@@ -10,27 +10,30 @@
   transition: all 0.3s linear;
   /* WebKit  */
 }
-
+@theme {
+  --background: #00060e;
+  --foreground: #6fffe9;
+  --color-primary: #1c2541;
+  --color-secondary: #00fff6;
+  --heading-color: #6fffe9;
+  --primary-black-color: #0b132b;
+  --gray-color: #3a506b;
+  --white-color: #ffffff;
+  --textcolor: #6fffe9;
+  --color-WhiteT: #ffffff;
+  --border-color: #1c2541;
+  --color-B: rgba(27, 192, 190, 0.1); /* 5BC0BE with opacity */
+  --color-dark: #0b132b;
+  --color-dark2: #1c2541;
+  --color-lightGreen: rgb(91 192 190 / 33%);
+  --color-lightGreen2: #5bc0be2b;
+  --color-lightGreen3: #3a506b;
+}
 :root {
-  --background: #171717;
-  --foreground: #eaf4e6;
-  --color-primary: #00563f; /* Royal Green */
-  --color-secondary: #f29727;
-  --heading-color: #eaf4e6;
-  --primary-black-color: #171717;
-  --gray-color: #222c23;
-  --white-color: #eaf4e6;
-  --text-color: #eaf4e6;
-  --border-color: #003d2c;
-  --color-B: rgba(0, 86, 63, 0.1); /* Royal Green with opacity */
-  --color-dark: #171717;
-  --color-dark2: #00563f;
-  --color-lightGreen: rgb(0 86 63 / 33%);
-  --color-lightGreen2: #00563f2b;
-  --color-lightGreen3: #222c23;
   --heading-font: "Bitter", "Segoe UI", serif;
   --body-font: "Lato", "Segoe UI", sans-serif;
   --accent-font: "Bitter", "Segoe UI", serif;
+  --ex-font: "Cinzel", serif;
 }
 /* new  */
 html {
@@ -45,41 +48,11 @@ html {
 /* Change this global values */
 /* Removed @theme block, now using :root for all variables */
 
-/* @theme inline {
+@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-} */
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #11221c;
-    --foreground: #fff;
-  }
-} */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a1a14;
-    --foreground: #eaf4e6;
-    --color-primary: #00a86b; /* Brighter Royal Green for dark mode */
-    --color-secondary: #f29727;
-    --heading-color: #eaf4e6;
-    --primary-black-color: #eaf4e6;
-    --gray-color: #14261c;
-    --white-color: #11221c;
-    --text-color: #eaf4e6;
-    --border-color: #003d2c;
-    --color-B: rgba(0, 168, 107, 0.1);
-    --color-dark: #00a86b;
-    --color-dark2: #00563f;
-    --color-lightGreen: rgb(0 168 107 / 33%);
-    --color-lightGreen2: #00a86b2b;
-    --color-lightGreen3: #14261c;
-    --heading-font: "Bitter", "Segoe UI", serif;
-    --body-font: "Lato", "Segoe UI", sans-serif;
-    --accent-font: "Bitter", "Segoe UI", serif;
-  }
 }
+
 html,
 body {
   scroll-padding-top: 10rem;
@@ -92,29 +65,29 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 8px rgb(202, 202, 202);
+  box-shadow: inset 0 0 8px var(--color-primary);
   border-radius: 100px;
   transition: all 0.3s ease-in-out;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
+  background: var(--color-secondary);
   border-radius: 100px;
   transition: all 0.3s ease-in-out;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-secondary);
+  background: var(--color-WhiteT);
 }
 body {
   background: var(--background);
-  color: var(--text-color);
+  color: var(--color-WhiteT);
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.5;
   scroll-behavior: smooth;
 }
@@ -152,27 +125,27 @@ input.form-control:focus {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 7rem;
   line-height: 1.5;
 }
 @media (max-width: 1600px) {
   h1 {
-    font-size: 7.5rem;
+    font-size: 6.5rem;
   }
 }
 @media (max-width: 1440px) {
   h1 {
-    font-size: 7rem;
+    font-size: 6rem;
   }
 }
 @media (max-width: 1280px) {
   h1 {
-    font-size: 6.6rem;
+    font-size: 5.6rem;
   }
 }
 @media (max-width: 1024px) {
   h1 {
-    font-size: 6.2rem;
+    font-size: 5.2rem;
   }
 }
 
@@ -219,5 +192,97 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  color: var(--heading-color);
 }
+
+.neonBtn a {
+  position: relative;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.neonBtn a:visited {
+  color: var(--color-secondary);
+}
+.neonBtn a:hover {
+  color: #050f1a;
+  background: var(--color-secondary);
+  border-radius: 3px;
+  box-shadow: 0 0 10px var(--color-secondary), 0 0 40px var(--color-secondary),
+    0 0 80px var(--color-secondary);
+  transition-delay: 600ms;
+}
+.neonBtn a span {
+  position: absolute;
+  display: block;
+}
+
+/************************************************
+3.	NEON DU HAUT
+************************************************/
+.neonBtn a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-secondary));
+}
+
+.neonBtn a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 600ms;
+}
+
+/************************************************
+4.	NEON DU BAS
+************************************************/
+.neonBtn a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--color-secondary));
+}
+
+.neonBtn a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 250ms;
+}
+
+/************************************************
+5.	NEON DE DROITE
+************************************************/
+.neonBtn a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--color-secondary));
+}
+
+.neonBtn a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 100ms;
+}
+
+/************************************************
+5.	NEON DE GAUCHE
+************************************************/
+.neonBtn a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--color-secondary));
+}
+
+.neonBtn a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 450ms;
+}
+
+/* mobile menu  */
