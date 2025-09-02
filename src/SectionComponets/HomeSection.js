@@ -100,12 +100,16 @@ const CounterUp = ({ end, label, duration = 1.5 }) => {
     }, [end, duration]);
 
     return (
-        <div className="flex flex-col items-center">
+        <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="flex flex-col items-center">
             <span className="text-[5rem] block font-heading font-medium text-secondary">
                 {display}+
             </span>
             <span className="text-[2rem] text-gray mt-1">{label}</span>
-        </div>
+        </motion.div>
     );
 };
 
@@ -136,17 +140,25 @@ const HomeSection = () => {
 
     return (
         <section id="home" className="home-section sectionPadding custom-container">
-            <div className="md:max-w-[100rem] w-full ml-auto">
-                <span className="section-number flex gap-[0.8rem] items-center uppercase py-[1rem] text-white text-[1.6rem] font-medium px-[1.5rem] border-[1px] border-secondary w-[fit-content] rounded-full"><Icon icon="famicons:home-outline" /> Introduce</span>
+            <div className="csWidth w-full ml-auto">
+                <motion.span initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{
+                        duration: 1,
+                    }} className="section-number flex gap-[0.8rem] items-center uppercase py-[1rem] text-white text-[1.6rem] font-medium px-[1.5rem] border-[1px] border-secondary w-[fit-content] rounded-full"><Icon icon="famicons:home-outline" /> Introduce</motion.span>
                 <div className="intro mt-[2rem]">
                     <span className="mb-[4rem] block">
                         <span className='text-secondary text-[1.6rem] font-medium'>I AM</span>
                         <h1 className="" >Ralph Edwards, a</h1>
                         <TypingEffect text="Web Designer" speed={120} />
                     </span>
-                    <div className="max-w-[70%]">
+                    <motion.div
+                        initial={{ y: 100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1 }}
+                        className="max-w-[70%]">
                         <p className="md:text-[2.2rem] text-gray text-[1.8rem]">I’m a passionate Web Designer and quick learner, eager to create impactful digital experiences in a hi-tech environment.</p>
-                    </div>
+                    </motion.div>
 
                 </div>
                 <div className="flex justify-end items-center mt-[-10rem]">

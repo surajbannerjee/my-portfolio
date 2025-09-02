@@ -1,12 +1,17 @@
-import MainContent from "@/components/MainContant/MainContant";
-import SideBarInfoBox from "@/components/SideBarInfoBox/SideBarInfoBox";
-import Image from "next/image";
+"use client"
+import React from 'react'
+import MobileApp from "@/components/MobileApp";
+import Website from "@/components/Website";
 
 export default function Home() {
   return (
     <div>
-      <SideBarInfoBox />
-      <MainContent />
+      <div>
+        <Website />
+      </div>
+      <div>
+        <MobileApp />
+      </div>
     </div>
   );
 }
