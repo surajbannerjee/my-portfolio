@@ -17,7 +17,7 @@
   --color-secondary: #00fff6;
   --heading-color: #6fffe9;
   --primary-black-color: #0b132b;
-  --gray-color: #3a506b;
+  --color-gray: #a5a7aa;
   --white-color: #ffffff;
   --textcolor: #6fffe9;
   --color-WhiteT: #ffffff;
@@ -28,6 +28,10 @@
   --color-lightGreen: rgb(91 192 190 / 33%);
   --color-lightGreen2: #5bc0be2b;
   --color-lightGreen3: #3a506b;
+  --font-ex-font: var(--ex-font);
+  --font-body: var(--body-font);
+  --font-heading: var(--heading-font);
+  --font-accent: var(--accent-font);
 }
 :root {
   --heading-font: "Bitter", "Segoe UI", serif;

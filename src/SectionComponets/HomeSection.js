@@ -5,6 +5,7 @@ import gsap from "gsap";
 import Link from "next/link";
 import Image from "next/image";
 import { ROUND_TEXT } from "@/constants/images";
+import { motion, useAnimation } from "framer-motion";
 
 const TypingEffect = ({
     words = ["Web Designer", "UI/Wordpress Developer"],
@@ -76,6 +77,38 @@ const TypingEffect = ({
     );
 };
 
+const CounterUp = ({ end, label, duration = 1.5 }) => {
+    const motionValue = useRef(0);
+    const [display, setDisplay] = useState(0);
+
+    useEffect(() => {
+        let start;
+        let raf;
+        const animate = (timestamp) => {
+            if (!start) start = timestamp;
+            const progress = Math.min((timestamp - start) / (duration * 1000), 1);
+            const value = Math.floor(progress * end);
+            setDisplay(value);
+            if (progress < 1) {
+                raf = requestAnimationFrame(animate);
+            } else {
+                setDisplay(end);
+            }
+        };
+        raf = requestAnimationFrame(animate);
+        return () => cancelAnimationFrame(raf);
+    }, [end, duration]);
+
+    return (
+        <div className="flex flex-col items-center">
+            <span className="text-[5rem] block font-heading font-medium text-secondary">
+                {display}+
+            </span>
+            <span className="text-[2rem] text-gray mt-1">{label}</span>
+        </div>
+    );
+};
+
 const HomeSection = () => {
     const roundTextRef = useRef(null);
     const arrowRef = useRef(null);
@@ -112,7 +145,7 @@ const HomeSection = () => {
                         <TypingEffect text="Web Designer" speed={120} />
                     </span>
                     <div className="max-w-[70%]">
-                        <p className="md:text-[2.2rem] text-[1.8rem]">I want to build my career with a leading corporate of hi-tech environment with committed & dedicated people, which will help me to explore myself fully and realize my potential. I am a quick learner and have the ability to work under pressure to meet deadlines through effective time management.</p>
+                        <p className="md:text-[2.2rem] text-gray text-[1.8rem]">I’m a passionate Web Designer and quick learner, eager to create impactful digital experiences in a hi-tech environment.</p>
                     </div>
 
                 </div>
@@ -121,6 +154,10 @@ const HomeSection = () => {
                         <span ref={arrowRef} className="text-secondary text-[3rem] font-medium absolute top-1/2 left-1/2.2 transform -translate-x-1/2 -translate-y-1/2"><Icon icon="line-md:arrow-down" /></span>
                         <Image ref={roundTextRef} src={ROUND_TEXT} alt="Round Text" height={700} width={700} className="w-[88%] h-[88%] object-contain rounded-full" />
                     </Link>
+                </div>
+                <div className="flex justify-start items-center mt-8 gap-[5rem]">
+                    <CounterUp end={3} label="Years of Experience" duration={1.5} />
+                    <CounterUp end={120} label="Project Completed" duration={2} />
                 </div>
             </div>
 
