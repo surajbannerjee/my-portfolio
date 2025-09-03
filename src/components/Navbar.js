@@ -6,12 +6,12 @@ import { motion } from 'framer-motion';
 
 
 const navLinks = [
-    { href: "#home", icon: "fluent:home-28-regular", y: "1.3rem" },
-    { href: "#about", icon: "ix:about", y: "6rem" },
-    { href: "#resume", icon: "qlementine-icons:resume-16", y: "11rem" },
-    { href: "#skills", icon: "hugeicons:ai-idea", y: "16rem" },
-    { href: "#portfolio", icon: "hugeicons:files-01", y: "21rem" },
-    { href: "#contact", icon: "fluent:chat-mail-20-regular", y: "26rem" },
+    { href: "#home", icon: "fluent:home-28-regular", y: "1.3rem", title: "Home" },
+    { href: "#about", icon: "ix:about", y: "6rem", title: "About" },
+    { href: "#resume", icon: "qlementine-icons:resume-16", y: "11rem", title: "Resume" },
+    { href: "#skills", icon: "hugeicons:ai-idea", y: "16rem", title: "Skills" },
+    { href: "#portfolio", icon: "hugeicons:files-01", y: "21rem", title: "Portfolio" },
+    { href: "#contact", icon: "fluent:chat-mail-20-regular", y: "26rem", title: "Contact" },
 ];
 
 
@@ -23,7 +23,7 @@ const Navbar = () => {
     const currentIdx = hoveredIdx !== null ? hoveredIdx : activeIdx;
 
     return (
-        <div className='navbar h-auto w-[7rem] py-[1.2rem] fixed top-1/2 transform -translate-y-1/2 right-[5rem] bg-background border-[1px] border-[#fff] rounded-full flex flex-col justify-between items-center z-50 '>
+        <div className='navbar h-auto w-[7rem] py-[1.2rem] fixed top-1/2 transform -translate-y-1/2 right-[5rem] bg-background border-[1px] border-B shadow-[0_0_10px_#00fef521] rounded-full flex flex-col justify-between items-center z-50 '>
             {navLinks.map((link, idx) => {
                 const isActive = hoveredIdx !== null ? hoveredIdx === idx : activeIdx === idx;
                 return (
@@ -36,12 +36,23 @@ const Navbar = () => {
                         onClick={() => setActiveIdx(idx)}
                     >
                         <Icon icon={link.icon} />
+                        {hoveredIdx === idx && (
+                            <motion.span
+                                className="customTooltip"
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 10 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                {link.title}
+                            </motion.span>
+                        )}
                     </Link>
                 );
             })}
             {/* Animated white circle with Framer Motion */}
             <motion.span
-                className='bg-white w-[5rem] h-[5rem] flex justify-center items-center rounded-full absolute left-1/2 top-0'
+                className='bg-secondary w-[5rem] h-[5rem] flex justify-center items-center rounded-full absolute left-1/2 top-0'
                 animate={{ y: navLinks[currentIdx].y }}
                 transition={{ type: 'spring', stiffness: 200, damping: 30 }}
                 style={{ translateX: '-50%' }}

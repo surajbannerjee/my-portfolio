@@ -60,6 +60,31 @@ body {
   scroll-padding-top: 10rem;
   scroll-behavior: smooth;
 }
+
+/* Tooltip for Navbar icons */
+.customTooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 110%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  z-index: 10;
+}
+.navbar a:hover .customTooltip,
+.navbar a:focus .customTooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(-0.5rem);
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 3px;
