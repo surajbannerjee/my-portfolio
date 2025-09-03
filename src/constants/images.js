@@ -14,3 +14,4 @@ export const MUI_SVG = URL("/assets/images/mui.svg");
 export const WEBFLOW_SVG = URL("/assets/images/webflow.svg");
 export const TAILWIND_SVG = URL("/assets/images/tailwind.svg");
 export const WORKS_1 = URL("/assets/images/works.jpg");
+export const JS124_SVG = URL("/assets/images/js124.svg");
