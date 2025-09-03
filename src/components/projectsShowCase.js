@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import projectDetails from './projectsContent';
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
+import Image from 'next/image';
 
 const tabList = Array.from(new Set(projectDetails.map(p => p.project)));
 // import { WORKS_1 } from '@/constants/images';
@@ -54,11 +55,13 @@ const ProjectsShowCase = () => {
                             whileHover={{ scale: 1.04, boxShadow: '0 8px 32px rgba(0,255,246,0.30)' }}
                         >
                             <div className="w-full h-[45rem] bg-gray-800 flex items-center justify-center">
-                                <img
+                                <Image
                                     src={project.image}
                                     alt={project.title}
                                     className="object-cover w-full h-full"
                                     style={{ maxHeight: '100%', maxWidth: '100%' }}
+                                    height={1000}
+                                    width={1000}
                                 />
                             </div>
                             <div className="px-[3rem] py-[2rem] flex items-center justify-between rounded-[2rem] absolute bottom-[2rem] bg-[rgba(0,0,0,0.5019607843)] w-[95%] left-1/2 transform -translate-x-1/2 backdrop-blur-lg">

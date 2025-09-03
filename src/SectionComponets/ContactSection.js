@@ -19,7 +19,7 @@ const ContactSection = () => {
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{
                                 duration: 1,
-                            }}>Let's Work  <span className="text-secondary">Together!</span></motion.h2>
+                            }}>Let&apos;s Work  <span className="text-secondary">Together!</span></motion.h2>
                     </div>
                     <ContactForm />
                 </div>
