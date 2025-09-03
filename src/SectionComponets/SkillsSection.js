@@ -3,23 +3,21 @@ import { Icon } from '@iconify/react'
 import React from 'react'
 import { motion } from 'framer-motion'
 import ProgressBar from '@/components/ProgressBar'
-import { CSS_SVG, HTML_SVG, JS124_SVG, JS_SVG, ME, MUI_SVG, REACT_SVG, SASS_SVG, TAILWIND_SVG, WEBFLOW_SVG, WORDPRESS_SVG } from '@/constants/images'
+import { CSS, HTML, JS, MUI, REACT, SASS, TAILWIND, WEBFLOW, WORDPRESS } from '@/constants/images'
 import Image from 'next/image'
 
 const SkillsSection = () => {
     // Sample skill images/icons (replace with your own)
     const skillImages = [
-        HTML_SVG,
-        CSS_SVG,
-        JS_SVG,
-        REACT_SVG,
-        SASS_SVG,
-        ME,
-        JS124_SVG,
-        WORDPRESS_SVG,
-        MUI_SVG,
-        WEBFLOW_SVG,
-        TAILWIND_SVG
+        HTML,
+        CSS,
+        JS,
+        REACT,
+        SASS,
+        WORDPRESS,
+        MUI,
+        WEBFLOW,
+        TAILWIND
     ];
 
     // Duplicate images for seamless infinite scroll
