@@ -12,5 +12,5 @@ export const SASS_SVG = URL("/assets/images/sass.svg");
 export const WORDPRESS_SVG = URL("/assets/images/wordpress.svg");
 export const MUI_SVG = URL("/assets/images/mui.svg");
 export const WEBFLOW_SVG = URL("/assets/images/webflow.svg");
-export const TAILWIND_SVG = URL("/assets/images/tailwind.svg");
+export const TAILWIND_SVG = URL("/assets/images/Tailwind.svg");
 export const WORKS_1 = URL("/assets/images/works-1.jpg");
