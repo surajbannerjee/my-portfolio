@@ -54,11 +54,11 @@ const SkillsSection = () => {
                     >
                         {sliderImages.map((src, idx) => (
                             <Image
-                                height={500}
-                                width={500}
+                                height={1000}
+                                width={1000}
                                 key={idx}
                                 src={src}
-                                alt="skill"
+                                alt={`skill${idx}`}
                                 className="w-[10rem] h-[10rem] object-contain rounded-full border-2 border-secondary  shadow-[0_0_20px_rgb(0,255,246,0.8)]"
                                 draggable={false}
                             />
