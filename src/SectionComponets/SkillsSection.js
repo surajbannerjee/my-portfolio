@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react'
 import React from 'react'
 import { motion } from 'framer-motion'
 import ProgressBar from '@/components/ProgressBar'
-import { CSS_SVG, HTML_SVG, JS_SVG, MUI_SVG, REACT_SVG, SASS_SVG, TAILWIND_SVG, WEBFLOW_SVG, WORDPRESS_SVG } from '@/constants/images'
+import { CSS_SVG, HTML_SVG, JS_SVG, ME, MUI_SVG, REACT_SVG, SASS_SVG, TAILWIND_SVG, WEBFLOW_SVG, WORDPRESS_SVG } from '@/constants/images'
 import Image from 'next/image'
 
 const SkillsSection = () => {
@@ -14,6 +14,7 @@ const SkillsSection = () => {
         JS_SVG,
         REACT_SVG,
         SASS_SVG,
+        ME,
         WORDPRESS_SVG,
         MUI_SVG,
         WEBFLOW_SVG,
