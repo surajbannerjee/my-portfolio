@@ -162,7 +162,7 @@ const HomeSection = () => {
 
                 </div>
                 <div className="flex justify-end items-center mt-[-10rem]">
-                    <Link href="#about" className="relative h-[17rem] w-[17rem] flex justify-center items-center border-1 border-B rounded-full  transition-all duration-300 ease-in-out">
+                    <Link href="#portfolio" className="relative h-[17rem] w-[17rem] flex justify-center items-center border-1 border-B rounded-full  transition-all duration-300 ease-in-out">
                         <span ref={arrowRef} className="text-secondary text-[3rem] font-medium absolute top-1/2 left-1/2.2 transform -translate-x-1/2 -translate-y-1/2"><Icon icon="line-md:arrow-down" /></span>
                         <Image ref={roundTextRef} src={ROUND_TEXT} alt="Round Text" height={700} width={700} className="w-[88%] h-[88%] object-contain rounded-full" />
                     </Link>
