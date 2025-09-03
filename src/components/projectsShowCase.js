@@ -43,7 +43,7 @@ const ProjectsShowCase = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -40 }}
                     transition={{ duration: 0.5 }}
-                    className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-[5rem] p-4"
+                    className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-[5rem] p-4"
                 >
                     {visibleProjects.map((project, index) => (
                         <motion.div
