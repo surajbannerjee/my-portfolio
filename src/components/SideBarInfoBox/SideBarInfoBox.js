@@ -70,6 +70,7 @@ const SideBarInfoBox = () => {
                         ))}
                     </ul>
                     <NeonButton
+                        type='link'
                         btnText="Hire Me!"
                         href="#"
                         icon="akar-icons:person"

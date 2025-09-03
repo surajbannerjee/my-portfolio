@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const AboutSection = () => {
     return (
         <section id="about" className="about-section sectionPadding custom-container">
-            <div className="md:max-w-[100rem] w-full ml-auto">
+            <div className="csWidth w-full ml-auto">
                 <motion.span initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{
