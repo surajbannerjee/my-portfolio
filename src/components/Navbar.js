@@ -1,17 +1,17 @@
 
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 
 const navLinks = [
-    { href: "#home", icon: "fluent:home-28-regular", y: "1.3rem", title: "Home" },
-    { href: "#about", icon: "ix:about", y: "6rem", title: "About" },
-    { href: "#resume", icon: "qlementine-icons:resume-16", y: "11rem", title: "Resume" },
-    { href: "#skills", icon: "hugeicons:ai-idea", y: "16rem", title: "Skills" },
-    { href: "#portfolio", icon: "hugeicons:files-01", y: "21rem", title: "Portfolio" },
-    { href: "#contact", icon: "fluent:chat-mail-20-regular", y: "26rem", title: "Contact" },
+    { href: "#home", icon: "fluent:home-28-regular", y: "1.3rem", x: "0", title: "Home" },
+    { href: "#about", icon: "ix:about", y: "6rem", x: "0", title: "About" },
+    { href: "#resume", icon: "qlementine-icons:resume-16", y: "11rem", x: "0", title: "Resume" },
+    { href: "#skills", icon: "hugeicons:ai-idea", y: "16rem", x: "0", title: "Skills" },
+    { href: "#portfolio", icon: "hugeicons:files-01", y: "21rem", x: "0", title: "Portfolio" },
+    { href: "#contact", icon: "fluent:chat-mail-20-regular", y: "26rem", x: "2rem", title: "Contact" },
 ];
 
 
@@ -19,11 +19,21 @@ const Navbar = () => {
     const [activeIdx, setActiveIdx] = useState(0);
     const [hoveredIdx, setHoveredIdx] = useState(null);
 
+
     // Use hovered index if hovering, else use active index
     const currentIdx = hoveredIdx !== null ? hoveredIdx : activeIdx;
 
+    // Responsive: detect if mobile (width < 1024px)
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
-        <div className='navbar h-auto w-[7rem] py-[1.2rem] fixed top-1/2 transform -translate-y-1/2 right-[5rem] bg-background border-[1px] border-B shadow-[0_0_10px_#00fef521] rounded-full flex flex-col justify-between items-center z-50 '>
+        <div className='navbar lg:h-auto h-[6.5rem] lg:w-[7rem] w-auto lg:py-[1.2rem] py-0 lg:px-0 px-[1rem] fixed lg:bottom-1/2 bottom-[5rem] transform lg:translate-y-1/2 translate-y-[0] lg:translate-x-0 translate-x-1/2 lg:right-[5rem] right-1/2 bg-[#00060e4d] border-[1px] border-B shadow-[0_0_10px_#00fef521] rounded-full flex lg:flex-col flex-row justify-between items-center z-50 '>
             {navLinks.map((link, idx) => {
                 const isActive = hoveredIdx !== null ? hoveredIdx === idx : activeIdx === idx;
                 return (
@@ -36,26 +46,27 @@ const Navbar = () => {
                         onClick={() => setActiveIdx(idx)}
                     >
                         <Icon icon={link.icon} />
-                        {hoveredIdx === idx && (
-                            <motion.span
-                                className="customTooltip"
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 10 }}
-                                transition={{ duration: 0.2 }}
-                            >
-                                {link.title}
-                            </motion.span>
-                        )}
+                        <motion.span
+                            className="customTooltip md:block hidden"
+                            initial={false}
+                            animate={hoveredIdx === idx ? { opacity: 1, y: -10 } : { opacity: 0, y: -5 }}
+                            transition={{ duration: 0.2 }}
+                        >
+                            {link.title}
+                        </motion.span>
                     </Link>
                 );
             })}
             {/* Animated white circle with Framer Motion */}
             <motion.span
                 className='bg-secondary w-[5rem] h-[5rem] flex justify-center items-center rounded-full absolute left-1/2 top-0'
-                animate={{ y: navLinks[currentIdx].y }}
-                transition={{ type: 'spring', stiffness: 200, damping: 30 }}
-                style={{ translateX: '-50%' }}
+                animate={
+                    isMobile
+                        ? { x: `calc(${currentIdx} * 5rem)`, y: 0 }
+                        : { y: navLinks[currentIdx].y, x: '-50%' }
+                }
+                transition={{ type: 'linear', duration: 0.2 }}
+                style={isMobile ? { left: 0, top: '50%', translateY: '-50%' } : { translateX: '-50%' }}
             />
         </div>
     );
