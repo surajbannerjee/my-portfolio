@@ -12,8 +12,8 @@ const RadialFloatingButton = () => {
             icon: "gis:location-poi",
             href: "#contact",
             title: "Location",
-            x: -70,
-            y: 15,
+            x: 35,
+            y: 130,
             action: () => {
                 // Scroll to contact section or open location
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
@@ -22,68 +22,74 @@ const RadialFloatingButton = () => {
         {
             id: 2,
             icon: "ri:phone-fill",
-            href: "tel:+1234567890",
+            href: "tel:9609618271",
             title: "Phone",
-            x: -60,
-            y: -35,
+            x: 15,
+            y: 85,
             action: () => {
                 // Open phone dialer
-                window.open('tel:+1234567890')
+                window.open('tel:9609618271')
             }
         },
         {
             id: 3,
             icon: "fluent:chat-mail-20-filled",
-            href: "mailto:contact@example.com",
+            href: "mailto:surajbanerjee255@gmail.com",
             title: "Email",
-            x: -28,
-            y: -70,
+            x: 25,
+            y: 35,
             action: () => {
-                // Open email client
-                window.open('mailto:contact@example.com')
+                window.open('mailto:surajbanerjee255@gmail.com')
             }
         },
         {
             id: 4,
             icon: "mage:whatsapp-filled",
-            href: "https://linkedin.com",
+            href: "https://wa.me/9609618271",
             title: "WhatsApp",
-            x: 20,
-            y: -80,
+            x: 70,
+            y: 10,
             action: () => {
                 // Open WhatsApp
-                window.open('https://wa.me/1234567890', '_blank')
+                window.open('https://wa.me/9609618271', '_blank')
             }
         }
     ]
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen)
+        setIsOpen(prev => !prev)
+    }
+
+    const handleItemClick = (action) => {
+        action()
+        // Add a small delay before closing for smoother UX
+        setTimeout(() => {
+            setIsOpen(false)
+        }, 150)
     }
 
     const itemVariants = {
-        hidden: {
-            opacity: 0,
-            scale: 0,
-            x: 0,
-            y: 0
-        },
-        visible: (item) => ({
-            opacity: 1,
-            scale: 1,
-            x: item.x, // Use custom x position
-            y: item.y, // Use custom y position
+        hidden: (item) => ({
             transition: {
-                delay: item.id * 0.1,
-                type: "spring",
-                stiffness: 400,
-                damping: 20
+                damping: 50
+            }
+        }),
+        visible: (item) => ({
+            transition: {
+                damping: 50
+            }
+        }),
+        exit: (item) => ({
+            transition: {
+                delay: (4 - item.id) * 0.05,
+                duration: 0.5,
+                ease: "easeInOut"
             }
         })
     }
 
     return (
-        <div className="radial-fab fixed md:bottom-8 bottom-60 right-8 z-50">
+        <div className="radial-fab fixed md:bottom-20 bottom-60 right-8 z-50">
             {/* Trigger Button */}
             <motion.button
                 className="trigger-button w-[5rem] h-[5rem] bg-secondary rounded-full flex items-center justify-center text-background text-[2.2rem] shadow-lg relative z-10 cursor-pointer"
@@ -97,25 +103,35 @@ const RadialFloatingButton = () => {
             </motion.button>
 
             {/* Radial Menu Items */}
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
                 {isOpen && (
-                    <ul className="radial-menu absolute top-0 left-0">
+                    <motion.ul
+                        className="radial-menu bg-transparent h-[20rem] w-[20rem] absolute top-[-8rem] left-[-7rem] rounded-full"
+                        initial={{ rotate: -40, opacity: 0 }}
+                        animate={{ rotate: 0, opacity: 1 }}
+                        exit={{ rotate: 90, opacity: 0 }}
+                        transition={{
+                            duration: 0.6,
+                            ease: "easeInOut",
+                            opacity: { duration: 0.3 }
+                        }}
+                    >
                         {radialItems.map((item, index) => (
                             <motion.li
                                 key={item.id}
-                                className="radial-item absolute top-0 left-0"
+                                className="radial-item absolute"
+                                style={{
+                                    transform: `translate(${item.x}px, ${item.y}px)`
+                                }}
                                 custom={item}
                                 variants={itemVariants}
                                 initial="hidden"
                                 animate="visible"
-                                exit="hidden"
+                                exit="exit"
                             >
                                 <motion.button
                                     className="cursor-pointer w-[4rem] h-[4rem] bg-background border border-secondary rounded-full flex items-center justify-center text-secondary text-[2.2rem] hover:bg-secondary hover:text-background transition-colors duration-200 shadow-md"
-                                    onClick={() => {
-                                        item.action()
-                                        setIsOpen(false)
-                                    }}
+                                    onClick={() => handleItemClick(item.action)}
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
                                     title={item.title}
@@ -124,22 +140,10 @@ const RadialFloatingButton = () => {
                                 </motion.button>
                             </motion.li>
                         ))}
-                    </ul>
+                    </motion.ul>
                 )}
             </AnimatePresence>
 
-            {/* Backdrop */}
-            {/* <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        className="fixed  bg-transparent -z-10"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={() => setIsOpen(false)}
-                    />
-                )}
-            </AnimatePresence> */}
         </div>
     )
 }

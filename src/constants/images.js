@@ -14,3 +14,11 @@ export const MUI = URL("/assets/images/mui.webp");
 export const WEBFLOW = URL("/assets/images/webflow.webp");
 export const TAILWIND = URL("/assets/images/tailwind.webp");
 export const WORKS_1 = URL("/assets/images/works.jpg");
+// portfolio images
+export const WILDORA = URL("/assets/images/wildora.jpg");
+export const WEDDING = URL("/assets/images/wedding.jpg");
+export const TVISTA_HOLIDAYS = URL("/assets/images/tvistaholidays.jpg");
+export const MEDICAL = URL("/assets/images/medical.jpg");
+export const INTERIOR = URL("/assets/images/interior.jpg");
+export const FURNIRO = URL("/assets/images/furniro_webflow.jpg");
+export const ASTRO = URL("/assets/images/astro.jpg");  

@@ -1,53 +1,53 @@
-import { WORKS_1 } from "@/constants/images";
+import { ASTRO, FURNIRO, INTERIOR, MEDICAL, TVISTA_HOLIDAYS, WEDDING, WILDORA, WORKS_1 } from "@/constants/images";
 
 const projectDetails = [
     // 🔹 Next.js (10 projects)
     {
         title: "Wildora Travel Website",
         description: "A modern travel and tour booking website with nature theme.",
-        image: WORKS_1,
+        image: WILDORA,
         link: "#",
         project: "Next.js",
     },
     {
         title: "Ecoland Residence",
         description: "Sustainable living platform showcasing eco-friendly housing.",
-        image: WORKS_1,
+        image: WEDDING,
         link: "#",
         project: "Next.js",
     },
     {
         title: "Foodies Hub",
         description: "Restaurant ordering and food delivery platform.",
-        image: WORKS_1,
+        image: TVISTA_HOLIDAYS,
         link: "#",
         project: "Next.js",
     },
     {
         title: "TechNova Portfolio",
         description: "Personal portfolio website for developers and designers.",
-        image: WORKS_1,
+        image: MEDICAL,
         link: "#",
         project: "Next.js",
     },
     {
         title: "EventSphere",
         description: "Event management and ticket booking application.",
-        image: WORKS_1,
+        image: INTERIOR,
         link: "#",
         project: "Next.js",
     },
     {
         title: "FitLife Pro",
         description: "Fitness coaching and workout tracking platform.",
-        image: WORKS_1,
+        image: FURNIRO,
         link: "#",
         project: "Next.js",
     },
     {
         title: "EduNext Academy",
         description: "E-learning platform with courses and video lessons.",
-        image: WORKS_1,
+        image: ASTRO,
         link: "#",
         project: "Next.js",
     },
