@@ -63,7 +63,7 @@ const ContactForm = () => {
 
     return (
         <div className="relative">
-            <form onSubmit={handleSubmit} className=" bg-transparent backdrop-blur-sm px-[5rem] py-[5rem] rounded-[3rem] shadow-[0_0_20px_#00fef521] flex flex-col gap-[2.6rem] mt-[7rem]">
+            <form onSubmit={handleSubmit} className=" bg-transparent backdrop-blur-sm md:px-[5rem] px-[3rem] md:py-[5rem] py-[3rem] rounded-[3rem] shadow-[0_0_20px_#00fef521] flex flex-col gap-[2.6rem] mt-[7rem]">
                 <div className='flex flex-col md:flex-row gap-[2rem]'>
                     <input
                         type="text"

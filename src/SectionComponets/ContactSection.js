@@ -6,7 +6,7 @@ import ContactForm from '@/components/ContactForm'
 
 const ContactSection = () => {
     return (
-        <section id="contact" className="contact-section sectionPadding custom-container">
+        <section id="contact" className="contact-section sectionPadding custom-container pb-[12rem]!">
             <div className="csWidth w-full ml-auto">
                 <div className="csWidth w-full ml-auto">
                     <motion.span initial={{ y: 100, opacity: 0 }}

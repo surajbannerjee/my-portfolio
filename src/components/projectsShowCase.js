@@ -43,7 +43,7 @@ const ProjectsShowCase = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -40 }}
                     transition={{ duration: 0.5 }}
-                    className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-[5rem] p-4"
+                    className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-[5rem] p-4"
                 >
                     {visibleProjects.map((project, index) => (
                         <motion.div
@@ -54,7 +54,7 @@ const ProjectsShowCase = () => {
                             viewport={{ once: true, amount: 0.3 }}
                             whileHover={{ scale: 1.04, boxShadow: '0 8px 32px rgba(0,255,246,0.30)' }}
                         >
-                            <div className="w-full h-[45rem] bg-gray-800 flex items-center justify-center">
+                            <div className="w-full sm:h-[45rem] h-[35rem] bg-gray-800 flex items-center justify-center">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
@@ -64,12 +64,12 @@ const ProjectsShowCase = () => {
                                     width={1000}
                                 />
                             </div>
-                            <div className="px-[3rem] py-[2rem] flex items-center justify-between rounded-[2rem] absolute bottom-[2rem] bg-[rgba(0,0,0,0.5019607843)] w-[95%] left-1/2 transform -translate-x-1/2 backdrop-blur-lg">
-                                <div>
-                                    <Link href={project.link} className="text-[3rem] font-bold text-WhiteT mb-2 line-clamp-1 group-hover:text-secondary">{project.title}</Link>
+                            <div className="px-[3rem] py-[2rem] flex md:items-center items-start flex-row justify-between gap-[2rem] rounded-[2rem] absolute bottom-[2rem] bg-[rgba(0,0,0,0.5019607843)] w-[95%] left-1/2 transform -translate-x-1/2 backdrop-blur-lg">
+                                <div className='flex flex-col w-[70%]'>
+                                    <Link href={project.link} className="md:text-[3rem] text-[2.5rem] font-bold text-WhiteT mb-2 line-clamp-1 group-hover:text-secondary">{project.title}</Link>
                                     <p className="text-WhiteT text-[1.6rem] line-clamp-1">{project.description}</p>
                                 </div>
-                                <Link href={project.link} className="text-WhiteT text-[5rem] h-[10rem] w-[10rem] rounded-[2rem] flex items-center justify-center border border-gray-500 group-hover:border-secondary  group-hover:text-secondary">
+                                <Link href={project.link} className="text-WhiteT md:text-[5rem] text-[3rem] md:h-[10rem] md:w-[10rem] h-[6rem] w-[6rem] md:rounded-[2rem] rounded-[1.2rem] flex items-center justify-center border border-gray-500 group-hover:border-secondary  group-hover:text-secondary">
                                     <Icon style={{ transform: 'rotate(45deg)' }} icon="guidance:up-arrow" />
                                 </Link>
                             </div>

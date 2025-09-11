@@ -72,7 +72,6 @@ const TypingEffect = ({
     return (
         <span className="typing-effect text-secondary">
             <h1 ref={spanRef}>{displayed} <span style={{ fontWeight: "bold", visibility: showCursor ? "visible" : "hidden" }}>|</span></h1>
-
         </span>
     );
 };
@@ -108,7 +107,7 @@ const CounterUp = ({ end, label, duration = 1.5 }) => {
             <span className="text-[5rem] block font-heading font-medium text-secondary">
                 {display}+
             </span>
-            <span className="text-[2rem] text-gray mt-1">{label}</span>
+            <span className="text-[2rem] md:text-left text-center text-gray mt-1">{label}</span>
         </motion.div>
     );
 };
@@ -149,25 +148,25 @@ const HomeSection = () => {
                 <div className="intro mt-[2rem]">
                     <span className="mb-[4rem] block">
                         <span className='text-secondary text-[1.6rem] font-medium'>I AM</span>
-                        <h1 className="" >Ralph Edwards, a</h1>
+                        <h1 className="" >Suraj Banerjee, a</h1>
                         <TypingEffect text="Web Designer" speed={120} />
                     </span>
                     <motion.div
                         initial={{ y: 100, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1 }}
-                        className="max-w-[70%]">
+                        className="md:max-w-[70%] max-w-full">
                         <p className="md:text-[2.2rem] text-gray text-[1.8rem]">I’m a passionate Web Designer and quick learner, eager to create impactful digital experiences in a hi-tech environment.</p>
                     </motion.div>
 
                 </div>
-                <div className="flex justify-end items-center mt-[-10rem]">
-                    <Link href="#portfolio" className="relative h-[17rem] w-[17rem] flex justify-center items-center border-1 border-B rounded-full  transition-all duration-300 ease-in-out">
-                        <span ref={arrowRef} className="text-secondary text-[3rem] font-medium absolute top-1/2 left-1/2.2 transform -translate-x-1/2 -translate-y-1/2"><Icon icon="line-md:arrow-down" /></span>
+                <div className="flex xl:justify-end justify-center items-center xl:mt-[-10rem] mt-0 xl:pr-[10rem] md:pr-[0]">
+                    <Link href="#portfolio" className="relative md:h-[17rem] h-[15rem] md:w-[17rem] w-[15rem] flex justify-center items-center border-1 border-B rounded-full transition-all duration-300 ease-in-out">
+                        <span ref={arrowRef} className="text-secondary text-[3rem] font-medium absolute  top-[50%] left-[40%] "><Icon icon="line-md:arrow-down" /></span>
                         <Image ref={roundTextRef} src={ROUND_TEXT} alt="Round Text" height={700} width={700} className="w-[88%] h-[88%] object-contain rounded-full" />
                     </Link>
                 </div>
-                <div className="flex justify-start items-center mt-8 gap-[5rem]">
+                <div className="flex md:justify-start justify-between items-center mt-8 md:gap-[5rem] gap-[3rem]">
                     <CounterUp end={3} label="Years of Experience" duration={1.5} />
                     <CounterUp end={120} label="Project Completed" duration={2} />
                 </div>

@@ -23,7 +23,7 @@ const AboutSection = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{
                             duration: 1,
-                        }} className="max-w-[80%]">
+                        }} className="lg:max-w-[80%]">
                         <p className="md:text-[2rem] text-gray text-[1.8rem]">I am a passionate Web Designer with hands-on experience in crafting responsive, user-friendly, and visually appealing websites. With a strong foundation in UI/UX principles, I specialize in transforming ideas into functional digital experiences that improve usability and engagement. I have worked with modern tools and frameworks such as Tailwind CSS, Bootstrap, React, WordPress, and Elementor, enabling me to deliver both creative and technically robust solutions.
                             My goal is to combine creativity with technology to design seamless web experiences that help businesses grow online.</p>
                     </motion.div>

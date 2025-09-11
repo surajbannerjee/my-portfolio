@@ -5,6 +5,7 @@ import HomeSection from '@/SectionComponets/HomeSection'
 import PortfolioSection from '@/SectionComponets/PortfolioSection'
 import Resume from '@/SectionComponets/Resume'
 import SkillsSection from '@/SectionComponets/SkillsSection'
+import RadialFloatingButton from '@/components/RadialFloatingButton/RadialFloatingButton'
 import React from 'react'
 
 const MainContent = () => {
@@ -24,6 +25,9 @@ const MainContent = () => {
             <SkillsSection />
             <PortfolioSection />
             <ContactSection />
+
+            {/* Radial Floating Action Button */}
+            <RadialFloatingButton />
         </main>
     )
 }

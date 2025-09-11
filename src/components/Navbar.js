@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 
 const navLinks = [
-    { href: "#home", icon: "fluent:home-28-regular", y: "1.3rem", x: "0", title: "Home" },
+    { href: "#home", icon: "fluent:home-28-regular", y: "1.3rem", x: "5rem", title: "Home" },
     { href: "#about", icon: "ix:about", y: "6rem", x: "0", title: "About" },
     { href: "#resume", icon: "qlementine-icons:resume-16", y: "11rem", x: "0", title: "Resume" },
     { href: "#skills", icon: "hugeicons:ai-idea", y: "16rem", x: "0", title: "Skills" },
@@ -32,8 +32,34 @@ const Navbar = () => {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+    // Scroll detection to update active section
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = navLinks.map(link => {
+                const sectionId = link.href.replace('#', '');
+                return document.getElementById(sectionId);
+            }).filter(Boolean);
+
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+            let currentSectionIndex = 0;
+            sections.forEach((section, index) => {
+                if (section && section.offsetTop <= scrollPosition) {
+                    currentSectionIndex = index;
+                }
+            });
+
+            setActiveIdx(currentSectionIndex);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Call once to set initial state
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <div className='navbar lg:h-auto h-[6.5rem] lg:w-[7rem] w-auto lg:py-[1.2rem] py-0 lg:px-0 px-[1rem] fixed lg:bottom-1/2 bottom-[5rem] transform lg:translate-y-1/2 translate-y-[0] lg:translate-x-0 translate-x-1/2 lg:right-[5rem] right-1/2 bg-[#00060e4d] border-[1px] border-B shadow-[0_0_10px_#00fef521] rounded-full flex lg:flex-col flex-row justify-between items-center z-50 '>
+        <div className='navbar lg:h-auto h-[6.5rem] lg:w-[7rem] w-auto lg:py-[1.2rem] py-0 lg:px-0 px-[1rem] fixed lg:bottom-1/2 bottom-[3rem] transform lg:translate-y-1/2 translate-y-[0] lg:translate-x-0 translate-x-1/2 lg:right-[5rem] right-1/2 bg-[#00060e4d] border-[1px] border-B shadow-[0_0_10px_#00fef521] rounded-full flex lg:flex-col flex-row justify-between items-center z-50 '>
             {navLinks.map((link, idx) => {
                 const isActive = hoveredIdx !== null ? hoveredIdx === idx : activeIdx === idx;
                 return (
@@ -66,7 +92,7 @@ const Navbar = () => {
                         : { y: navLinks[currentIdx].y, x: '-50%' }
                 }
                 transition={{ type: 'linear', duration: 0.2 }}
-                style={isMobile ? { left: 0, top: '50%', translateY: '-50%' } : { translateX: '-50%' }}
+                style={isMobile ? { left: 9, top: '50%', translateY: '-50%' } : { translateX: '-0%' }}
             />
         </div>
     );
