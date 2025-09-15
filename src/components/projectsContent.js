@@ -1,7 +1,6 @@
 import { ASTRO, FURNIRO, INTERIOR, MEDICAL, TVISTA_HOLIDAYS, WEDDING, WILDORA, WORKS_1 } from "@/constants/images";
 
 const projectDetails = [
-    // 🔹 Next.js (10 projects)
     {
         title: "Wildora Travel Website",
         description: "A modern travel and tour booking website with nature theme.",
@@ -151,7 +150,7 @@ const projectDetails = [
     {
         title: "Portfolio Classic",
         description: "Clean and responsive personal portfolio website.",
-        image: WORKS_1,
+        image: INTERIOR,
         link: "#",
         project: "HTML",
     },
