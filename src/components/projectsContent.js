@@ -9,6 +9,13 @@ const projectDetails = [
         project: "Next.js",
     },
     {
+        title: "Furniro Webflow",
+        description: "Furniro — a restaurant website offering delicious food, drinks, and easy table reservations.",
+        image: FURNIRO,
+        link: "https://furniro-2fde57.webflow.io/",
+        project: "Webflow",
+    },
+    {
         title: "Wedding Planner",
         description: "A comprehensive platform for planning and organizing weddings.",
         image: WEDDING,
@@ -22,6 +29,14 @@ const projectDetails = [
         link: "#",
         project: "WordPress",
     },
+    {
+        title: "Mental Wellness",
+        description: "A mental health and wellness resource platform.",
+        image: MENTAL_WELLNESS,
+        link: "https://my-landing-pages-lac.vercel.app/mental-wellness",
+        project: "Next.js",
+    },
+
     {
         title: "Jaunty",
         description: "Jaunty — premium New York cannabis with top-tier carts, vapes, and edibles made for good vibes.",
@@ -50,15 +65,6 @@ const projectDetails = [
         link: "https://tvistaholidays.com/",
         project: "Next.js",
     },
-    {
-        title: "Mental Wellness",
-        description: "A mental health and wellness resource platform.",
-        image: MENTAL_WELLNESS,
-        link: "https://my-landing-pages-lac.vercel.app/mental-wellness",
-        project: "Next.js",
-    },
-
-
     // 🔹 HTML (10 projects)
     {
         title: "Portfolio Classic",

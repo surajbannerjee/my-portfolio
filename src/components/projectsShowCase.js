@@ -93,7 +93,7 @@ const ProjectsShowCase = () => {
                 </motion.div>
             </AnimatePresence>
             {/* Show More / Show Less Button */}
-            {filteredProjects.length > 8 && (
+            {filteredProjects.length > 7 && (
                 <div className="flex justify-center mt-8">
                     <button
                         onClick={() => {
