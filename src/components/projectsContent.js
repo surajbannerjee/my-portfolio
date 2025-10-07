@@ -1,4 +1,4 @@
-import { ASTRO, FURNIRO, INTERIOR, MEDICAL, MENTAL_WELLNESS, TVISTA_HOLIDAYS, WEDDING, WILDORA, WORKS_1 } from "@/constants/images";
+import { ASTRO, FURNIRO, INTERIOR, JAUNTY, MEDICAL, MENTAL_WELLNESS, TVISTA_HOLIDAYS, WEDDING, WILDORA, WORKS_1 } from "@/constants/images";
 
 const projectDetails = [
     {
@@ -15,13 +15,7 @@ const projectDetails = [
         link: "#",
         project: "Next.js",
     },
-    {
-        title: "Tvista Holidays",
-        description: "travel agency website for booking holidays and tours.",
-        image: TVISTA_HOLIDAYS,
-        link: "https://tvistaholidays.com/",
-        project: "Next.js",
-    },
+
     {
         title: "Mental Wellness",
         description: "A mental health and wellness resource platform.",
@@ -30,24 +24,31 @@ const projectDetails = [
         project: "Next.js",
     },
     {
-        title: "Brew Hub",
-        description: "restaurant and cafe website with delicious food and reservation table.",
-        image: FURNIRO,
-        link: "https://furniro-2fde57.webflow.io/",
-        project: "Webflow",
+        title: "Jaunty",
+        description: "Jaunty. 100% New York owned &amp; operated makers of premium distillate, live resin &amp; live rosin products. Find Jaunty at your favorite NY dispensaries.",
+        image: JAUNTY,
+        link: "https://jaunty.com/",
+        project: "WordPress",
     },
     {
-        title: "EduNext Academy",
-        description: "E-learning platform with courses and video lessons.",
+        title: "Astrology ",
+        description: "Astrology website for daily horoscopes and zodiac insights.",
         image: ASTRO,
-        link: "#",
-        project: "Next.js",
+        link: "https://surajbannerjee.github.io/astro.github.io/",
+        project: "HTML",
     },
     {
         title: "TechNova Portfolio",
         description: "Personal portfolio website for developers and designers.",
         image: MEDICAL,
         link: "https://surajbannerjee.github.io/medical.github.io/",
+        project: "Next.js",
+    },
+    {
+        title: "Tvista Holidays",
+        description: "travel agency website for booking holidays and tours.",
+        image: TVISTA_HOLIDAYS,
+        link: "https://tvistaholidays.com/",
         project: "Next.js",
     },
     {
