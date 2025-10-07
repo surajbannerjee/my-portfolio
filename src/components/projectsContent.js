@@ -23,17 +23,10 @@ const projectDetails = [
         project: "Next.js",
     },
     {
-        title: "TechNova Portfolio",
-        description: "Personal portfolio website for developers and designers.",
-        image: MEDICAL,
-        link: "https://surajbannerjee.github.io/medical.github.io/",
-        project: "Next.js",
-    },
-    {
         title: "Mental Wellness",
         description: "A mental health and wellness resource platform.",
         image: MENTAL_WELLNESS,
-        link: "#",
+        link: "https://my-landing-pages-lac.vercel.app/mental-wellness",
         project: "Next.js",
     },
     {
@@ -48,6 +41,13 @@ const projectDetails = [
         description: "E-learning platform with courses and video lessons.",
         image: ASTRO,
         link: "#",
+        project: "Next.js",
+    },
+    {
+        title: "TechNova Portfolio",
+        description: "Personal portfolio website for developers and designers.",
+        image: MEDICAL,
+        link: "https://surajbannerjee.github.io/medical.github.io/",
         project: "Next.js",
     },
     {
