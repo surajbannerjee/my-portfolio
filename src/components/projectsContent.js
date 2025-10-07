@@ -25,7 +25,7 @@ const projectDetails = [
     },
     {
         title: "Jaunty",
-        description: "Jaunty. 100% New York owned &amp; operated makers of premium distillate, live resin &amp; live rosin products. Find Jaunty at your favorite NY dispensaries.",
+        description: "Jaunty — premium New York cannabis with top-tier carts, vapes, and edibles made for good vibes.",
         image: JAUNTY,
         link: "https://jaunty.com/",
         project: "WordPress",
