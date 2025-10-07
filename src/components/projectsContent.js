@@ -9,7 +9,7 @@ const projectDetails = [
         project: "Next.js",
     },
     {
-        title: "Furniro Webflow",
+        title: "Furniro Restaurant",
         description: "Furniro — a restaurant website offering delicious food, drinks, and easy table reservations.",
         image: FURNIRO,
         link: "https://furniro-2fde57.webflow.io/",
