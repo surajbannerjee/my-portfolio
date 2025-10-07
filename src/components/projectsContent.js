@@ -1,47 +1,47 @@
-import { ASTRO, FURNIRO, INTERIOR, MEDICAL, TVISTA_HOLIDAYS, WEDDING, WILDORA, WORKS_1 } from "@/constants/images";
+import { ASTRO, FURNIRO, INTERIOR, MEDICAL, MENTAL_WELLNESS, TVISTA_HOLIDAYS, WEDDING, WILDORA, WORKS_1 } from "@/constants/images";
 
 const projectDetails = [
     {
         title: "Wildora Travel Website",
-        description: "A modern travel and tour booking website with nature theme.",
+        description: "wildora is a wildlife and adventure travel website.",
         image: WILDORA,
-        link: "#",
+        link: "https://wildora.vercel.app/",
         project: "Next.js",
     },
     {
-        title: "Ecoland Residence",
-        description: "Sustainable living platform showcasing eco-friendly housing.",
+        title: "Wedding Planner",
+        description: "A comprehensive platform for planning and organizing weddings.",
         image: WEDDING,
         link: "#",
         project: "Next.js",
     },
     {
-        title: "Foodies Hub",
-        description: "Restaurant ordering and food delivery platform.",
+        title: "Tvista Holidays",
+        description: "travel agency website for booking holidays and tours.",
         image: TVISTA_HOLIDAYS,
-        link: "#",
+        link: "https://tvistaholidays.com/",
         project: "Next.js",
     },
     {
         title: "TechNova Portfolio",
         description: "Personal portfolio website for developers and designers.",
         image: MEDICAL,
+        link: "https://surajbannerjee.github.io/medical.github.io/",
+        project: "Next.js",
+    },
+    {
+        title: "Mental Wellness",
+        description: "A mental health and wellness resource platform.",
+        image: MENTAL_WELLNESS,
         link: "#",
         project: "Next.js",
     },
     {
-        title: "EventSphere",
-        description: "Event management and ticket booking application.",
-        image: INTERIOR,
-        link: "#",
-        project: "Next.js",
-    },
-    {
-        title: "FitLife Pro",
-        description: "Fitness coaching and workout tracking platform.",
+        title: "Brew Hub",
+        description: "restaurant and cafe website with delicious food and reservation table.",
         image: FURNIRO,
-        link: "#",
-        project: "Next.js",
+        link: "https://furniro-2fde57.webflow.io/",
+        project: "Webflow",
     },
     {
         title: "EduNext Academy",

@@ -28,16 +28,16 @@ const SideBarInfoBox = () => {
     // Contact info array for mapping
     const contactInfo = [
         {
-            href: "mailto:hello@drake.design",
+            href: "mailto:surajbanerjee255@gmail.com",
             className: "text-WhiteT text-[1.6rem]",
             labelClass: "email",
-            label: "hello@drake.design",
+            label: "surajbanerjee255@gmail.com",
         },
         {
             href: "#",
             className: "",
             labelClass: "address",
-            label: "Based in Los Angeles, CA",
+            label: "Based in Kolkata, India",
         },
     ];
 
@@ -72,7 +72,7 @@ const SideBarInfoBox = () => {
                     <NeonButton
                         type='link'
                         btnText="Hire Me!"
-                        href="#"
+                        href="#contact"
                         icon="akar-icons:person"
                     />
                 </div>

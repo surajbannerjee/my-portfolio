@@ -6,13 +6,18 @@ import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
 
-const tabList = Array.from(new Set(projectDetails.map(p => p.project)));
+// 1. Add "All" to the tab list
+const tabList = ["All", ...Array.from(new Set(projectDetails.map(p => p.project)))];
 
 const ProjectsShowCase = () => {
-    const [activeTab, setActiveTab] = React.useState(tabList[0]);
+    // 2. Set default active tab to "All"
+    const [activeTab, setActiveTab] = React.useState("All");
     const [visibleCount, setVisibleCount] = React.useState(6);
     const [hoveredProject, setHoveredProject] = React.useState(null);
-    const filteredProjects = projectDetails.filter(p => p.project === activeTab);
+    // 3. Filter logic
+    const filteredProjects = activeTab === "All"
+        ? projectDetails
+        : projectDetails.filter(p => p.project === activeTab);
     const visibleProjects = filteredProjects.slice(0, visibleCount);
     const isShowMore = visibleCount < filteredProjects.length;
 
