@@ -12,7 +12,7 @@ const tabList = ["All", ...Array.from(new Set(projectDetails.map(p => p.project)
 const ProjectsShowCase = () => {
     // 2. Set default active tab to "All"
     const [activeTab, setActiveTab] = React.useState("All");
-    const [visibleCount, setVisibleCount] = React.useState(6);
+    const [visibleCount, setVisibleCount] = React.useState(8);
     const [hoveredProject, setHoveredProject] = React.useState(null);
     // 3. Filter logic
     const filteredProjects = activeTab === "All"
@@ -93,14 +93,14 @@ const ProjectsShowCase = () => {
                 </motion.div>
             </AnimatePresence>
             {/* Show More / Show Less Button */}
-            {filteredProjects.length > 5 && (
+            {filteredProjects.length > 8 && (
                 <div className="flex justify-center mt-8">
                     <button
                         onClick={() => {
                             if (isShowMore) {
-                                setVisibleCount(prev => Math.min(prev + 5, filteredProjects.length));
+                                setVisibleCount(prev => Math.min(prev + 8, filteredProjects.length));
                             } else {
-                                setVisibleCount(5);
+                                setVisibleCount(8);
                             }
                         }}
                         className="submitButton flex items-center justify-center text-center gap-2 rounded-[1.2rem] px-[3rem] py-[1.6rem] font-medium text-[2rem] leading-[1.2] w-fit mt-[2rem]"
