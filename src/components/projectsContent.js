@@ -16,20 +16,6 @@ const projectDetails = [
         project: "Webflow",
     },
     {
-        title: "Wedding Planner",
-        description: "A comprehensive platform for planning and organizing weddings.",
-        image: WEDDING,
-        link: "#",
-        project: "Next.js",
-    },
-    {
-        title: "Drinks Electrical",
-        description: "Drinks Electrical is your one-stop shop for all electrical appliances and gadgets.",
-        image: DRINKS_ELECTRICAL,
-        link: "#",
-        project: "WordPress",
-    },
-    {
         title: "Mental Wellness",
         description: "A mental health and wellness resource platform.",
         image: MENTAL_WELLNESS,
@@ -44,6 +30,21 @@ const projectDetails = [
         link: "https://jaunty.com/",
         project: "WordPress",
     },
+    {
+        title: "Wedding Planner",
+        description: "A comprehensive platform for planning and organizing weddings.",
+        image: WEDDING,
+        link: "#",
+        project: "Next.js",
+    },
+    {
+        title: "Drinks Electrical",
+        description: "Drinks Electrical is your one-stop shop for all electrical appliances and gadgets.",
+        image: DRINKS_ELECTRICAL,
+        link: "#",
+        project: "WordPress",
+    },
+
     {
         title: "Astrology ",
         description: "Astrology website for daily horoscopes and zodiac insights.",
