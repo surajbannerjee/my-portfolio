@@ -1,4 +1,4 @@
-import { ASTRO, FURNIRO, INTERIOR, JAUNTY, MEDICAL, MENTAL_WELLNESS, TVISTA_HOLIDAYS, WEDDING, WILDORA, WORKS_1 } from "@/constants/images";
+import { ASTRO, DRINKS_ELECTRICAL, FURNIRO, INTERIOR, JAUNTY, MEDICAL, MENTAL_WELLNESS, TVISTA_HOLIDAYS, WEDDING, WILDORA, WORKS_1 } from "@/constants/images";
 
 const projectDetails = [
     {
@@ -15,13 +15,12 @@ const projectDetails = [
         link: "#",
         project: "Next.js",
     },
-
     {
-        title: "Mental Wellness",
-        description: "A mental health and wellness resource platform.",
-        image: MENTAL_WELLNESS,
-        link: "https://my-landing-pages-lac.vercel.app/mental-wellness",
-        project: "Next.js",
+        title: "Drinks Electrical",
+        description: "Drinks Electrical is your one-stop shop for all electrical appliances and gadgets.",
+        image: DRINKS_ELECTRICAL,
+        link: "#",
+        project: "WordPress",
     },
     {
         title: "Jaunty",
@@ -49,6 +48,13 @@ const projectDetails = [
         description: "travel agency website for booking holidays and tours.",
         image: TVISTA_HOLIDAYS,
         link: "https://tvistaholidays.com/",
+        project: "Next.js",
+    },
+    {
+        title: "Mental Wellness",
+        description: "A mental health and wellness resource platform.",
+        image: MENTAL_WELLNESS,
+        link: "https://my-landing-pages-lac.vercel.app/mental-wellness",
         project: "Next.js",
     },
     {

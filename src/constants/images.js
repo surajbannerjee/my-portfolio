@@ -24,3 +24,4 @@ export const FURNIRO = URL("/assets/images/furniro_webflow.jpg");
 export const ASTRO = URL("/assets/images/astro.jpg");
 export const MENTAL_WELLNESS = URL("/assets/images/mental-wellness.webp");
 export const JAUNTY = URL("/assets/images/jaunty.webp");
+export const DRINKS_ELECTRICAL = URL("/assets/images/drinkselectrical.webp");
