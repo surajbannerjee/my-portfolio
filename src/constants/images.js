@@ -1,7 +1,7 @@
 const URL = (url) => {
   return url;
 };
-export const ME = URL("/assets/images/my.webp");
+export const ME = URL("/assets/images/me.webp");
 export const ROUND_TEXT = URL("/assets/images/roundtext.png");
 export const NEXTJS = URL("/assets/images/nextjs.webp");
 export const HTML = URL("/assets/images/html.webp");
