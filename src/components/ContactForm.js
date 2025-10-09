@@ -65,7 +65,7 @@ const ContactForm = () => {
 
     return (
         <div className="relative">
-            <form onSubmit={handleSubmit} className=" bg-transparent backdrop-blur-sm md:px-[5rem] px-[3rem] md:py-[5rem] py-[3rem] rounded-[3rem] shadow-[0_0_20px_#00fef521] flex flex-col gap-[2.6rem] mt-[7rem]">
+            <form onSubmit={handleSubmit} className=" bg-transparent contactForm backdrop-blur-sm md:px-[5rem] px-[3rem] md:py-[5rem] py-[3rem] rounded-[3rem] shadow-[0_0_20px_#00fef521] flex flex-col gap-[2.6rem] mt-[7rem]">
                 <div className='flex flex-col md:flex-row gap-[2rem]'>
                     <input
                         type="text"
@@ -99,7 +99,7 @@ const ContactForm = () => {
                     <div className="w-full relative">
                         <button
                             type="button"
-                            className={`w-full mySelect p-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-secondary outline-none flex justify-between items-center cursor-pointer ${form.service ? 'text-WhiteT' : 'text-[#888c94]'}`}
+                            className={`w-full mySelect p-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-secondary outline-none flex justify-between items-center cursor-pointer ${form.service ? 'text-WhiteT' : 'text-WhiteT'}`}
                             onClick={() => setDropdownOpen((open) => !open)}
                         >
                             {form.service || 'Choose Service'}
