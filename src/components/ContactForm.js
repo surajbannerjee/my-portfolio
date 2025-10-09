@@ -102,7 +102,8 @@ const ContactForm = () => {
                             className={`w-full mySelect p-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-secondary outline-none flex justify-between items-center cursor-pointer ${form.service ? 'text-WhiteT' : 'text-WhiteT'}`}
                             onClick={() => setDropdownOpen((open) => !open)}
                         >
-                            {form.service || 'Choose Service'}
+                            <span className='SelectBoxValue'>{form.service || 'Choose Service'}</span>
+
                             <span className="ml-2 text-secondary">
                                 <Icon icon="pepicons-pop:angle-down-circle" />
                             </span>
