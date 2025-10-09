@@ -22,7 +22,6 @@ const projectDetails = [
         link: "https://my-landing-pages-lac.vercel.app/mental-wellness",
         project: "Next.js",
     },
-
     {
         title: "Jaunty",
         description: "Jaunty — premium New York cannabis with top-tier carts, vapes, and edibles made for good vibes.",
@@ -44,7 +43,6 @@ const projectDetails = [
         link: "#",
         project: "WordPress",
     },
-
     {
         title: "Astrology ",
         description: "Astrology website for daily horoscopes and zodiac insights.",
@@ -57,16 +55,15 @@ const projectDetails = [
         description: "Personal portfolio website for developers and designers.",
         image: MEDICAL,
         link: "https://surajbannerjee.github.io/medical.github.io/",
-        project: "Next.js",
+        project: "HTML",
     },
     {
         title: "Tvista Holidays",
         description: "travel agency website for booking holidays and tours.",
         image: TVISTA_HOLIDAYS,
         link: "https://tvistaholidays.com/",
-        project: "Next.js",
+        project: "HTML",
     },
-    // 🔹 HTML (10 projects)
     {
         title: "Portfolio Classic",
         description: "Clean and responsive personal portfolio website.",
