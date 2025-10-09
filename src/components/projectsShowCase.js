@@ -80,10 +80,10 @@ const ProjectsShowCase = () => {
                                 </div>
                                 <div className="px-[2rem] py-[2rem] flex md:items-center items-start flex-row justify-between gap-[2rem] rounded-[2rem] absolute bottom-[1rem] bg-[rgba(0,0,0,0.5019607843)] w-[95%] left-1/2 transform -translate-x-1/2 backdrop-blur-lg">
                                     <div className='flex flex-col w-[75%]'>
-                                        <Link href={project.link} className={`md:text-[3rem] text-[2.5rem] font-bold mb-2 line-clamp-1 transition-colors duration-300 ${isHovered ? 'text-secondary' : 'text-WhiteT'}`}>{project.title}</Link>
+                                        <Link target='_blank' href={project.link} className={`md:text-[3rem] text-[2.5rem] font-bold mb-2 line-clamp-1 transition-colors duration-300 ${isHovered ? 'text-secondary' : 'text-WhiteT'}`}>{project.title}</Link>
                                         <p className="text-WhiteT text-[1.6rem] line-clamp-1">{project.description}</p>
                                     </div>
-                                    <Link href={project.link} className={`md:text-[5rem] text-[3rem] md:h-[8rem] md:w-[8rem] h-[6rem] w-[6rem] md:rounded-[2rem] rounded-[1.2rem] flex items-center justify-center border transition-all duration-300 ${isHovered ? 'border-secondary text-secondary' : 'border-white text-WhiteT'}`}>
+                                    <Link target='_blank' href={project.link} className={`md:text-[5rem] text-[3rem] md:h-[8rem] md:w-[8rem] h-[6rem] w-[6rem] md:rounded-[2rem] rounded-[1.2rem] flex items-center justify-center border transition-all duration-300 ${isHovered ? 'border-secondary text-secondary' : 'border-white text-WhiteT'}`}>
                                         <Icon style={{ transform: 'rotate(45deg)' }} icon="guidance:up-arrow" />
                                     </Link>
                                 </div>
