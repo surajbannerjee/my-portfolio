@@ -108,7 +108,7 @@ const ContactForm = () => {
                             </span>
                         </button>
                         {dropdownOpen && (
-                            <div className="absolute left-0 top-full w-full bg-gray-900 border border-gray-700 rounded-xl mt-2 z-10 shadow-lg">
+                            <div className="absolute left-0 top-full w-full bg-gray-900 border border-gray-700 rounded-xl mt-2 z-10 shadow-lg max-h-[20rem] overflow-y-auto">
                                 {services.map((service, idx) => (
                                     <div
                                         key={idx}
