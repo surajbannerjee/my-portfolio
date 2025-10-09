@@ -5,10 +5,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const services = [
     'Web Design',
+    'React Native App Development',
     'Web Development',
     'UI/UX Design',
     'WordPress',
-    'SEO',
+    "Webflow",
+    'Web App Development',
     'Other',
 ];
 
