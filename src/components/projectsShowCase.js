@@ -95,18 +95,24 @@ const ProjectsShowCase = () => {
             {/* Show More / Show Less Button */}
             {filteredProjects.length > 7 && (
                 <div className="flex justify-center mt-8">
-                    <button
-                        onClick={() => {
-                            if (isShowMore) {
+                    {isShowMore ? (
+                        <button
+                            onClick={() => {
                                 setVisibleCount(prev => Math.min(prev + 8, filteredProjects.length));
-                            } else {
-                                setVisibleCount(8);
-                            }
-                        }}
-                        className="submitButton flex items-center justify-center text-center gap-2 rounded-[1.2rem] px-[3rem] py-[1.6rem] font-medium text-[2rem] leading-[1.2] w-fit mt-[2rem]"
-                    >
-                        {isShowMore ? 'Show More' : 'Show Less'}
-                    </button>
+                            }}
+                            className="submitButton flex items-center justify-center text-center gap-2 rounded-[1.2rem] px-[3rem] py-[1.6rem] font-medium text-[2rem] leading-[1.2] w-fit mt-[2rem]"
+                        >
+                            Show More
+                        </button>
+                    ) : (
+                        <Link
+                            href="https://my-landing-pages-lac.vercel.app/"
+                            target="_blank"
+                            className="submitButton flex items-center justify-center text-center gap-2 rounded-[1.2rem] px-[3rem] py-[1.6rem] font-medium text-[2rem] leading-[1.2] w-fit mt-[2rem]"
+                        >
+                            More Landing Pages
+                        </Link>
+                    )}
                 </div>
             )}
         </div>

@@ -25,3 +25,4 @@ export const ASTRO = URL("/assets/images/astro.jpg");
 export const MENTAL_WELLNESS = URL("/assets/images/mental-wellness.webp");
 export const JAUNTY = URL("/assets/images/Jaunty.webp");
 export const DRINKS_ELECTRICAL = URL("/assets/images/drinkselectrical.webp");
+export const TALK = URL("/assets/images/Talk.webp");

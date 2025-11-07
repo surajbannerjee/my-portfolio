@@ -1,4 +1,4 @@
-import { ASTRO, DRINKS_ELECTRICAL, FURNIRO, INTERIOR, JAUNTY, MEDICAL, MENTAL_WELLNESS, TVISTA_HOLIDAYS, WEDDING, WILDORA, WORKS_1 } from "@/constants/images";
+import { ASTRO, DRINKS_ELECTRICAL, FURNIRO, INTERIOR, JAUNTY, MEDICAL, MENTAL_WELLNESS, TALK, TVISTA_HOLIDAYS, WEDDING, WILDORA, WORKS_1 } from "@/constants/images";
 
 const projectDetails = [
     {
@@ -30,10 +30,10 @@ const projectDetails = [
         project: "WordPress",
     },
     {
-        title: "Wedding Planner",
-        description: "A comprehensive platform for planning and organizing weddings.",
-        image: WEDDING,
-        link: "#",
+        title: "Talk Ai",
+        description: "Talk Ai is an AI-powered chatbot platform that enhances customer engagement and support.",
+        image: TALK,
+        link: "https://my-landing-pages-lac.vercel.app/tallk",
         project: "Next.js",
     },
     {
@@ -70,6 +70,13 @@ const projectDetails = [
         image: INTERIOR,
         link: "#",
         project: "HTML",
+    },
+    {
+        title: "Wedding Planner",
+        description: "A comprehensive platform for planning and organizing weddings.",
+        image: WEDDING,
+        link: "#",
+        project: "Next.js",
     },
 
 
