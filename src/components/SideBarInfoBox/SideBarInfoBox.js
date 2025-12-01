@@ -10,17 +10,17 @@ import NeonButton from '../NeonButton'
 const SideBarInfoBox = () => {
     const socialLinks = [
         {
-            href: '#',
+            href: 'https://www.facebook.com/suraj.banerjee.1042',
             icon: 'hugeicons:facebook-02',
             className: 'hover:border-secondary hover:text-secondary',
         },
         {
-            href: '#',
+            href: 'https://www.instagram.com/soul.of.suraj?igsh=MXNwMDBuejJjeTNkbw==',
             icon: 'radix-icons:instagram-logo',
             className: '',
         },
         {
-            href: '#',
+            href: 'https://www.linkedin.com/in/suraj-banerjee?utm_source=share_via&utm_content=profile&utm_medium=member_android',
             icon: 'meteor-icons:linkedin',
             className: '',
         },
