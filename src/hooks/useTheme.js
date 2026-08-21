@@ -8,7 +8,7 @@ export function useTheme() {
 
   useEffect(() => {
     setMounted(true);
-    const saved = localStorage.getItem("rayo-theme");
+    const saved = localStorage.getItem("suraj");
     if (saved) {
       setTheme(saved);
       document.documentElement.setAttribute("color-scheme", saved);
@@ -24,7 +24,7 @@ export function useTheme() {
     const next = theme === "light" ? "dark" : "light";
     setTheme(next);
     document.documentElement.setAttribute("color-scheme", next);
-    localStorage.setItem("rayo-theme", next);
+    localStorage.setItem("suraj", next);
   };
 
   return { theme, toggleTheme, mounted };
