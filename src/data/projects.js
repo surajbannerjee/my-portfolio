@@ -1,0 +1,60 @@
+export const PINNED_PROJECTS = [
+  {
+    id: "muvi-cinema",
+    highlightTitle: "MUVI Cinema",
+    title: "Movie Ticket Booking App",
+    url: "/project-details",
+    previewClass: "mxd-project-item__preview-1",
+    tags: ["React", "UI/UX", "Tailwind CSS"],
+    image: "https://res.cloudinary.com/drrw18aos/image/upload/v1787164367/Gemini_Generated_Image_dxtclzdxtclzdxtc_xhhzib.png",
+  },
+  {
+    id: "wildora",
+    highlightTitle: "Wildora",
+    title: "Nature & Eco Platform",
+    url: "/project-details",
+    previewClass: "mxd-project-item__preview-2",
+    tags: ["Web Design", "Next.js", "Animation"],
+    image: "https://res.cloudinary.com/drrw18aos/image/upload/v1787165082/Gemini_Generated_Image_49v82449v82449v8_phybma.png",
+  },
+  {
+    id: "furniro",
+    highlightTitle: "Furniro",
+    title: "Modern Furniture E-Commerce",
+    url: "/project-details",
+    previewClass: "mxd-project-item__preview-3",
+    tags: ["WordPress", "Elementor", "WooCommerce"],
+    image: "https://res.cloudinary.com/drrw18aos/image/upload/v1787165776/brewhub_edgff6.png",
+  },
+];
+
+export const ALL_PROJECTS = [
+  ...PINNED_PROJECTS,
+  {
+    id: "nova-dashboard",
+    highlightTitle: "Nova",
+    title: "Analytics & SaaS Dashboard",
+    url: "/project-details",
+    previewClass: "mxd-project-item__preview-4",
+    tags: ["Dashboard", "Next.js", "TypeScript"],
+    image: "/img/works/1200x1200_prj-04.webp",
+  },
+  {
+    id: "zenith-studio",
+    highlightTitle: "Zenith",
+    title: "Creative Design Agency",
+    url: "/project-details",
+    previewClass: "mxd-project-item__preview-5",
+    tags: ["Branding", "GSAP", "Full Responsive"],
+    image: "/img/works/1200x1200_prj-05.webp",
+  },
+  {
+    id: "aurora-app",
+    highlightTitle: "Aurora",
+    title: "FinTech Mobile Experience",
+    url: "/project-details",
+    previewClass: "mxd-project-item__preview-6",
+    tags: ["Mobile UI", "Figma", "Design System"],
+    image: "/img/works/1200x1200_prj-06.webp",
+  },
+];
