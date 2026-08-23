@@ -591,8 +591,6 @@ export default function AboutMePage() {
         </div>
       </div>
 
-      {/* 10. Testimonials Slider */}
-      <TestimonialsSlider />
 
       {/* 11. Parallax Divider */}
       <ParallaxDivider
