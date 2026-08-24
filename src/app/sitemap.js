@@ -6,7 +6,6 @@ export default function sitemap() {
     "",
     "/about-me",
     "/my-works",
-    "/project-details",
     "/services",
     "/pricing",
     "/team",

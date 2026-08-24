@@ -36,10 +36,10 @@ export const SITE_CONTENT = {
   },
 
   video: {
-    mp4: "/video/540x720_menu-video-01.mp4",
-    webm: "/video/540x720_menu-video-01.webm",
-    ogv: "/video/540x720_menu-video-01.ogv",
-    poster: "/img/promo/540x720_menu-video-01.webp",
+    mp4: "/video/menu-video-01.mp4",
+    webm: "/video/menu-video-01.webm",
+    ogv: "/video/menu-video-01.ogv",
+    poster: "/img/promo/menu-video-01.webp",
   },
 
   socials: [

@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import AnimatedButton from "@/components/common/AnimatedButton";
-import CountUpNumber from "@/components/common/CountUpNumber";
 import SplitTextReveal from "@/components/common/SplitTextReveal";
 import {
   SiFigma,
@@ -45,7 +44,7 @@ export default function HomeAbout() {
   ];
 
   return (
-    <div id="about" className="mxd-section padding-default">
+    <div id="about" className="mxd-section padding-hero-09">
       <div className="mxd-container grid-container">
         {/* Section Header */}
         <div className="mxd-block">
@@ -83,157 +82,86 @@ export default function HomeAbout() {
 
         {/* Main Content Grid */}
         <div className="mxd-block">
-          <div className="container-fluid px-0">
-            <div className="row gx-0 gy-4 align-items-stretch">
-              {/* Left Column: Bio & Highlights */}
-              <div className="col-12 col-xl-5 mxd-grid-item no-margin mb-4 mb-xl-0">
-                <div className="bg-[#141414]/90 border border-white/10 radius-m p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
-                  <div>
-                    <div className="d-flex align-items-center gap-3 mb-4">
-                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-lime-400/40 shrink-0">
-                        <Image
-                          src="https://res.cloudinary.com/drrw18aos/image/upload/v1787163087/ChatGPT_Image_Aug_19_2026_11_41_05_PM_dtr5z4.png"
-                          alt="Suraj Banerjee"
-                          width={64}
-                          height={64}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-white mb-1" style={{ fontSize: "clamp(20px, 2vw, 24px)" }}>
-                          Suraj Banerjee
-                        </h3>
-                        <p className="text-lime-400 font-medium" style={{ fontSize: "clamp(13px, 1.3vw, 15px)" }}>
-                          Frontend UI &amp; WordPress Developer
-                        </p>
-                      </div>
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-5 md:gap-6 items-stretch">
+            {/* Left Column: Bio & Highlights */}
+            <div className="xl:col-span-5 h-full">
+              <div className="bg-[#141414]/90 border-1 border-white/10 radius-m p-6 md:p-8 h-full flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-lime-400/40 shrink-0">
+                      <Image
+                        src="https://res.cloudinary.com/drrw18aos/image/upload/v1787163087/ChatGPT_Image_Aug_19_2026_11_41_05_PM_dtr5z4.png"
+                        alt="Suraj Banerjee"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-
-                    <p className="font-semibold text-white/95 mb-3 leading-snug" style={{ fontSize: "clamp(16px, 1.6vw, 19px)" }}>
-                      Bridging the gap between creative Figma UI designs and high-performance React &amp; Next.js web applications.
-                    </p>
-
-                    <p className="text-neutral-400 mb-4 leading-relaxed" style={{ fontSize: "clamp(14px, 1.4vw, 16px)", lineHeight: "1.65" }}>
-                      With over 3 years of hands-on experience, I specialize in building responsive, blazing-fast interfaces with <strong>React.js, Next.js, Tailwind CSS, and Material UI</strong>. I also create custom WordPress solutions with Elementor Pro and ACF that give clients seamless digital workflows.
-                    </p>
+                    <div>
+                      <h3 className="font-bold text-white mb-1" style={{ fontSize: "clamp(20px, 2vw, 24px)" }}>
+                        Suraj Banerjee
+                      </h3>
+                      <p className="text-lime-400 font-medium" style={{ fontSize: "clamp(13px, 1.3vw, 15px)" }}>
+                        Frontend UI &amp; WordPress Developer
+                      </p>
+                    </div>
                   </div>
 
-                  {/* Buttons */}
-                  <div className="d-flex flex-wrap gap-3 pt-3 border-t border-white/10">
-                    <AnimatedButton
-                      href="/about-me"
-                      className="btn btn-anim btn-default btn-accent slide-right-up"
-                      caption="Know More"
-                      iconClass="ph-bold ph-arrow-up-right"
-                    />
-                    <AnimatedButton
-                      href="/img/pdf/CV.pdf"
-                      download="Suraj_Banerjee_CV.pdf"
-                      id="home-about-cv"
-                      className="btn btn-anim btn-default btn-outline slide-down"
-                      caption="Download CV"
-                      iconClass="ph-bold ph-arrow-down"
-                    />
-                  </div>
+                  <p className="font-semibold text-white/95 mb-3 leading-snug" style={{ fontSize: "clamp(16px, 1.6vw, 19px)" }}>
+                    Bridging the gap between creative Figma UI designs and high-performance React &amp; Next.js web applications.
+                  </p>
+
+                  <p className="text-neutral-400 mb-4 leading-relaxed" style={{ fontSize: "clamp(14px, 1.4vw, 16px)", lineHeight: "1.65" }}>
+                    With over 3 years of hands-on experience, I specialize in building responsive, blazing-fast interfaces with <strong>React.js, Next.js, Tailwind CSS, and Material UI</strong>. I also create custom WordPress solutions with Elementor Pro and ACF that give clients seamless digital workflows.
+                  </p>
                 </div>
-              </div>
 
-              {/* Right Column: Key Pillars */}
-              <div className="col-12 col-xl-7">
-                <div className="container-fluid p-0">
-                  <div className="row g-3">
-                    {pillars.map((pillar, idx) => (
-                      <div key={idx} className="col-12 col-md-6 mxd-grid-item no-margin">
-                        <div className="bg-[#141414]/90 border border-white/10 hover:border-lime-400/50 radius-m p-4 h-100 d-flex flex-column justify-content-between transition-all duration-300 hover:bg-[#191919]">
-                          <div>
-                            <div className="d-flex justify-content-between align-items-start mb-3">
-                              <div className="p-3 rounded-2xl bg-black/50 border border-white/10">
-                                {pillar.icon}
-                              </div>
-                              <span className="tag tag-default text-xs font-semibold">
-                                {pillar.tag}
-                              </span>
-                            </div>
-                            <h4 className="font-bold text-white mb-2" style={{ fontSize: "clamp(16px, 1.6vw, 19px)" }}>
-                              {pillar.title}
-                            </h4>
-                            <p className="text-neutral-400 leading-relaxed" style={{ fontSize: "clamp(13px, 1.3vw, 15px)", lineHeight: "1.6" }}>
-                              {pillar.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                {/* Buttons */}
+                <div className="flex flex-wrap gap-3 pt-4 border-t border-white/10 mt-4">
+                  <AnimatedButton
+                    href="/about-me"
+                    className="btn btn-anim btn-default btn-accent slide-right-up"
+                    caption="Know More"
+                    iconClass="ph-bold ph-arrow-up-right"
+                  />
+                  <AnimatedButton
+                    href="/img/pdf/CV.pdf"
+                    download="Suraj_Banerjee_CV.pdf"
+                    id="home-about-cv"
+                    className="btn btn-anim btn-default btn-outline slide-down"
+                    caption="Download CV"
+                    iconClass="ph-bold ph-arrow-down"
+                  />
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* Stats Row */}
-        <div className="mxd-block pt-4">
-          <div className="container-fluid px-0">
-            <div className="row gx-3 gy-3">
-              <div className="col-6 col-md-3 mxd-grid-item no-margin">
-                <div className="bg-[#141414]/90 border border-white/10 radius-m p-4 text-center">
-                  <div className="d-flex justify-content-center">
-                    <CountUpNumber
-                      end={3}
-                      suffix="+"
-                      id="home-stat-1"
-                      className="mxd-counter__number mxd-stats-number xsmall"
-                    />
+            {/* Right Column: Key Pillars Grid with generous gaps */}
+            <div className="xl:col-span-7 h-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 h-full">
+                {pillars.map((pillar, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-[#141414]/90 border-1 border-white/10 hover:border-lime-400/50 radius-m p-5 md:p-6 h-full flex flex-col justify-between transition-all duration-300 hover:bg-[#191919]"
+                  >
+                    <div>
+                      <div className="flex justify-between items-start mb-3">
+                        <div className="p-3 rounded-2xl bg-black/50 border border-white/10 flex items-center justify-center">
+                          {pillar.icon}
+                        </div>
+                        <span className="tag tag-default text-xs font-semibold">
+                          {pillar.tag}
+                        </span>
+                      </div>
+                      <h4 className="font-bold text-white mb-2" style={{ fontSize: "clamp(16px, 1.6vw, 19px)" }}>
+                        {pillar.title}
+                      </h4>
+                      <p className="text-neutral-400 leading-relaxed mb-0" style={{ fontSize: "clamp(13px, 1.3vw, 15px)", lineHeight: "1.6" }}>
+                        {pillar.description}
+                      </p>
+                    </div>
                   </div>
-                  <p className="font-medium text-neutral-300 mt-2" style={{ fontSize: "clamp(13px, 1.3vw, 15px)" }}>
-                    Years Experience
-                  </p>
-                </div>
-              </div>
-              <div className="col-6 col-md-3 mxd-grid-item no-margin">
-                <div className="bg-[#141414]/90 border border-white/10 radius-m p-4 text-center">
-                  <div className="d-flex justify-content-center">
-                    <CountUpNumber
-                      end={70}
-                      suffix="+"
-                      id="home-stat-2"
-                      className="mxd-counter__number mxd-stats-number xsmall"
-                    />
-                  </div>
-                  <p className="font-medium text-neutral-300 mt-2" style={{ fontSize: "clamp(13px, 1.3vw, 15px)" }}>
-                    Completed Projects
-                  </p>
-                </div>
-              </div>
-              <div className="col-6 col-md-3 mxd-grid-item no-margin">
-                <div className="bg-[#141414]/90 border border-white/10 radius-m p-4 text-center">
-                  <div className="d-flex justify-content-center">
-                    <CountUpNumber
-                      end={40}
-                      suffix="%"
-                      id="home-stat-3"
-                      className="mxd-counter__number mxd-stats-number xsmall"
-                    />
-                  </div>
-                  <p className="font-medium text-neutral-300 mt-2" style={{ fontSize: "clamp(13px, 1.3vw, 15px)" }}>
-                    UX Speed Boost
-                  </p>
-                </div>
-              </div>
-              <div className="col-6 col-md-3 mxd-grid-item no-margin">
-                <div className="bg-[#141414]/90 border border-white/10 radius-m p-4 text-center">
-                  <div className="d-flex justify-content-center">
-                    <CountUpNumber
-                      end={100}
-                      suffix="%"
-                      id="home-stat-4"
-                      className="mxd-counter__number mxd-stats-number xsmall"
-                    />
-                  </div>
-                  <p className="font-medium text-neutral-300 mt-2" style={{ fontSize: "clamp(13px, 1.3vw, 15px)" }}>
-                    Pixel Precision
-                  </p>
-                </div>
+                ))}
               </div>
             </div>
           </div>
