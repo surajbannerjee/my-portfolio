@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import InnerHeadline from "@/components/sections/InnerHeadline";
 import TypedHeadline from "@/components/common/TypedHeadline";
 import ParallaxDivider from "@/components/sections/ParallaxDivider";
 import Marquee from "@/components/common/Marquee";
-import TestimonialsSlider from "@/components/sections/TestimonialsSlider";
 import CtaSection from "@/components/sections/CtaSection";
 import AnimatedButton from "@/components/common/AnimatedButton";
 import CountUpNumber from "@/components/common/CountUpNumber";
@@ -52,9 +52,9 @@ export default function AboutMePage() {
           <TypedHeadline
             strings={[
               "Frontend UI Developer",
-              "Next.js Specialist",
-              "WordPress Architect",
+              "WordPress Developer",
               "UI/UX Web Designer",
+              "Responsive Web Developer",
             ]}
           />
         }
@@ -125,8 +125,7 @@ export default function AboutMePage() {
                     <div className="row gx-0">
                       <div className="col-12 col-xl-2 mxd-grid-item no-margin">
                         <div className="mxd-approach-list__image anim-uni-in-up">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src="/img/icons/h70_appr-01.webp" alt="Icon" />
+                          <Image src="/img/icons/h70_appr-01.webp" alt="Icon" width={70} height={70} />
                         </div>
                       </div>
                       <div className="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -155,8 +154,7 @@ export default function AboutMePage() {
                     <div className="row gx-0">
                       <div className="col-12 col-xl-2 mxd-grid-item no-margin">
                         <div className="mxd-approach-list__image anim-uni-in-up">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src="/img/icons/h70_appr-02.webp" alt="Icon" />
+                          <Image src="/img/icons/h70_appr-02.webp" alt="Icon" width={70} height={70} />
                         </div>
                       </div>
                       <div className="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -185,8 +183,7 @@ export default function AboutMePage() {
                     <div className="row gx-0">
                       <div className="col-12 col-xl-2 mxd-grid-item no-margin">
                         <div className="mxd-approach-list__image anim-uni-in-up">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src="/img/icons/h70_appr-03.webp" alt="Icon" />
+                          <Image src="/img/icons/h70_appr-03.webp" alt="Icon" width={70} height={70} />
                         </div>
                       </div>
                       <div className="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -236,17 +233,18 @@ export default function AboutMePage() {
                       </div>
                       <div className="mxd-stats-cards__btngroup">
                         <AnimatedButton
-                          href="#testimonials"
+                          href="#experience"
                           className="btn btn-anim btn-default btn-outline slide-right-down"
-                          caption="Client Feedback"
+                          caption="Work History"
                           iconClass="ph-bold ph-arrow-down-right"
                         />
                       </div>
                       <div className="mxd-stats-cards__image mxd-stats-cards-image-1">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                           src="/img/illustrations/800x800_card-image-01.webp"
                           alt="Illustration"
+                          width={800}
+                          height={800}
                         />
                       </div>
                     </div>
@@ -258,8 +256,7 @@ export default function AboutMePage() {
                       <div className="mxd-stats-cards__btngroup">
                         <div className="mxd-avatars">
                           <div className="mxd-avatars__item">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/img/avatars/300x300_ava-02.webp" alt="Avatar" />
+                            <Image src="/img/avatars/300x300_ava-02.webp" alt="Avatar" width={300} height={300} />
                           </div>
                           <div className="mxd-avatars__item bg-base-opp">
                             <svg
@@ -286,8 +283,7 @@ export default function AboutMePage() {
                             </svg>
                           </div>
                           <div className="mxd-avatars__item">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/img/avatars/300x300_ava-01.webp" alt="Avatar" />
+                            <Image src="/img/avatars/300x300_ava-01.webp" alt="Avatar" width={300} height={300} />
                           </div>
                         </div>
                       </div>
@@ -305,10 +301,11 @@ export default function AboutMePage() {
                         </p>
                       </div>
                       <div className="mxd-stats-cards__image mxd-stats-cards-image-2">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                           src="/img/illustrations/800x800_card-image-02.webp"
                           alt="Illustration"
+                          width={800}
+                          height={800}
                         />
                       </div>
                     </div>
@@ -321,7 +318,7 @@ export default function AboutMePage() {
       </div>
 
       {/* 5. Work Experience (Directly from CV) */}
-      <div className="mxd-section padding-default">
+      <div id="experience" className="mxd-section padding-default">
         <div className="mxd-container grid-container">
           <div className="mxd-block">
             <div className="mxd-pinned-universal">
@@ -423,8 +420,7 @@ export default function AboutMePage() {
                   <div className="mxd-tech-stack-cards__item">
                     <div className="mxd-tech-stack-cards__inner-v3">
                       <div className="mxd-tech-stack-cards__icon">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={tech.icon} alt={tech.name} />
+                        <Image src={tech.icon} alt={tech.name} width={40} height={40} />
                       </div>
                       <div className="mxd-tech-stack-cards__title">
                         <p className="t-bright t-caption">{tech.name}</p>

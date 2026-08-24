@@ -2347,9 +2347,11 @@ p.t-muted a.no-effect {
 p.t-opposite {
   color: var(--t-opp-bright);
 }
+
 .t-opposite {
   color: var(--t-opp-bright);
 }
+
 p.t-opposite-medium {
   color: var(--t-opp-medium);
 }
@@ -2383,9 +2385,11 @@ p.t-bright {
 p.t-bright.opposite {
   color: var(--t-opp-bright);
 }
+
 .t-bright.opposite {
   color: var(--t-opp-bright);
 }
+
 p.t-medium {
   font-weight: var(--fw-medium);
 }
@@ -5673,7 +5677,7 @@ form textarea:required:valid {
 
 @media only screen and (min-width: 1600px) {
   .mxd-project-item__media {
-    height: 930px;
+    height: 800px;
   }
 }
 

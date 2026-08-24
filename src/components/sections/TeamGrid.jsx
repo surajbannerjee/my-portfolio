@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { TEAM_MEMBERS } from "@/data/team";
 import AnimatedButton from "@/components/common/AnimatedButton";
 import SplitTextReveal from "@/components/common/SplitTextReveal";
@@ -62,8 +63,12 @@ export default function TeamGrid() {
                         >
                           <div className="mxd-team-cards__media anim-uni-in-up">
                             <div className="mxd-team-cards__photo">
-                              {/* eslint-disable-next-line @next/next/no-img-element */}
-                              <img src={member.photo} alt={member.name} />
+                              <Image
+                                src={member.photo}
+                                alt={member.name}
+                                width={600}
+                                height={800}
+                              />
                             </div>
                             <div className="mxd-team-cards__socials">
                               {member.socials.map((social, sIdx) => (
@@ -101,8 +106,12 @@ export default function TeamGrid() {
                         >
                           <div className="mxd-team-cards__media anim-uni-in-up">
                             <div className="mxd-team-cards__photo">
-                              {/* eslint-disable-next-line @next/next/no-img-element */}
-                              <img src={member.photo} alt={member.name} />
+                              <Image
+                                src={member.photo}
+                                alt={member.name}
+                                width={600}
+                                height={800}
+                              />
                             </div>
                             <div className="mxd-team-cards__socials">
                               {member.socials.map((social, sIdx) => (
@@ -135,10 +144,11 @@ export default function TeamGrid() {
                   <div className="mxd-team-cards__media no-margin overflow-visible anim-uni-in-up">
                     <Link className="mxd-team-cards__career" href="/contact">
                       <div className="career__image">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                           src="/img/illustrations/800x800_card-image-04.webp"
                           alt="Career"
+                          width={800}
+                          height={800}
                         />
                       </div>
                       <div className="career__caption">

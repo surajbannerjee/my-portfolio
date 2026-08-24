@@ -10,7 +10,7 @@ import JsonLd from "@/components/common/JsonLd";
 export const metadata = {
   metadataBase: new URL("https://suraj-banerjee.vercel.app"),
   title: {
-    default: "Suraj Banerjee — Frontend UI Developer | Next.js & React Specialist",
+    default: "Suraj Banerjee — Frontend UI & WordPress Developer",
     template: "%s | Suraj Banerjee",
   },
   description:
@@ -50,7 +50,7 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://suraj-banerjee.vercel.app",
-    title: "Suraj Banerjee — Frontend UI Developer | Next.js & React Specialist",
+    title: "Suraj Banerjee — Frontend UI & WordPress Developer",
     description:
       "Passionate Frontend Developer specializing in intuitive, responsive web applications, modern Next.js/React architectures, custom WordPress, and pixel-perfect UI execution.",
     siteName: "Suraj Banerjee Portfolio",

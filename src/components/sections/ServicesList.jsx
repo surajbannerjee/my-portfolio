@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const SERVICES_LIST = [
   {
@@ -106,11 +107,12 @@ export default function ServicesList() {
                     transition: "opacity 0.3s ease",
                   }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     className="hover-reveal__image"
                     src={item.image}
-                    alt=""
+                    alt={item.title}
+                    width={360}
+                    height={440}
                     style={{
                       transform: hoveredIdx === idx ? "scale(1, 1)" : "scale(1, 1.4)",
                       transition: "transform 0.3s ease",

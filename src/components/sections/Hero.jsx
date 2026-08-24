@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import CountUpNumber from "@/components/common/CountUpNumber";
 import AnimatedButton from "@/components/common/AnimatedButton";
 
@@ -88,11 +89,13 @@ export default function Hero() {
           </div>
           <div className="mxd-hero-09__objects">
             <div className="hero-09-objects__image loading__item">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 className="mxd-move"
                 src="https://res.cloudinary.com/drrw18aos/image/upload/v1787163087/ChatGPT_Image_Aug_19_2026_11_41_05_PM_dtr5z4.png"
                 alt="Suraj Banerjee — Frontend UI Developer"
+                width={800}
+                height={1000}
+                priority
               />
             </div>
             <div className="hero-09-objects__item item-01 loading__item">

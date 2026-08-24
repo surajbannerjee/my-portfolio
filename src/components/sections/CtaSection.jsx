@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import AnimatedButton from "@/components/common/AnimatedButton";
 import SplitTextReveal from "@/components/common/SplitTextReveal";
 
@@ -21,8 +22,12 @@ export default function CtaSection({
               <div className="mxd-promo__content">
                 <p className="mxd-promo__title anim-uni-in-up">
                   <span className="mxd-promo__icon">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/img/icons/300x300_obj-cta-01.webp" alt="Icon" />
+                    <Image
+                      src="/img/icons/300x300_obj-cta-01.webp"
+                      alt="Icon"
+                      width={300}
+                      height={300}
+                    />
                   </span>
                   <SplitTextReveal as="span" className="mxd-promo__caption reveal-type">
                     {caption}
@@ -39,17 +44,19 @@ export default function CtaSection({
               </div>
               {/* parallax images */}
               <div className="mxd-promo__images">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   className="promo-image promo-image-1"
                   src="/img/illustrations/cta-img-01.webp"
-                  alt="Image"
+                  alt="CTA illustration"
+                  width={396}
+                  height={396}
                 />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   className="promo-image promo-image-2"
                   src="/img/illustrations/cta-img-02.webp"
-                  alt="Image"
+                  alt="CTA illustration"
+                  width={140}
+                  height={140}
                 />
               </div>
             </div>

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { gsap } from "@/lib/gsap";
 
 export default function RotatingButton({
@@ -64,8 +65,13 @@ export default function RotatingButton({
           </text>
         </g>
       </svg>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="btn-rotating__image" src={imageSrc} alt="Object" />
+      <Image
+        className="btn-rotating__image"
+        src={imageSrc}
+        alt="Object"
+        width={300}
+        height={300}
+      />
     </>
   );
 

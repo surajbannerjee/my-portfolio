@@ -37,7 +37,7 @@ export const ALL_PROJECTS = [
     url: "/project-details",
     previewClass: "mxd-project-item__preview-4",
     tags: ["Dashboard", "Next.js", "TypeScript"],
-    image: "/img/works/1200x1200_prj-04.webp",
+    image: "/img/works/preview/1200x800_prv-04.webp",
   },
   {
     id: "zenith-studio",
@@ -46,7 +46,7 @@ export const ALL_PROJECTS = [
     url: "/project-details",
     previewClass: "mxd-project-item__preview-5",
     tags: ["Branding", "GSAP", "Full Responsive"],
-    image: "/img/works/1200x1200_prj-05.webp",
+    image: "/img/works/preview/1200x800_prv-05.webp",
   },
   {
     id: "aurora-app",
@@ -55,6 +55,6 @@ export const ALL_PROJECTS = [
     url: "/project-details",
     previewClass: "mxd-project-item__preview-6",
     tags: ["Mobile UI", "Figma", "Design System"],
-    image: "/img/works/1200x1200_prj-06.webp",
+    image: "/img/works/preview/1200x800_prv-06.webp",
   },
 ];

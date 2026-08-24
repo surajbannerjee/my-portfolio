@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import InnerHeadline from "@/components/sections/InnerHeadline";
 import CtaSection from "@/components/sections/CtaSection";
 import AnimatedButton from "@/components/common/AnimatedButton";
@@ -120,37 +121,41 @@ export default function ProjectDetailsPage() {
                 <div className="row gx-0">
                   <div className="col-12 col-xl-5 mxd-project-cards__item mxd-grid-item anim-uni-scale-in-right">
                     <div className="mxd-project-cards__inner align-end bg-base-tint radius-m">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src="/img/works/1200x1200_prj-details-01.webp"
                         alt="Project Preview"
+                        width={1200}
+                        height={1200}
                       />
                     </div>
                   </div>
                   <div className="col-12 col-xl-7 mxd-project-cards__item mxd-grid-item anim-uni-scale-in-left">
                     <div className="mxd-project-cards__inner align-end bg-base-tint radius-m">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src="/img/works/1400x1000_prj-details-01.webp"
                         alt="Project Preview"
+                        width={1400}
+                        height={1000}
                       />
                     </div>
                   </div>
                   <div className="col-12 col-xl-7 mxd-project-cards__item mxd-grid-item anim-uni-scale-in-right">
                     <div className="mxd-project-cards__inner bg-base-tint radius-m">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src="/img/works/1400x1000_prj-details-02.webp"
                         alt="Project Preview"
+                        width={1400}
+                        height={1000}
                       />
                     </div>
                   </div>
                   <div className="col-12 col-xl-5 mxd-project-cards__item mxd-grid-item anim-uni-scale-in-left">
                     <div className="mxd-project-cards__inner bg-base-tint radius-m">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src="/img/works/1200x1200_prj-details-02.webp"
                         alt="Project Preview"
+                        width={1200}
+                        height={1200}
                       />
                     </div>
                   </div>

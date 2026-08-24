@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import CountUpNumber from "@/components/common/CountUpNumber";
 import AnimatedButton from "@/components/common/AnimatedButton";
 
@@ -41,10 +42,11 @@ export default function StatsCards() {
                                 />
                               </div>
                               <div className="mxd-stats-cards__image mxd-stats-cards-image-3">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
+                                <Image
                                   src="/img/illustrations/800x800_card-image-03.webp"
-                                  alt="Illustration"
+                                  alt="Stats Illustration"
+                                  width={800}
+                                  height={800}
                                 />
                               </div>
                             </div>
@@ -73,10 +75,11 @@ export default function StatsCards() {
                                 />
                               </div>
                               <div className="mxd-stats-cards__image mxd-stats-cards-image-4">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
+                                <Image
                                   src="/img/illustrations/800x800_card-image-04.webp"
-                                  alt="Illustration"
+                                  alt="Stats Illustration"
+                                  width={800}
+                                  height={800}
                                 />
                               </div>
                             </div>

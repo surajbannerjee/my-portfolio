@@ -1,5 +1,7 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import TechMarquee from "@/components/sections/TechMarquee";
+import HomeAbout from "@/components/sections/HomeAbout";
 import PinnedProjects from "@/components/sections/PinnedProjects";
 import Marquee from "@/components/common/Marquee";
 import StackingCards from "@/components/sections/StackingCards";
@@ -32,6 +34,12 @@ export default function HomePage() {
     <main id="mxd-page-content" className="mxd-page-content">
       {/* Hero Section */}
       <Hero />
+
+      {/* Tech Stack Marquee */}
+      <TechMarquee />
+
+      {/* About Me Section */}
+      <HomeAbout />
 
       {/* Projects Section */}
       <PinnedProjects />

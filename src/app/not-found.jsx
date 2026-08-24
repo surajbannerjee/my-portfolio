@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import AnimatedButton from "@/components/common/AnimatedButton";
 import Marquee from "@/components/common/Marquee";
 
@@ -30,8 +31,13 @@ export default function NotFound() {
       {/* Floating Image Background */}
       <div className="mxd-floating-img floating-bg">
         <div className="mxd-floating-img__item mxd-move">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/img/backgrounds/900x900_err-01.webp" alt="Image" />
+          <Image
+            src="/img/backgrounds/900x900_err-01.webp"
+            alt="Page not found illustration"
+            width={900}
+            height={900}
+            priority
+          />
         </div>
       </div>
 

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { STACKING_SERVICES } from "@/data/services";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
@@ -91,17 +92,19 @@ export default function StackingCards() {
                         <p className={service.textClass || ""}>{service.description}</p>
                       </div>
                       <div className="services-stack__image">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                           className="service-img service-img-s"
                           src={service.imageSmall}
-                          alt="Service/Feature Image"
+                          alt={service.title}
+                          width={300}
+                          height={300}
                         />
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                           className="service-img service-img-m"
                           src={service.imageMedium}
-                          alt="Service/Feature Image"
+                          alt={service.title}
+                          width={800}
+                          height={800}
                         />
                       </div>
                     </div>

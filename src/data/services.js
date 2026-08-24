@@ -10,8 +10,8 @@ export const STACKING_SERVICES = [
     textClass: "text-dark",
     tagClass: "bg-black text-white",
     buttonClass: "btn-opposite",
-    imageSmall: "/img/illustrations/300x300_stack-01.webp",
-    imageMedium: "/img/illustrations/800x800_stack-01.webp",
+    imageSmall: "/img/illustrations/800x800_service-image-01.webp",
+    imageMedium: "/img/illustrations/800x800_service-image-01.webp",
     url: "/services",
   },
   {
@@ -25,8 +25,8 @@ export const STACKING_SERVICES = [
     textClass: "t-opposite",
     tagClass: "bg-base-shade",
     buttonClass: "btn-additional",
-    imageSmall: "/img/illustrations/300x300_stack-02.webp",
-    imageMedium: "/img/illustrations/800x800_stack-02.webp",
+    imageSmall: "/img/illustrations/800x800_service-image-02.webp",
+    imageMedium: "/img/illustrations/800x800_service-image-02.webp",
     url: "/services",
   },
   {
@@ -40,8 +40,8 @@ export const STACKING_SERVICES = [
     textClass: "text-dark",
     tagClass: "bg-black text-white",
     buttonClass: "btn-opposite",
-    imageSmall: "/img/illustrations/300x300_stack-03.webp",
-    imageMedium: "/img/illustrations/800x800_stack-03.webp",
+    imageSmall: "/img/illustrations/800x800_service-image-03.webp",
+    imageMedium: "/img/illustrations/800x800_service-image-03.webp",
     url: "/services",
   },
   {
@@ -55,8 +55,8 @@ export const STACKING_SERVICES = [
     textClass: "t-opposite",
     tagClass: "bg-base-shade",
     buttonClass: "btn-additional",
-    imageSmall: "/img/illustrations/300x300_stack-04.webp",
-    imageMedium: "/img/illustrations/800x800_stack-04.webp",
+    imageSmall: "/img/illustrations/800x800_service-image-04.webp",
+    imageMedium: "/img/illustrations/800x800_service-image-04.webp",
     url: "/services",
   },
 ];

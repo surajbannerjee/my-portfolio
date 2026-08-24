@@ -13,7 +13,7 @@ export const TEAM_MEMBERS = [
     id: "alex-chen",
     name: "Alex Chen",
     position: "UI/UX Design Collaborator",
-    photo: "/img/avatars/600x800_team-02.webp",
+    photo: "/img/avatars/300x300_ava-02.webp",
     socials: [
       { name: "Behance", url: "#" },
       { name: "Dribbble", url: "#" },
@@ -23,7 +23,7 @@ export const TEAM_MEMBERS = [
     id: "elena-rostova",
     name: "Elena Rostova",
     position: "3D & Visual Asset Creator",
-    photo: "/img/avatars/600x800_team-03.webp",
+    photo: "/img/avatars/300x300_ava-03.webp",
     socials: [
       { name: "ArtStation", url: "#" },
       { name: "Instagram", url: "#" },
@@ -33,7 +33,7 @@ export const TEAM_MEMBERS = [
     id: "marcus-vance",
     name: "Marcus Vance",
     position: "Backend & Cloud Architect",
-    photo: "/img/avatars/600x800_team-04.webp",
+    photo: "/img/avatars/300x300_ava-04.webp",
     socials: [
       { name: "GitHub", url: "#" },
       { name: "X", url: "#" },
