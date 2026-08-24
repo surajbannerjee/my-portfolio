@@ -95,7 +95,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
       {/* Modal Container */}
       <div
         ref={contentRef}
-        className="relative z-10 w-full max-w-5xl max-h-[90vh] bg-[#141414] border border-white/10 rounded-[1.8rem] md:rounded-[2.4rem] shadow-2xl flex flex-col overflow-hidden"
+        className="relative z-10 w-full xl:max-w-[70dvw] lg:max-w-[80dvw] md:max-w-[90dvw] max-h-[90dvh] bg-[#141414] border border-white/10 rounded-[1.8rem] md:rounded-[2.4rem] shadow-2xl flex flex-col overflow-hidden"
         style={{
           boxShadow: "0 25px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(190, 242, 100, 0.08)",
         }}
@@ -144,11 +144,11 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
               className="font-bold text-white mb-3 tracking-tight"
               style={{ fontSize: "clamp(24px, 3.2vw, 36px)", lineHeight: "1.2" }}
             >
-              <span className="text-lime-400 font-extrabold">{project.highlightTitle}</span>{" "}
+              <span className="text-[var(--accent)] font-extrabold">{project.highlightTitle}</span>{" "}
               — {project.title}
             </h2>
             <p
-              className="text-neutral-300 leading-relaxed max-w-3xl"
+              className="text-neutral-300 leading-relaxed "
               style={{ fontSize: "clamp(15px, 1.6vw, 18px)", lineHeight: "1.65" }}
             >
               {project.summary}
@@ -156,7 +156,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
           </div>
 
           {/* Featured Hero Banner */}
-          <div className="relative w-full h-[260px] sm:h-[380px] md:h-[480px] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 bg-black/40">
+          <div className="relative w-full aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 bg-black/40">
             <Image
               src={project.image}
               alt={project.title}
@@ -168,7 +168,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
           </div>
 
           {/* Project Meta Details Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 md:p-6 bg-[#1C1C1C] border border-white/10 rounded-2xl">
+          <div className="flex flex-wrap justify-between gap-4 p-5 md:p-6 bg-[#1C1C1C] border border-white/10 rounded-2xl">
             <div>
               <p
                 className="uppercase font-semibold text-neutral-400 tracking-wider mb-1"
@@ -220,7 +220,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
             <div className="p-6 md:p-8 bg-[#1C1C1C] border border-white/10 rounded-2xl flex flex-col justify-between">
               <div>
                 <span
-                  className="uppercase font-bold text-lime-400 tracking-wider block mb-2"
+                  className="uppercase font-bold text-[var(--accent)] tracking-wider block mb-2"
                   style={{ fontSize: "13px" }}
                 >
                   01. The Challenge
@@ -243,7 +243,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
             <div className="p-6 md:p-8 bg-[#1C1C1C] border border-white/10 rounded-2xl flex flex-col justify-between">
               <div>
                 <span
-                  className="uppercase font-bold text-lime-400 tracking-wider block mb-2"
+                  className="uppercase font-bold text-[var(--accent)] tracking-wider block mb-2"
                   style={{ fontSize: "13px" }}
                 >
                   02. The Solution
@@ -277,7 +277,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                 {project.gallery.map((imgUrl, gIdx) => (
                   <div
                     key={gIdx}
-                    className="relative h-[240px] sm:h-[280px] md:h-[320px] rounded-2xl overflow-hidden border border-white/10 bg-black/40"
+                    className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/40"
                   >
                     <Image
                       src={imgUrl}
@@ -334,7 +334,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
               onClick={() => (onSelectProject ? onSelectProject(prevProject) : null)}
               className="group flex items-center gap-3 text-left py-2.5 px-4 rounded-xl hover:bg-white/5 transition-colors"
             >
-              <i className="ph-bold ph-arrow-left text-xl text-lime-400 transition-transform group-hover:-translate-x-1"></i>
+              <i className="ph-bold ph-arrow-left text-xl text-[var(--accent)] transition-transform group-hover:-translate-x-1"></i>
               <div>
                 <p
                   className="uppercase tracking-wider text-neutral-400 font-semibold"
@@ -343,7 +343,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                   Previous
                 </p>
                 <p
-                  className="font-bold text-white group-hover:text-lime-400 transition-colors"
+                  className="font-bold text-white group-hover:text-[var(--accent)] transition-colors"
                   style={{ fontSize: "16px" }}
                 >
                   {prevProject.highlightTitle}
@@ -363,13 +363,13 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                   Next
                 </p>
                 <p
-                  className="font-bold text-white group-hover:text-lime-400 transition-colors"
+                  className="font-bold text-white group-hover:text-[var(--accent)] transition-colors"
                   style={{ fontSize: "16px" }}
                 >
                   {nextProject.highlightTitle}
                 </p>
               </div>
-              <i className="ph-bold ph-arrow-right text-xl text-lime-400 transition-transform group-hover:translate-x-1"></i>
+              <i className="ph-bold ph-arrow-right text-xl text-[var(--accent)] transition-transform group-hover:translate-x-1"></i>
             </button>
           </div>
         </div>

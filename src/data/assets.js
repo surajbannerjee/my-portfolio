@@ -14,40 +14,23 @@ export const ASSETS = {
   projects: [
     {
       id: "prj-01",
-      title: "MUVI Cinema App",
+      title: "MUVI Cinema",
       previewUrl: "https://res.cloudinary.com/drrw18aos/image/upload/v1787164367/Gemini_Generated_Image_dxtclzdxtclzdxtc_xhhzib.png",
-      localFallback: "/img/works/preview/1200x800_prv-01.webp",
+      localFallback: "/img/works//preview/MuviSS01.png",
     },
     {
       id: "prj-02",
-      title: "Wildora Platform",
+      title: "Wildora ",
       previewUrl: "https://res.cloudinary.com/drrw18aos/image/upload/v1787165082/Gemini_Generated_Image_49v82449v82449v8_phybma.png",
-      localFallback: "/img/works/preview/1200x800_prv-02.webp",
+      localFallback: "/img/works/preview/WildoraSS01.png",
     },
     {
       id: "prj-03",
-      title: "Furniro E-Commerce",
+      title: "Furniro",
       previewUrl: "https://res.cloudinary.com/drrw18aos/image/upload/v1787165776/brewhub_edgff6.png",
-      localFallback: "/img/works/preview/1200x800_prv-03.webp",
+      localFallback: "/img/works/preview/furniroSS01.png",
     },
-    {
-      id: "prj-04",
-      title: "Nova SaaS Analytics",
-      previewUrl: "/img/works/preview/1200x800_prv-04.webp",
-      localFallback: "/img/works/preview/1200x800_prv-04.webp",
-    },
-    {
-      id: "prj-05",
-      title: "Zenith Creative Agency",
-      previewUrl: "/img/works/preview/1200x800_prv-05.webp",
-      localFallback: "/img/works/preview/1200x800_prv-05.webp",
-    },
-    {
-      id: "prj-06",
-      title: "Aurora FinTech App",
-      previewUrl: "/img/works/preview/1200x800_prv-06.webp",
-      localFallback: "/img/works/preview/1200x800_prv-06.webp",
-    },
+
   ],
 
   // 3. Services Stacking Cards Illustrations
