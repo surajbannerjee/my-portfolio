@@ -117,7 +117,7 @@ export default function Footer() {
                   c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"
                 />
               </svg>
-              <a href={`mailto:${SITE_CONTENT.email}?subject=Message%20from%20your%20site`}>
+              <a className="cursor-pointer break-all" href={`mailto:${SITE_CONTENT.email}?subject=Message%20from%20your%20site`}>
                 {SITE_CONTENT.email}
               </a>
             </p>
@@ -154,25 +154,22 @@ export default function Footer() {
             </div>
             <div className="form-container anim-uni-in-up">
               <div
-                className={`form__reply subscription-ok ${
-                  subStatus === "success" ? "is-visible" : ""
-                }`}
+                className={`form__reply subscription-ok ${subStatus === "success" ? "is-visible" : ""
+                  }`}
               >
                 <span className="reply__text">Done! Thanks for subscribing.</span>
               </div>
               <div
-                className={`form__reply subscription-error ${
-                  subStatus === "error" ? "is-visible" : ""
-                }`}
+                className={`form__reply subscription-error ${subStatus === "error" ? "is-visible" : ""
+                  }`}
               >
                 <span className="reply__text">
                   Ooops! Something went wrong. Please try again later.
                 </span>
               </div>
               <form
-                className={`form notify-form form-light ${
-                  subStatus !== "idle" ? "is-hidden" : ""
-                }`}
+                className={`form notify-form form-light ${subStatus !== "idle" ? "is-hidden" : ""
+                  }`}
                 onSubmit={handleSubscribe}
               >
                 <input
