@@ -147,61 +147,90 @@ https://suraj-banerjee.vercel.app`;
       </html>
     `;
 
-    // Only attempt sending if emailPass credentials exist
+    // If EMAIL_PASS credentials exist, send via Nodemailer
     if (emailPass) {
-      const transporter = nodemailer.createTransport(
-        process.env.SMTP_HOST
-          ? {
-              host: process.env.SMTP_HOST,
-              port: Number(process.env.SMTP_PORT) || 465,
-              secure: Number(process.env.SMTP_PORT) === 465,
-              auth: {
-                user: emailUser,
-                pass: emailPass,
-              },
-            }
-          : {
-              service: "gmail",
-              auth: {
-                user: emailUser,
-                pass: emailPass,
-              },
-            }
-      );
+      try {
+        const transporter = nodemailer.createTransport(
+          process.env.SMTP_HOST
+            ? {
+                host: process.env.SMTP_HOST,
+                port: Number(process.env.SMTP_PORT) || 465,
+                secure: Number(process.env.SMTP_PORT) === 465,
+                auth: {
+                  user: emailUser,
+                  pass: emailPass,
+                },
+              }
+            : {
+                service: "gmail",
+                auth: {
+                  user: emailUser,
+                  pass: emailPass,
+                },
+              }
+        );
 
-      // 1. Send inquiry notification to Admin (Suraj)
-      await transporter.sendMail({
-        from: `"Suraj Banerjee Portfolio" <${emailUser}>`,
-        replyTo: `"${clientName}" <${clientEmail}>`,
-        to: recipientEmail,
-        subject: `🚀 New Project Inquiry from ${clientName}`,
-        text: adminEmailText,
-        html: adminEmailHtml,
-        headers: {
-          "X-Priority": "1",
-          "Importance": "high",
-        },
-      });
+        // 1. Send inquiry notification to Admin (Suraj)
+        await transporter.sendMail({
+          from: `"Suraj Banerjee Portfolio" <${emailUser}>`,
+          replyTo: `"${clientName}" <${clientEmail}>`,
+          to: recipientEmail,
+          subject: `🚀 New Project Inquiry from ${clientName}`,
+          text: adminEmailText,
+          html: adminEmailHtml,
+          headers: {
+            "X-Priority": "1",
+            "Importance": "high",
+          },
+        });
 
-      // 2. Send instant confirmation receipt to Client
-      await transporter.sendMail({
-        from: `"Suraj Banerjee" <${emailUser}>`,
-        replyTo: recipientEmail,
-        to: clientEmail,
-        subject: `Thanks for getting in touch, ${clientName}! — Suraj Banerjee`,
-        text: clientAutoReplyText,
-        html: clientAutoReplyHtml,
-      });
+        // 2. Send instant confirmation receipt to Client
+        await transporter.sendMail({
+          from: `"Suraj Banerjee" <${emailUser}>`,
+          replyTo: recipientEmail,
+          to: clientEmail,
+          subject: `Thanks for getting in touch, ${clientName}! — Suraj Banerjee`,
+          text: clientAutoReplyText,
+          html: clientAutoReplyHtml,
+        });
+
+        return NextResponse.json({
+          success: true,
+          message: "Message sent successfully via Nodemailer!",
+        });
+      } catch (nodemailerErr) {
+        console.error("Nodemailer failed, falling back to Web3Forms:", nodemailerErr);
+      }
     }
 
-    return NextResponse.json({
-      success: true,
-      message: "Message sent successfully!",
+    // Fallback: Send directly via Web3Forms if EMAIL_PASS is not configured or failed on Vercel
+    const web3FormData = new FormData();
+    web3FormData.append("access_key", "a4a14ce6-6913-4d3d-92a0-42ddfd37ec95");
+    web3FormData.append("subject", `🚀 New Project Inquiry from ${clientName}`);
+    web3FormData.append("from_name", "Suraj Banerjee Portfolio");
+    web3FormData.append("Name", clientName);
+    web3FormData.append("Email", clientEmail);
+    web3FormData.append("Company", clientCompany);
+    web3FormData.append("Phone", clientPhone);
+    web3FormData.append("Message", clientMessage);
+
+    const web3Res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: web3FormData,
     });
+
+    if (web3Res.ok) {
+      return NextResponse.json({
+        success: true,
+        message: "Message sent successfully via Web3Forms fallback!",
+      });
+    } else {
+      throw new Error("Both Nodemailer and Web3Forms failed to deliver email");
+    }
   } catch (err) {
-    console.error("Nodemailer API Error:", err);
+    console.error("Contact API Error:", err);
     return NextResponse.json(
-      { error: "Failed to send message via Nodemailer" },
+      { error: "Failed to send message" },
       { status: 500 }
     );
   }

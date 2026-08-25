@@ -91,10 +91,12 @@ export default function Hero() {
             <div className="hero-09-objects__image loading__item">
               <Image
                 className="mxd-move"
-                src="https://res.cloudinary.com/drrw18aos/image/upload/v1787163087/ChatGPT_Image_Aug_19_2026_11_41_05_PM_dtr5z4.png"
+                src="https://res.cloudinary.com/drrw18aos/image/upload/f_auto,q_auto:good,w_600/v1787163087/ChatGPT_Image_Aug_19_2026_11_41_05_PM_dtr5z4.png"
                 alt="Suraj Banerjee — Frontend UI Developer"
-                width={800}
-                height={1000}
+                width={500}
+                height={625}
+                sizes="(max-width: 640px) 320px, (max-width: 1024px) 440px, 480px"
+                quality={85}
                 priority
               />
             </div>
