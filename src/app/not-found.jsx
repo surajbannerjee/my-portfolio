@@ -82,11 +82,17 @@ export default function NotFound() {
             <div className="mxd-block absolute-centered-block loading__item">
               <Marquee
                 direction="right"
+                speed={20}
+                repeatCount={8}
                 className="marquee marquee-error marquee-right--gsap bright"
               >
-                <div className="marquee__item item-regular item-regular-xl text">
-                  <p className="marquee__text text-xl">404</p>
-                  <div className="marquee__image image-xl">{renderStarIcon()}</div>
+                <div className="marquee__item item-regular item-regular-xl text flex items-center gap-6 px-6">
+                  <span className="marquee__text text-xl font-bold tracking-tighter" style={{ fontSize: "clamp(6rem, 15vw, 16rem)", lineHeight: "1" }}>
+                    404
+                  </span>
+                  <div className="marquee__image image-xl w-12 h-12 md:w-20 md:h-20 text-[var(--accent,#BEF264)]">
+                    {renderStarIcon()}
+                  </div>
                 </div>
               </Marquee>
             </div>

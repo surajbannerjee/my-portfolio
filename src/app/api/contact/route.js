@@ -1,15 +1,16 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
     const body = await req.json();
     const { Name, Email, "E-mail": AltEmail, Company, Phone, Message } = body || {};
 
-    const clientName = Name || "Valued Client";
-    const clientEmail = Email || AltEmail;
-    const clientCompany = Company || "N/A";
-    const clientPhone = Phone || "N/A";
-    const clientMessage = Message || "No message body provided.";
+    const clientName = (Name || "Valued Client").trim();
+    const clientEmail = (Email || AltEmail || "").trim();
+    const clientCompany = (Company || "N/A").trim();
+    const clientPhone = (Phone || "N/A").trim();
+    const clientMessage = (Message || "No message body provided.").trim();
 
     if (!clientEmail || !Message) {
       return NextResponse.json(
@@ -18,42 +19,72 @@ export async function POST(req) {
       );
     }
 
-    const RESEND_API_KEY = process.env.RESEND_API_KEY || "";
+    const emailUser = (process.env.EMAIL_USER || process.env.SMTP_USER || "surajbanerjee255@gmail.com").trim();
+    const emailPass = (process.env.EMAIL_PASS || process.env.EMAIL_PASSWORD || process.env.SMTP_PASS || "").replace(/\s+/g, "");
+    const recipientEmail = (process.env.RECIPIENT_EMAIL || "surajbanerjee255@gmail.com").trim();
+
+    // Plain text versions to pass spam filters
+    const adminEmailText = `New Project Inquiry from ${clientName}
+
+Name: ${clientName}
+Email: ${clientEmail}
+Company: ${clientCompany}
+Phone: ${clientPhone}
+
+Message:
+${clientMessage}
+
+---
+Sent from Suraj Banerjee Portfolio at ${new Date().toLocaleString()}`;
+
+    const clientAutoReplyText = `Hi ${clientName},
+
+Thank you for reaching out! I have received your project inquiry and will get back to you within 24 hours.
+
+Your Message:
+"${clientMessage}"
+
+Best regards,
+Suraj Banerjee
+Frontend UI Developer
+https://suraj-banerjee.vercel.app`;
 
     const adminEmailHtml = `
       <!DOCTYPE html>
-      <html>
+      <html lang="en">
       <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Project Inquiry</title>
         <style>
-          body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #161616; color: #FAF7F6; margin: 0; padding: 20px; }
-          .container { max-width: 600px; margin: 0 auto; background: #222222; border-radius: 12px; padding: 30px; border: 1px solid #333; }
-          .header { text-align: center; border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 25px; }
-          .header h1 { color: #FAF7F6; font-size: 24px; margin: 0; }
-          .badge { display: inline-block; background: #FAF7F6; color: #161616; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 12px; margin-top: 8px; }
-          .field { margin-bottom: 18px; }
-          .field-label { font-size: 12px; text-transform: uppercase; color: #888; letter-spacing: 1px; margin-bottom: 4px; }
-          .field-value { font-size: 16px; color: #fff; font-weight: 500; }
-          .message-box { background: #1a1a1a; padding: 20px; border-radius: 8px; border-left: 4px solid #FAF7F6; font-size: 15px; line-height: 1.6; color: #ddd; margin-top: 10px; }
-          .footer { text-align: center; margin-top: 30px; font-size: 12px; color: #666; border-top: 1px solid #333; padding-top: 20px; }
+          body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #121212; color: #FAF7F6; margin: 0; padding: 24px; }
+          .container { max-width: 600px; margin: 0 auto; background: #1c1c1c; border-radius: 16px; padding: 32px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+          .header { text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 20px; margin-bottom: 25px; }
+          .header h1 { color: #ffffff; font-size: 22px; font-weight: 700; margin: 0; }
+          .badge { display: inline-block; background: #BEF264; color: #121212; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 11px; margin-top: 10px; letter-spacing: 0.5px; text-transform: uppercase; }
+          .field { margin-bottom: 20px; }
+          .field-label { font-size: 11px; text-transform: uppercase; color: #888888; letter-spacing: 1px; margin-bottom: 6px; font-weight: 600; }
+          .field-value { font-size: 15px; color: #ffffff; font-weight: 500; }
+          .message-box { background: #141414; padding: 20px; border-radius: 12px; border-left: 3px solid #BEF264; font-size: 15px; line-height: 1.6; color: #e0e0e0; margin-top: 8px; border-top: 1px solid rgba(255,255,255,0.04); border-right: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); }
+          .footer { text-align: center; margin-top: 30px; font-size: 12px; color: #666666; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; }
         </style>
       </head>
       <body>
         <div class="container">
           <div class="header">
-            <h1>New Client Project Inquiry</h1>
+            <h1>🚀 New Project Inquiry</h1>
             <span class="badge">Suraj Banerjee Portfolio</span>
           </div>
           <div class="field">
-            <div class="field-label">Client Name</div>
+            <div class="field-label">Sender Name</div>
             <div class="field-value">${clientName}</div>
           </div>
           <div class="field">
-            <div class="field-label">Email Address</div>
-            <div class="field-value"><a href="mailto:${clientEmail}" style="color: #fff; text-decoration: underline;">${clientEmail}</a></div>
+            <div class="field-label">Sender Email</div>
+            <div class="field-value"><a href="mailto:${clientEmail}" style="color: #BEF264; text-decoration: none; font-weight: 600;">${clientEmail}</a></div>
           </div>
           <div class="field">
-            <div class="field-label">Company</div>
+            <div class="field-label">Company / Organization</div>
             <div class="field-value">${clientCompany}</div>
           </div>
           <div class="field">
@@ -61,11 +92,11 @@ export async function POST(req) {
             <div class="field-value">${clientPhone}</div>
           </div>
           <div class="field">
-            <div class="field-label">Project Message</div>
+            <div class="field-label">Project Details / Message</div>
             <div class="message-box">${clientMessage.replace(/\n/g, "<br>")}</div>
           </div>
           <div class="footer">
-            Sent automatically from your portfolio at ${new Date().toLocaleDateString()}
+            Delivered directly via Nodemailer from Suraj Banerjee Portfolio
           </div>
         </div>
       </body>
@@ -74,19 +105,21 @@ export async function POST(req) {
 
     const clientAutoReplyHtml = `
       <!DOCTYPE html>
-      <html>
+      <html lang="en">
       <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thank You for Reaching Out</title>
         <style>
-          body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; color: #222; margin: 0; padding: 20px; }
-          .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 35px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-          .header { text-align: center; margin-bottom: 25px; }
-          .header h2 { font-size: 24px; color: #111; margin: 0; }
-          .content { font-size: 15px; line-height: 1.7; color: #444; }
-          .highlight { background: #f4f4f4; padding: 15px 20px; border-radius: 8px; margin: 20px 0; font-style: italic; color: #555; }
-          .button-wrap { text-align: center; margin: 30px 0; }
-          .btn { background: #161616; color: #ffffff !important; padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-block; }
-          .footer { text-align: center; font-size: 12px; color: #888; margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; }
+          body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f5f5f7; color: #1d1d1f; margin: 0; padding: 24px; }
+          .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 16px; padding: 36px; border: 1px solid #e5e5e7; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+          .header { text-align: center; margin-bottom: 24px; }
+          .header h2 { font-size: 22px; color: #1d1d1f; margin: 0 0 6px; font-weight: 700; }
+          .content { font-size: 15px; line-height: 1.7; color: #424245; }
+          .highlight { background: #f5f5f7; padding: 18px 22px; border-radius: 12px; margin: 20px 0; font-size: 14px; color: #515154; border-left: 3px solid #161616; }
+          .btn-wrap { text-align: center; margin: 30px 0 20px; }
+          .btn { background: #161616; color: #ffffff !important; padding: 13px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 14px; display: inline-block; }
+          .footer { text-align: center; font-size: 12px; color: #86868b; margin-top: 32px; border-top: 1px solid #f0f0f2; padding-top: 20px; }
         </style>
       </head>
       <body>
@@ -96,15 +129,15 @@ export async function POST(req) {
           </div>
           <div class="content">
             <p>Hi <strong>${clientName}</strong>,</p>
-            <p>Thank you for getting in touch! I have received your message regarding your project inquiry and I'm excited to review your requirements.</p>
+            <p>Thank you for getting in touch! I have received your message regarding your project inquiry and will review the requirements shortly.</p>
             <div class="highlight">
-              "${clientMessage.substring(0, 150)}${clientMessage.length > 150 ? "..." : ""}"
+              "${clientMessage.substring(0, 160)}${clientMessage.length > 160 ? "..." : ""}"
             </div>
-            <p>I typically respond to inquiries within 24 hours. If your request is urgent, feel free to connect with me directly on my social channels.</p>
-            <div class="button-wrap">
-              <a href="https://surajbanerjee.dev" class="btn">View Portfolio</a>
+            <p>I typically respond to inquiries within 24 hours.</p>
+            <div class="btn-wrap">
+              <a href="https://suraj-banerjee.vercel.app" class="btn">Visit Portfolio</a>
             </div>
-            <p>Best regards,<br><strong>Suraj Banerjee</strong><br><em>Frontend UI Developer</em></p>
+            <p style="margin-top: 25px;">Best regards,<br><strong>Suraj Banerjee</strong><br><span style="color: #86868b; font-size: 13px;">Frontend UI Developer</span></p>
           </div>
           <div class="footer">
             © ${new Date().getFullYear()} Suraj Banerjee. All rights reserved.
@@ -114,33 +147,50 @@ export async function POST(req) {
       </html>
     `;
 
-    if (RESEND_API_KEY) {
-      await fetch("https://api.resend.com/emails", {
-        method: "POST",
+    // Only attempt sending if emailPass credentials exist
+    if (emailPass) {
+      const transporter = nodemailer.createTransport(
+        process.env.SMTP_HOST
+          ? {
+              host: process.env.SMTP_HOST,
+              port: Number(process.env.SMTP_PORT) || 465,
+              secure: Number(process.env.SMTP_PORT) === 465,
+              auth: {
+                user: emailUser,
+                pass: emailPass,
+              },
+            }
+          : {
+              service: "gmail",
+              auth: {
+                user: emailUser,
+                pass: emailPass,
+              },
+            }
+      );
+
+      // 1. Send inquiry notification to Admin (Suraj)
+      await transporter.sendMail({
+        from: `"Suraj Banerjee Portfolio" <${emailUser}>`,
+        replyTo: `"${clientName}" <${clientEmail}>`,
+        to: recipientEmail,
+        subject: `🚀 New Project Inquiry from ${clientName}`,
+        text: adminEmailText,
+        html: adminEmailHtml,
         headers: {
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-          "Content-Type": "application/json",
+          "X-Priority": "1",
+          "Importance": "high",
         },
-        body: JSON.stringify({
-          from: "Suraj Banerjee Portfolio <onboarding@resend.dev>",
-          to: "surajbanerjee255@gmail.com",
-          subject: `🚀 New Project Inquiry from ${clientName}`,
-          html: adminEmailHtml,
-        }),
       });
 
-      await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from: "Suraj Banerjee <onboarding@resend.dev>",
-          to: clientEmail,
-          subject: `Thanks for your inquiry, ${clientName}! — Suraj Banerjee`,
-          html: clientAutoReplyHtml,
-        }),
+      // 2. Send instant confirmation receipt to Client
+      await transporter.sendMail({
+        from: `"Suraj Banerjee" <${emailUser}>`,
+        replyTo: recipientEmail,
+        to: clientEmail,
+        subject: `Thanks for getting in touch, ${clientName}! — Suraj Banerjee`,
+        text: clientAutoReplyText,
+        html: clientAutoReplyHtml,
       });
     }
 
@@ -149,9 +199,9 @@ export async function POST(req) {
       message: "Message sent successfully!",
     });
   } catch (err) {
-    console.error("Contact API Error:", err);
+    console.error("Nodemailer API Error:", err);
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: "Failed to send message via Nodemailer" },
       { status: 500 }
     );
   }

@@ -42,7 +42,7 @@ export default function TechMarquee({
     <div className="mxd-section overflow-hidden py-6 md:py-10">
       <div className="mxd-container fullwidth-container">
         <div className="mxd-block">
-          <Marquee direction={direction} speed={speed} className="marquee marquee-right--gsap">
+          <Marquee direction={direction} speed={speed} repeatCount={4} className="marquee marquee-right--gsap">
             {TECH_ITEMS.map((tech, idx) => (
               <div key={idx} className="marquee__item one-line item-regular px-2 sm:px-3">
                 <div

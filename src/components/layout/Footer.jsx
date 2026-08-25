@@ -1,24 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { SITE_CONTENT } from "@/data/siteContent";
 import AnimatedButton from "@/components/common/AnimatedButton";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [subStatus, setSubStatus] = useState("idle");
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (!email) return;
-    setSubStatus("success");
-    setTimeout(() => {
-      setSubStatus("idle");
-      setEmail("");
-    }, 5000);
-  };
-
   return (
     <footer id="mxd-footer" className="mxd-footer">
       {/* Footer Block - Fullwidth Text Start */}
@@ -148,45 +135,30 @@ export default function Footer() {
               </a>
             </p>
           </div>
-          <div className="footer-blocks__card fill-card notify">
-            <div className="footer-blocks__title anim-uni-in-up">
-              <p className="footer-blocks__title-m">{SITE_CONTENT.footer.subscribeTitle}</p>
-            </div>
-            <div className="form-container anim-uni-in-up">
-              <div
-                className={`form__reply subscription-ok ${subStatus === "success" ? "is-visible" : ""
-                  }`}
-              >
-                <span className="reply__text">Done! Thanks for subscribing.</span>
+          <div className="footer-blocks__card fill-card">
+            <div className="flex flex-col justify-between h-full">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-lime-400/10 border border-lime-400/20 text-lime-500 text-[1.2rem] font-semibold mb-3 anim-uni-in-up">
+                  <span className="w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>
+                  <span>Available for New Projects</span>
+                </div>
+                <div className="footer-blocks__title anim-uni-in-up">
+                  <p className="footer-blocks__title-m" style={{ fontSize: "clamp(1.8rem, 2.4vw, 4rem)", lineHeight: "1.4", marginBottom: "0.8rem" }}>
+                    Have an idea or a project in mind? Let&apos;s talk.
+                  </p>
+                </div>
+                <p className="t-small t-muted anim-uni-in-up" style={{ fontSize: "14px", lineHeight: "1.6", marginBottom: "1.6rem" }}>
+                  Based in Kolkata, India (IST • UTC+5:30). Open for freelance projects and remote engineering roles.
+                </p>
               </div>
-              <div
-                className={`form__reply subscription-error ${subStatus === "error" ? "is-visible" : ""
-                  }`}
-              >
-                <span className="reply__text">
-                  Ooops! Something went wrong. Please try again later.
-                </span>
-              </div>
-              <form
-                className={`form notify-form form-light ${subStatus !== "idle" ? "is-hidden" : ""
-                  }`}
-                onSubmit={handleSubscribe}
-              >
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+              <div className="anim-uni-in-up pt-1">
+                <AnimatedButton
+                  href="/contact"
+                  className="btn btn-anim btn-default btn-accent slide-right-up"
+                  caption="Start a Project"
+                  iconClass="ph-bold ph-arrow-up-right"
                 />
-                <button
-                  className="btn btn-form btn-absolute-right btn-muted slide-right-up anim-no-delay"
-                  type="submit"
-                  aria-label="Submit"
-                >
-                  <i className="ph ph-arrow-up-right"></i>
-                </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>

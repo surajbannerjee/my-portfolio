@@ -6,67 +6,82 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 export default function Marquee({
   children,
   direction = "right",
-  speed = 30,
-  className = "marquee marquee-right--gsap muted-extra",
-  innerClassName = "marquee__toright",
+  speed = 28,
+  className = "marquee",
+  innerClassName = "marquee__inner",
+  repeatCount = 8,
 }) {
-  const containerRef = useRef(null);
   const trackRef = useRef(null);
+  const animRef = useRef(null);
 
   useEffect(() => {
-    if (!trackRef.current) return;
-
     const track = trackRef.current;
-    const mod = gsap.utils.wrap(0, 50);
+    if (!track) return;
 
-    const dirParam = direction === "right" ? "+=50%" : "-=50%";
+    // Determine direction
+    const isRight = direction === "right";
+    const fromX = isRight ? -50 : 0;
+    const toX = isRight ? 0 : -50;
 
-    const marqueeTween = gsap.to(track, {
+    // Set initial position
+    gsap.set(track, { xPercent: fromX });
+
+    // Create infinite seamless linear marquee loop
+    const anim = gsap.to(track, {
+      xPercent: toX,
       duration: speed,
       ease: "none",
-      x: dirParam,
-      modifiers: {
-        x: (x) => {
-          const val = parseFloat(x);
-          return mod(val) + "%";
-        },
-      },
       repeat: -1,
     });
+    animRef.current = anim;
 
-    const master = gsap.timeline().add(marqueeTween, 0);
-
-    const tween = gsap.to(master, {
-      duration: 1.5,
+    // Smooth velocity recovery on scroll
+    let returnToNormal = gsap.to(anim, {
       timeScale: 1,
+      duration: 0.8,
+      ease: "power2.out",
       paused: true,
     });
 
-    const timeScaleClamp = gsap.utils.clamp(1, 6);
-
     const trigger = ScrollTrigger.create({
-      start: 0,
-      end: "max",
       onUpdate: (self) => {
-        master.timeScale(timeScaleClamp(Math.abs(self.getVelocity() / 200)));
-        tween.invalidate().restart();
+        const velocity = Math.abs(self.getVelocity());
+        if (velocity > 15) {
+          const boost = Math.min(1 + velocity / 250, 4.5);
+          anim.timeScale(boost);
+          returnToNormal.invalidate().restart();
+        }
       },
     });
 
     return () => {
-      master.kill();
-      tween.kill();
+      anim.kill();
+      returnToNormal.kill();
       trigger.kill();
     };
   }, [direction, speed]);
 
+  // Duplicate items to ensure uninterrupted seamless loop across all screen sizes
+  const duplicates = Array.from({ length: repeatCount });
+
   return (
-    <div ref={containerRef} className={className}>
-      <div ref={trackRef} className={innerClassName} style={{ display: "flex", width: "max-content" }}>
-        {children}
-        {children}
-        {children}
-        {children}
+    <div
+      className={`${className} overflow-hidden w-full relative`}
+      style={{ maskImage: "linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)" }}
+    >
+      <div
+        ref={trackRef}
+        className={`${innerClassName} flex flex-nowrap will-change-transform`}
+        style={{
+          width: "max-content",
+          display: "flex",
+        }}
+      >
+        {duplicates.map((_, i) => (
+          <div key={i} className="flex items-center flex-shrink-0">
+            {children}
+          </div>
+        ))}
       </div>
     </div>
   );
