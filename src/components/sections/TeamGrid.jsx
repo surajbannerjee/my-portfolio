@@ -146,11 +146,12 @@ export default function TeamGrid() {
                   <div className="mxd-team-cards__media no-margin overflow-visible anim-uni-in-up">
                     <Link className="mxd-team-cards__career" href="/contact">
                       <div className="career__image">
-                        <Image
+                        <ImageWithSkeleton
                           src="/img/illustrations/800x800_card-image-04.webp"
                           alt="Career"
                           width={800}
                           height={800}
+                          rounded="rounded-2xl"
                         />
                       </div>
                       <div className="career__caption">
