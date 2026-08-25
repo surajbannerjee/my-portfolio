@@ -14,6 +14,7 @@ module.exports = {
         accent: "var(--accent)",
         additional: "var(--additional)",
         primary: "var(--primary)",
+        muted: "var(--muted, rgba(255, 255, 255, 0.08))",
         "t-bright": "var(--t-bright)",
         "t-medium": "var(--t-medium)",
         "t-muted": "var(--t-muted)",

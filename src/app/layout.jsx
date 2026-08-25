@@ -56,7 +56,7 @@ export const metadata = {
     siteName: "Suraj Banerjee Portfolio",
     images: [
       {
-        url: "/img/og-image.jpg",
+        url: "/img/og-image.png",
         width: 1200,
         height: 630,
         alt: "Suraj Banerjee — Frontend UI Developer Portfolio",
@@ -69,7 +69,7 @@ export const metadata = {
     description:
       "Frontend UI Developer bridging the gap between Figma design and high-performance React & Next.js engineering.",
     creator: "@imsurajbanerjee",
-    images: ["/img/og-image.jpg"],
+    images: ["/img/og-image.png"],
   },
   robots: {
     index: true,

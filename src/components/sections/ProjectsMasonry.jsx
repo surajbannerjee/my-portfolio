@@ -54,7 +54,7 @@ function ProjectsMasonryContent() {
                         }}
                       >
                         <div
-                          className={`mxd-project-item__preview masonry-preview ${project.previewClass} parallax-img-small`}
+                          className={`mxd-project-item__preview masonry-preview ${project.previewClass} parallax-img-small bg-skeleton-loading`}
                           style={
                             project.image
                               ? { backgroundImage: `url(${project.image})` }

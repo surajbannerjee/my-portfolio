@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import Image from "next/image";
+import { ImageWithSkeleton } from "@/components/common/Skeleton";
 import Link from "next/link";
 import { ALL_PROJECTS } from "@/data/projects";
 import AnimatedButton from "@/components/common/AnimatedButton";
@@ -157,13 +157,14 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
 
           {/* Featured Hero Banner */}
           <div className="relative w-full aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 bg-black/40">
-            <Image
+            <ImageWithSkeleton
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover object-top"
+              imageClassName="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 1200px"
               priority
+              rounded="rounded-2xl md:rounded-3xl"
             />
           </div>
 
@@ -279,12 +280,13 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                     key={gIdx}
                     className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/40"
                   >
-                    <Image
+                    <ImageWithSkeleton
                       src={imgUrl}
                       alt={`${project.title} Preview ${gIdx + 1}`}
                       fill
-                      className="object-cover"
+                      imageClassName="object-cover"
                       sizes="(max-width: 768px) 100vw, 50vw"
+                      rounded="rounded-2xl"
                     />
                   </div>
                 ))}

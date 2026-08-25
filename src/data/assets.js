@@ -16,7 +16,7 @@ export const ASSETS = {
       id: "prj-01",
       title: "MUVI Cinema",
       previewUrl: "https://res.cloudinary.com/drrw18aos/image/upload/v1787164367/Gemini_Generated_Image_dxtclzdxtclzdxtc_xhhzib.png",
-      localFallback: "/img/works//preview/MuviSS01.png",
+      localFallback: "/img/works/preview/MuviSS01.png",
     },
     {
       id: "prj-02",

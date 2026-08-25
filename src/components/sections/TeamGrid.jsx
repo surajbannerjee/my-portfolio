@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ImageWithSkeleton } from "@/components/common/Skeleton";
 import { TEAM_MEMBERS } from "@/data/team";
 import AnimatedButton from "@/components/common/AnimatedButton";
 import SplitTextReveal from "@/components/common/SplitTextReveal";
@@ -63,11 +63,12 @@ export default function TeamGrid() {
                         >
                           <div className="mxd-team-cards__media anim-uni-in-up">
                             <div className="mxd-team-cards__photo">
-                              <Image
+                              <ImageWithSkeleton
                                 src={member.photo}
                                 alt={member.name}
                                 width={600}
                                 height={800}
+                                rounded="rounded-xl"
                               />
                             </div>
                             <div className="mxd-team-cards__socials">
@@ -106,11 +107,12 @@ export default function TeamGrid() {
                         >
                           <div className="mxd-team-cards__media anim-uni-in-up">
                             <div className="mxd-team-cards__photo">
-                              <Image
+                              <ImageWithSkeleton
                                 src={member.photo}
                                 alt={member.name}
                                 width={600}
                                 height={800}
+                                rounded="rounded-xl"
                               />
                             </div>
                             <div className="mxd-team-cards__socials">

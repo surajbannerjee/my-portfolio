@@ -58,7 +58,7 @@ export default function PinnedProjects() {
                             }}
                           >
                             <div
-                              className={`mxd-project-item__preview ${project.previewClass} parallax-img-small`}
+                              className={`mxd-project-item__preview ${project.previewClass} parallax-img-small bg-skeleton-loading`}
                               style={{ backgroundImage: `url(${project.image})` }}
                             ></div>
                             <div className="mxd-project-item__tags">

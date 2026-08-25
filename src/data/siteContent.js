@@ -44,7 +44,7 @@ export const SITE_CONTENT = {
 
   socials: [
     { name: "LinkedIn", url: "https://www.linkedin.com/in/suraj-banerjee-0a1251268/" },
-    { name: "GitHub", url: "https://github.com/surajbanerjee" },
+    { name: "GitHub", url: "https://github.com/surajbannerjee" },
     { name: "X (Twitter)", url: "https://x.com/imsurajbanerjee" },
     { name: "Instagram", url: "https://www.instagram.com/imsurajbanerjee" },
   ],

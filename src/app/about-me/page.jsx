@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { ImageWithSkeleton } from "@/components/common/Skeleton";
 import InnerHeadline from "@/components/sections/InnerHeadline";
 import TypedHeadline from "@/components/common/TypedHeadline";
 import ParallaxDivider from "@/components/sections/ParallaxDivider";
@@ -125,7 +126,7 @@ export default function AboutMePage() {
                     <div className="row gx-0">
                       <div className="col-12 col-xl-2 mxd-grid-item no-margin">
                         <div className="mxd-approach-list__image anim-uni-in-up">
-                          <Image src="/img/icons/h70_appr-01.webp" alt="Icon" width={70} height={70} />
+                          <ImageWithSkeleton src="/img/icons/h70_appr-01.webp" alt="Icon" width={70} height={70} rounded="rounded-lg" />
                         </div>
                       </div>
                       <div className="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -154,7 +155,7 @@ export default function AboutMePage() {
                     <div className="row gx-0">
                       <div className="col-12 col-xl-2 mxd-grid-item no-margin">
                         <div className="mxd-approach-list__image anim-uni-in-up">
-                          <Image src="/img/icons/h70_appr-02.webp" alt="Icon" width={70} height={70} />
+                          <ImageWithSkeleton src="/img/icons/h70_appr-02.webp" alt="Icon" width={70} height={70} rounded="rounded-lg" />
                         </div>
                       </div>
                       <div className="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -183,7 +184,7 @@ export default function AboutMePage() {
                     <div className="row gx-0">
                       <div className="col-12 col-xl-2 mxd-grid-item no-margin">
                         <div className="mxd-approach-list__image anim-uni-in-up">
-                          <Image src="/img/icons/h70_appr-03.webp" alt="Icon" width={70} height={70} />
+                          <ImageWithSkeleton src="/img/icons/h70_appr-03.webp" alt="Icon" width={70} height={70} rounded="rounded-lg" />
                         </div>
                       </div>
                       <div className="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -240,11 +241,12 @@ export default function AboutMePage() {
                         />
                       </div>
                       <div className="mxd-stats-cards__image mxd-stats-cards-image-1">
-                        <Image
+                        <ImageWithSkeleton
                           src="/img/illustrations/800x800_card-image-01.webp"
                           alt="Illustration"
                           width={800}
                           height={800}
+                          rounded="rounded-2xl"
                         />
                       </div>
                     </div>
@@ -256,7 +258,7 @@ export default function AboutMePage() {
                       <div className="mxd-stats-cards__btngroup">
                         <div className="mxd-avatars">
                           <div className="mxd-avatars__item">
-                            <Image src="/img/avatars/300x300_ava-02.webp" alt="Avatar" width={300} height={300} />
+                            <ImageWithSkeleton src="/img/avatars/300x300_ava-02.webp" alt="Avatar" width={300} height={300} rounded="rounded-full" />
                           </div>
                           <div className="mxd-avatars__item bg-base-opp">
                             <svg
@@ -283,7 +285,7 @@ export default function AboutMePage() {
                             </svg>
                           </div>
                           <div className="mxd-avatars__item">
-                            <Image src="/img/avatars/300x300_ava-01.webp" alt="Avatar" width={300} height={300} />
+                            <ImageWithSkeleton src="/img/avatars/300x300_ava-01.webp" alt="Avatar" width={300} height={300} rounded="rounded-full" />
                           </div>
                         </div>
                       </div>
@@ -301,11 +303,12 @@ export default function AboutMePage() {
                         </p>
                       </div>
                       <div className="mxd-stats-cards__image mxd-stats-cards-image-2">
-                        <Image
+                        <ImageWithSkeleton
                           src="/img/illustrations/800x800_card-image-02.webp"
                           alt="Illustration"
                           width={800}
                           height={800}
+                          rounded="rounded-2xl"
                         />
                       </div>
                     </div>

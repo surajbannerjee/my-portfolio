@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ImageWithSkeleton } from "@/components/common/Skeleton";
 import { STACKING_SERVICES } from "@/data/services";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
@@ -92,19 +92,21 @@ export default function StackingCards() {
                         <p className={service.textClass || ""}>{service.description}</p>
                       </div>
                       <div className="services-stack__image">
-                        <Image
-                          className="service-img service-img-s"
+                        <ImageWithSkeleton
+                          containerClassName="service-img service-img-s"
                           src={service.imageSmall}
                           alt={service.title}
                           width={300}
                           height={300}
+                          rounded="rounded-2xl"
                         />
-                        <Image
-                          className="service-img service-img-m"
+                        <ImageWithSkeleton
+                          containerClassName="service-img service-img-m"
                           src={service.imageMedium}
                           alt={service.title}
                           width={800}
                           height={800}
+                          rounded="rounded-2xl"
                         />
                       </div>
                     </div>

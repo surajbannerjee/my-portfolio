@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { ImageWithSkeleton } from "@/components/common/Skeleton";
 import CountUpNumber from "@/components/common/CountUpNumber";
 import AnimatedButton from "@/components/common/AnimatedButton";
 
@@ -42,11 +42,12 @@ export default function StatsCards() {
                                 />
                               </div>
                               <div className="mxd-stats-cards__image mxd-stats-cards-image-3">
-                                <Image
+                                <ImageWithSkeleton
                                   src="/img/illustrations/800x800_card-image-03.webp"
                                   alt="Stats Illustration"
                                   width={800}
                                   height={800}
+                                  rounded="rounded-2xl"
                                 />
                               </div>
                             </div>
@@ -75,11 +76,12 @@ export default function StatsCards() {
                                 />
                               </div>
                               <div className="mxd-stats-cards__image mxd-stats-cards-image-4">
-                                <Image
+                                <ImageWithSkeleton
                                   src="/img/illustrations/800x800_card-image-04.webp"
                                   alt="Stats Illustration"
                                   width={800}
                                   height={800}
+                                  rounded="rounded-2xl"
                                 />
                               </div>
                             </div>
