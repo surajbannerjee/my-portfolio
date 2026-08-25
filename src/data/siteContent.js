@@ -26,7 +26,7 @@ export const SITE_CONTENT = {
   exploreLinks: [
     { title: "Services", url: "/services" },
     { title: "Pricing", url: "/pricing" },
-    { title: "Team", url: "/team" },
+    // { title: "Team", url: "/team" }, // Hidden for now
     { title: "FAQ", url: "/faq" },
   ],
 

@@ -1,56 +1,57 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { gsap } from "@/lib/gsap";
 
 export default function Loader() {
   const [count, setCount] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const loaderRef = useRef(null);
 
   useEffect(() => {
-    // Check if previously loaded in session
-    if (sessionStorage.getItem("rayo_loaded")) {
-      setIsLoaded(true);
-      triggerPageAppearance();
-      return;
-    }
-
     let currentVal = 0;
-    let timer;
-    let safetyTimer;
+    let timer = null;
 
-    function updateCounter() {
-      if (currentVal < 100) {
-        const increment = Math.floor(Math.random() * 20) + 10;
-        currentVal = Math.min(currentVal + increment, 100);
-        setCount(currentVal);
-        const delay = Math.floor(Math.random() * 60) + 20;
-        timer = setTimeout(updateCounter, delay);
+    function step() {
+      const increment = Math.floor(Math.random() * 12) + 6;
+      currentVal += increment;
+
+      if (currentVal >= 100) {
+        currentVal = 100;
+        setCount(100);
+        setTimeout(hideLoader, 180);
       } else {
-        hideLoader();
+        setCount(currentVal);
+        const delay = Math.floor(Math.random() * 35) + 25;
+        timer = setTimeout(step, delay);
       }
     }
 
+    timer = setTimeout(step, 40);
+
     function hideLoader() {
-      sessionStorage.setItem("rayo_loaded", "true");
-
-      gsap.to(".loader__count", {
-        duration: 0.4,
-        ease: "power2.in",
-        y: "100%",
-        delay: 0.2,
-      });
-
-      gsap.to(".loader__wrapper", {
-        duration: 0.5,
-        ease: "power4.in",
-        y: "-100%",
-        delay: 0.4,
+      const tl = gsap.timeline({
         onComplete: () => {
           setIsLoaded(true);
           triggerPageAppearance();
         },
       });
+
+      tl.to(".loader__count", {
+        duration: 0.35,
+        ease: "power2.in",
+        y: "100%",
+      });
+
+      tl.to(
+        ".loader__wrapper",
+        {
+          duration: 0.55,
+          ease: "power4.inOut",
+          y: "-100%",
+        },
+        "-=0.1"
+      );
     }
 
     function triggerPageAppearance() {
@@ -63,7 +64,7 @@ export default function Loader() {
         gsap.to(loadingItems, {
           duration: 0.8,
           ease: "power4",
-          startAt: { y: 60 },
+          startAt: { y: 50 },
           y: 0,
           opacity: 1,
           stagger: 0.06,
@@ -82,13 +83,12 @@ export default function Loader() {
       if (heroTags.length) {
         gsap.fromTo(
           heroTags,
-          { opacity: 0, y: -40, scale: 0.9 },
+          { opacity: 0, y: -30, scale: 0.9 },
           {
-            duration: 0.6,
+            duration: 0.5,
             y: 0,
             opacity: 1,
             scale: 1,
-            rotation: 0,
             ease: "back.out(1.7)",
             stagger: 0.05,
           }
@@ -96,24 +96,25 @@ export default function Loader() {
       }
     }
 
-    updateCounter();
-
-    // Fallback safety timeout
-    safetyTimer = setTimeout(() => {
-      setIsLoaded(true);
-      triggerPageAppearance();
-    }, 1200);
-
     return () => {
-      clearTimeout(timer);
-      clearTimeout(safetyTimer);
+      if (timer) clearTimeout(timer);
     };
   }, []);
 
   if (isLoaded) return null;
 
   return (
-    <div id="loader" className={`loader ${isLoaded ? "loaded" : ""}`} style={{ pointerEvents: isLoaded ? "none" : "auto" }}>
+    <div
+      ref={loaderRef}
+      id="loader"
+      className="loader"
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 99999,
+        pointerEvents: isLoaded ? "none" : "auto",
+      }}
+    >
       <div className="loader__wrapper">
         <div className="loader__content">
           <div className="loader__count">

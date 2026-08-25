@@ -1,3 +1,11 @@
+import { notFound } from "next/navigation";
+
+// The Team page is temporarily hidden. When ready to reopen, uncomment the component below.
+export default function TeamPage() {
+  notFound();
+}
+
+/*
 import React from "react";
 import InnerHeadline from "@/components/sections/InnerHeadline";
 import TeamGrid from "@/components/sections/TeamGrid";
@@ -18,10 +26,9 @@ export const metadata = {
   },
 };
 
-export default function TeamPage() {
+export function ActiveTeamPage() {
   return (
     <main id="mxd-page-content" className="mxd-page-content inner-page-content">
-      {/* 1. Inner Headline */}
       <InnerHeadline
         subtitle="Team"
         title={<h1 className="inner-headline__title loading__item">Meet our team</h1>}
@@ -32,10 +39,8 @@ export default function TeamPage() {
         }
       />
 
-      {/* 2. Team Grid */}
       <TeamGrid />
 
-      {/* 3. Parallax Divider */}
       <ParallaxDivider
         imageClass="divider-image-5"
         circleHref="/contact"
@@ -43,7 +48,6 @@ export default function TeamPage() {
         circleImage="/img/icons/300x300_obj-btn-02.webp"
       />
 
-      {/* 4. CTA Section */}
       <CtaSection
         caption="Interested in working together or hiring me for a project?"
         btnText="Get in Touch"
@@ -52,3 +56,4 @@ export default function TeamPage() {
     </main>
   );
 }
+*/
