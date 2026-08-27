@@ -218,11 +218,17 @@ export default function NavigationMenu({ isOpen, onToggle }) {
                       loop
                       muted
                       playsInline
-                      poster={SITE_CONTENT.video.poster}
+                      poster={SITE_CONTENT.video?.poster}
                     >
-                      <source type="video/mp4" src={SITE_CONTENT.video.mp4} />
-                      <source type="video/webm" src={SITE_CONTENT.video.webm} />
-                      <source type="video/ogv" src={SITE_CONTENT.video.ogv} />
+                      {SITE_CONTENT.video?.webm && (
+                        <source type="video/webm" src={SITE_CONTENT.video.webm} />
+                      )}
+                      {SITE_CONTENT.video?.mp4 && (
+                        <source type="video/mp4" src={SITE_CONTENT.video.mp4} />
+                      )}
+                      {SITE_CONTENT.video?.ogv && (
+                        <source type="video/ogv" src={SITE_CONTENT.video.ogv} />
+                      )}
                     </video>
                   </div>
                 </div>

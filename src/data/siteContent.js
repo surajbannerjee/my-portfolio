@@ -36,10 +36,9 @@ export const SITE_CONTENT = {
   },
 
   video: {
-    mp4: "/video/menu-video-01.mp4",
-    webm: "/video/menu-video-01.webm",
-    ogv: "/video/menu-video-01.ogv",
-    poster: "/img/promo/menu-video-01.webp",
+    mp4: "https://res.cloudinary.com/drrw18aos/video/upload/v1787822129/0_Glowing_Sphere_Wire_Sphere_1280x720_prevev.mp4",
+    webm: "https://res.cloudinary.com/drrw18aos/video/upload/v1787822129/0_Glowing_Sphere_Wire_Sphere_1280x720_prevev.webm",
+    poster: "https://res.cloudinary.com/drrw18aos/video/upload/v1787822129/0_Glowing_Sphere_Wire_Sphere_1280x720_prevev.webp",
   },
 
   socials: [

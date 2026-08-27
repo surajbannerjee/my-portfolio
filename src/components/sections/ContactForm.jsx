@@ -34,30 +34,13 @@ export default function ContactForm() {
       if (response.ok) {
         setStatus("success");
       } else {
-        throw new Error("Local API error");
-      }
-    } catch {
-      try {
-        const web3Data = new FormData();
-        web3Data.append("access_key", "a4a14ce6-6913-4d3d-92a0-42ddfd37ec95");
-        web3Data.append("subject", "New Contact Form Submission — Suraj Banerjee Portfolio");
-        web3Data.append("from_name", "Suraj Banerjee Portfolio");
-        web3Data.append("Name", formData.Name);
-        web3Data.append("Company", formData.Company);
-        web3Data.append("Email", formData["E-mail"]);
-        web3Data.append("Phone", formData.Phone);
-        web3Data.append("Message", formData.Message);
-
-        await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: web3Data,
-        });
-
-        setStatus("success");
-      } catch (err) {
-        console.error(err);
+        const data = await response.json().catch(() => ({}));
+        console.error("Submission error:", data.error || "Failed to submit form");
         setStatus("error");
       }
+    } catch (err) {
+      console.error("Form submit network error:", err);
+      setStatus("error");
     }
 
     setTimeout(() => {
