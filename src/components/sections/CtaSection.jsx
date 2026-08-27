@@ -17,7 +17,9 @@ export default function CtaSection({
           <div className="mxd-promo">
             <div className="mxd-promo__inner anim-zoom-out-container">
               {/* background */}
-              <div className="mxd-promo__bg"></div>
+              <div className="mxd-promo__bg " style={{
+                backgroundImage: "url(/img/backgrounds/bg1.webp)"
+              }}></div>
               {/* caption */}
               <div className="mxd-promo__content">
                 <p className="mxd-promo__title anim-uni-in-up">

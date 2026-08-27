@@ -21,7 +21,7 @@ export default function ScrollToTop() {
   const scrollToTop = (e) => {
     e.preventDefault();
     if (window.lenis) {
-      window.lenis.scrollTo(0);
+      window.lenis.scrollTo(0, { duration: 1.4 });
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }

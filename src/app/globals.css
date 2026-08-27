@@ -74,7 +74,7 @@ body {
 .divider-image-10,
 .prj-details-img-01 {
   background-image: url("https://res.cloudinary.com/drrw18aos/image/upload/v1787169663/meBanner_fmiayz.png") !important;
-  background-position: center center !important;
+  background-position: center center;
   background-size: cover !important;
   background-repeat: no-repeat !important;
 }
@@ -258,4 +258,130 @@ img {
 
 [data-slot="skeleton"] {
   background-color: var(--muted, rgba(255, 255, 255, 0.08)) !important;
+}
+
+/* =======================================================
+   Responsive adjustments for Parallax Rotating Circle
+   ======================================================= */
+@media only screen and (max-width: 1199px) {
+  .mxd-container__circle {
+    position: absolute !important;
+    top: -5.5rem !important;
+    right: 4.5rem !important;
+    margin-bottom: 0 !important;
+    text-align: right !important;
+    z-index: 10 !important;
+  }
+
+  .mxd-container__circle .btn-rotating-blur-outline {
+    width: 145px !important;
+    height: 145px !important;
+  }
+
+  .mxd-container__circle .btn-rotating-blur-outline .btn-rotating__text {
+    width: 130px !important;
+    height: 130px !important;
+    top: 0.75rem !important;
+    left: 0.75rem !important;
+  }
+
+  .mxd-container__circle .btn-rotating-blur-outline .btn-rotating__image {
+    width: 5.6rem !important;
+    height: auto !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .mxd-container__circle {
+    position: absolute !important;
+    top: -4rem !important;
+    right: 3rem !important;
+    margin-bottom: 0 !important;
+    text-align: right !important;
+    z-index: 10 !important;
+  }
+
+  .mxd-container__circle .btn-rotating-blur-outline {
+    width: 115px !important;
+    height: 115px !important;
+  }
+
+  .mxd-container__circle .btn-rotating-blur-outline .btn-rotating__text {
+    width: 102px !important;
+    height: 102px !important;
+    top: 0.65rem !important;
+    left: 0.65rem !important;
+  }
+
+  .mxd-container__circle .btn-rotating-blur-outline .btn-rotating__text text {
+    font-size: 1.34rem !important;
+    letter-spacing: 0.08rem !important;
+  }
+
+  .mxd-container__circle .btn-rotating-blur-outline .btn-rotating__image {
+    width: 4.6rem !important;
+    height: auto !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mxd-container__circle {
+    top: -3.8rem !important;
+    right: 2rem !important;
+  }
+
+  .mxd-container__circle .btn-rotating-blur-outline {
+    width: 105px !important;
+    height: 105px !important;
+  }
+
+  .mxd-container__circle .btn-rotating-blur-outline .btn-rotating__text {
+    width: 92px !important;
+    height: 92px !important;
+    top: 0.65rem !important;
+    left: 0.65rem !important;
+  }
+
+  .mxd-container__circle .btn-rotating-blur-outline .btn-rotating__text text {
+    font-size: 1.3rem !important;
+    letter-spacing: 0.07rem !important;
+  }
+
+  .mxd-container__circle .btn-rotating-blur-outline .btn-rotating__image {
+    width: 4.2rem !important;
+    height: auto !important;
+  }
+}
+
+/* =======================================================
+   Animated 3D Floating Illustrations for Desktop Footer Cards
+   ======================================================= */
+@keyframes footer-float-1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-14px) rotate(4deg) scale(1.04);
+  }
+}
+
+@keyframes footer-float-2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-16px) rotate(-4deg) scale(1.04);
+  }
+}
+
+.footer-floating-img-1 {
+  animation: footer-float-1 5s ease-in-out infinite;
+  filter: drop-shadow(0 20px 28px rgba(0, 0, 0, 0.45));
+  will-change: transform;
+}
+
+.footer-floating-img-2 {
+  animation: footer-float-2 5.5s ease-in-out infinite;
+  filter: drop-shadow(0 20px 28px rgba(0, 0, 0, 0.45));
+  will-change: transform;
 }

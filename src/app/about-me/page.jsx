@@ -304,11 +304,12 @@ export default function AboutMePage() {
                       </div>
                       <div className="mxd-stats-cards__image mxd-stats-cards-image-2">
                         <ImageWithSkeleton
-                          src="/img/illustrations/800x800_card-image-02.webp"
+                          src="/img/illustrations/800x800_card-image-03.webp"
                           alt="Illustration"
                           width={800}
                           height={800}
                           rounded="rounded-2xl"
+                          imageClassName="object-cover h-full w-full"
                         />
                       </div>
                     </div>

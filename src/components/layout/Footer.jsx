@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { SITE_CONTENT } from "@/data/siteContent";
+import Image from "next/image";
 import AnimatedButton from "@/components/common/AnimatedButton";
 
 export default function Footer() {
@@ -42,10 +43,10 @@ export default function Footer() {
 
       {/* Footer Block - Info Columns Start */}
       <div className="mxd-footer__footer-blocks">
-        {/* single column 1 */}
+        {/* single column 1 - Navigation Links */}
         <div className="footer-blocks__column animate-card-3">
-          <div className="footer-blocks__card fullheight-card">
-            <div className="footer-blocks__nav">
+          <div className="footer-blocks__card fullheight-card relative overflow-hidden group">
+            <div className="footer-blocks__nav z-10">
               <ul className="footer-nav">
                 {SITE_CONTENT.menu.map((item, idx) => (
                   <li key={idx} className="footer-nav__item anim-uni-in-up">
@@ -58,7 +59,22 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-            <div className="footer-blocks__links anim-uni-in-up" style={{ display: "flex", flexWrap: "wrap", gap: "0.8rem", marginTop: "1.6rem" }}>
+
+            {/* Desktop Animated Floating Illustration */}
+            <div className="hidden xl:flex flex-col items-center justify-center my-auto py-2 z-10 pointer-events-none">
+              <div className="relative w-40 h-40 flex items-center justify-center">
+                <div className="absolute inset-0 bg-lime-400/10 rounded-full blur-2xl transform scale-75 group-hover:scale-100 group-hover:bg-lime-400/20 transition-all duration-700"></div>
+                <Image
+                  src="/img/illustrations/800x800_card-image-01.webp"
+                  alt="Navigation 3D Emblem"
+                  width={160}
+                  height={160}
+                  className="footer-floating-img-1 relative z-10 w-36 h-36 object-contain transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+            </div>
+
+            <div className="footer-blocks__links anim-uni-in-up z-10" style={{ display: "flex", flexWrap: "wrap", gap: "0.8rem", marginTop: "1.6rem" }}>
               {SITE_CONTENT.exploreLinks?.map((item, idx) => (
                 <AnimatedButton
                   key={idx}
@@ -81,7 +97,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* single column 2 */}
+        {/* single column 2 - Contact & CTA */}
         <div className="footer-blocks__column animate-card-3">
           <div className="footer-blocks__card">
             <p className="mxd-point-subtitle anim-uni-in-up">
@@ -163,10 +179,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* single column 3 */}
+        {/* single column 3 - Socials & Connect */}
         <div className="footer-blocks__column animate-card-3">
-          <div className="footer-blocks__card fullheight-card">
-            <div className="footer-blocks__block">
+          <div className="footer-blocks__card fullheight-card relative overflow-hidden group">
+            <div className="footer-blocks__block z-10">
               <div className="footer-blocks__title anim-uni-in-up">
                 <p className="footer-blocks__title-l">{SITE_CONTENT.footer.socialsTitle}</p>
               </div>
@@ -187,7 +203,22 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="footer-blocks__links anim-uni-in-up">
+
+            {/* Desktop Animated Floating Illustration */}
+            <div className="hidden xl:flex flex-col items-center justify-center my-auto py-2 z-10 pointer-events-none">
+              <div className="relative w-40 h-40 flex items-center justify-center">
+                <div className="absolute inset-0 bg-red-500/10 rounded-full blur-2xl transform scale-75 group-hover:scale-100 group-hover:bg-red-500/20 transition-all duration-700"></div>
+                <Image
+                  src="/img/illustrations/800x800_card-image-04.webp"
+                  alt="Connect 3D Helmet"
+                  width={160}
+                  height={160}
+                  className="footer-floating-img-2 relative z-10 w-36 h-36 object-contain transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+            </div>
+
+            <div className="footer-blocks__links anim-uni-in-up z-10">
               <p className="t-xsmall t-muted">
                 <Link className="no-effect" href={SITE_CONTENT.authorUrl}>
                   {SITE_CONTENT.author}

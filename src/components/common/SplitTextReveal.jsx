@@ -8,9 +8,9 @@ export default function SplitTextReveal({
   children,
   as: Component = "h2",
   className = "reveal-type",
-  start = "top 85%",
-  end = "top 25%",
-  stagger = 0.1,
+  start = "top 90%",
+  end = "bottom 70%",
+  stagger = 0.08,
   initialOpacity = 0.2,
 }) {
   const elementRef = useRef(null);
@@ -26,13 +26,14 @@ export default function SplitTextReveal({
         trigger: el,
         start,
         end,
-        scrub: true,
+        scrub: 1,
       },
       opacity: initialOpacity,
       stagger,
     });
 
     return () => {
+      if (anim.scrollTrigger) anim.scrollTrigger.kill();
       anim.kill();
       split.revert();
     };
