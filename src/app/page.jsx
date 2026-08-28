@@ -1,6 +1,6 @@
 import React from "react";
+import Image from "next/image";
 import Hero from "@/components/sections/Hero";
-import TechMarquee from "@/components/sections/TechMarquee";
 import HomeAbout from "@/components/sections/HomeAbout";
 import PinnedProjects from "@/components/sections/PinnedProjects";
 import Marquee from "@/components/common/Marquee";
@@ -8,8 +8,35 @@ import StackingCards from "@/components/sections/StackingCards";
 import ManifestSection from "@/components/sections/ManifestSection";
 import ParallaxDivider from "@/components/sections/ParallaxDivider";
 import CtaSection from "@/components/sections/CtaSection";
+import {
+  TECH_HTML,
+  TECH_CSS,
+  TECH_JAVASCRIPT,
+  TECH_NEXT_JS,
+  TECH_REACT,
+  TECH_TAILWIND_CSS,
+  TECH_MATERIAL_UI,
+  TECH_WORDPRESS,
+  TECH_FIGMA,
+  TECH_WEBFLOW,
+  TECH_PHOTOSHOP,
+} from "@/constant/image";
 
 export default function HomePage() {
+  const techStack = [
+    { name: "HTML", icon: TECH_HTML },
+    { name: "CSS", icon: TECH_CSS },
+    { name: "JavaScript", icon: TECH_JAVASCRIPT },
+    { name: "Next.js", icon: TECH_NEXT_JS },
+    { name: "React.js", icon: TECH_REACT },
+    { name: "Tailwind CSS", icon: TECH_TAILWIND_CSS },
+    { name: "Material UI", icon: TECH_MATERIAL_UI },
+    { name: "WordPress", icon: TECH_WORDPRESS },
+    { name: "Figma", icon: TECH_FIGMA },
+    { name: "Webflow", icon: TECH_WEBFLOW },
+    { name: "Photoshop", icon: TECH_PHOTOSHOP },
+  ];
+
   const renderStarIcon = () => (
     <svg
       version="1.1"
@@ -35,8 +62,29 @@ export default function HomePage() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Tech Stack Marquee */}
-      <TechMarquee />
+      {/* 6. Tech Stack Marquee */}
+      <div className="mxd-section padding-grid-pre-pinned">
+        <div className="mxd-container fullwidth-container">
+          <div className="mxd-block">
+            <Marquee direction="right">
+              {techStack.map((tech, idx) => (
+                <div key={idx} className="marquee__item one-line item-regular">
+                  <div className="mxd-tech-stack-cards__item">
+                    <div className="mxd-tech-stack-cards__inner-v3">
+                      <div className="mxd-tech-stack-cards__icon">
+                        <Image src={tech.icon} alt={tech.name} width={40} height={40} />
+                      </div>
+                      <div className="mxd-tech-stack-cards__title">
+                        <p className="t-bright t-caption">{tech.name}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </Marquee>
+          </div>
+        </div>
+      </div>
 
       {/* About Me Section */}
       <HomeAbout />

@@ -11,6 +11,19 @@ import CtaSection from "@/components/sections/CtaSection";
 import AnimatedButton from "@/components/common/AnimatedButton";
 import CountUpNumber from "@/components/common/CountUpNumber";
 import SplitTextReveal from "@/components/common/SplitTextReveal";
+import {
+  TECH_HTML,
+  TECH_CSS,
+  TECH_JAVASCRIPT,
+  TECH_NEXT_JS,
+  TECH_REACT,
+  TECH_TAILWIND_CSS,
+  TECH_MATERIAL_UI,
+  TECH_WORDPRESS,
+  TECH_FIGMA,
+  TECH_WEBFLOW,
+  TECH_PHOTOSHOP,
+} from "@/constant/image";
 
 export default function AboutMePage() {
   const renderStarIcon = () => (
@@ -34,14 +47,17 @@ export default function AboutMePage() {
   );
 
   const techStack = [
-    { name: "Next.js", icon: "/img/tech/icon-html.svg" },
-    { name: "React.js", icon: "/img/tech/icon-scketch.svg" },
-    { name: "Tailwind CSS", icon: "/img/tech/icon-css.svg" },
-    { name: "Material UI", icon: "/img/tech/icon-illustrator.svg" },
-    { name: "WordPress", icon: "/img/tech/icon-notion.svg" },
-    { name: "Figma", icon: "/img/tech/icon-figma.svg" },
-    { name: "Webflow", icon: "/img/tech/icon-blender.svg" },
-    { name: "Photoshop", icon: "/img/tech/icon-photoshop.svg" },
+    { name: "HTML", icon: TECH_HTML },
+    { name: "CSS", icon: TECH_CSS },
+    { name: "JavaScript", icon: TECH_JAVASCRIPT },
+    { name: "Next.js", icon: TECH_NEXT_JS },
+    { name: "React.js", icon: TECH_REACT },
+    { name: "Tailwind CSS", icon: TECH_TAILWIND_CSS },
+    { name: "Material UI", icon: TECH_MATERIAL_UI },
+    { name: "WordPress", icon: TECH_WORDPRESS },
+    { name: "Figma", icon: TECH_FIGMA },
+    { name: "Webflow", icon: TECH_WEBFLOW },
+    { name: "Photoshop", icon: TECH_PHOTOSHOP },
   ];
 
   return (
