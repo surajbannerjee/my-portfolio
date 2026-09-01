@@ -21,6 +21,14 @@ import {
   PROJECT_WILDORASS02,
   PROJECT_WILDORASS03,
   PROJECT_WILDORASS04,
+  PROJECT_MYTOOLSS01,
+  PROJECT_MYTOOLSS02,
+  PROJECT_MYTOOLSS03,
+  PROJECT_MYTOOLSS04,
+  PROJECT_MYTOOLSS05,
+  PROJECT_MYTOOLSS06,
+  PROJECT_MYTOOLSS07,
+  PROJECT_MYTOOLSS08,
 } from "@/constant";
 
 export const PINNED_PROJECTS = [
@@ -79,6 +87,7 @@ export const PINNED_PROJECTS = [
     ],
     liveUrl: "https://wildora.vercel.app/",
   },
+
   {
     id: "furniro",
     highlightTitle: "Furniro",
@@ -104,6 +113,41 @@ export const PINNED_PROJECTS = [
     ],
     techStack: ["Webflow", "Webflow animation"],
     liveUrl: "https://furniro-2fde57.webflow.io/",
+  },
+  {
+    id: "my-tools",
+    highlightTitle: "My Tools",
+    title: "Client-Side Digital Utilities & Converter Suite",
+    url: "/my-works?project=my-tools",
+    previewClass: "mxd-project-item__preview-2",
+    tags: ["Web App", "Next.js", "Tailwind CSS", "WebAssembly", "Client-Side Processing"],
+    image: "https://mytools-kohl.vercel.app/images/logo.webp",
+    client: "Self-Directed / Open Source Utility Project",
+    year: "2026",
+    services: "Full-Stack Web Development, Client-Side Media Processing, UI/UX Design, AdSense Optimization",
+    industry: "Digital Utilities, Web Tools & Productivity Platforms",
+    summary: "A modern, high-performance web platform offering 37+ free client-side digital utilities including image compression, next-gen format conversion, document tools, and financial calculators.",
+    challenge: "Building a feature-rich online converter platform that guarantees 100% data privacy by eliminating server-side file uploads, while ensuring desktop-level processing speeds directly within the user's browser across all devices.",
+    solution: "Engineered a client-side architecture using Next.js and Tailwind CSS powered by WebAssembly and HTML5 Canvas API. Implemented fast batch processing, dynamic image compression, official ID resizer presets (Passport, PAN, GATE), and ad placements for efficient monetization.",
+    gallery: [
+      PROJECT_MYTOOLSS01,
+      PROJECT_MYTOOLSS02,
+      PROJECT_MYTOOLSS03,
+      PROJECT_MYTOOLSS04,
+      PROJECT_MYTOOLSS05,
+      PROJECT_MYTOOLSS06,
+      PROJECT_MYTOOLSS07,
+      PROJECT_MYTOOLSS08,
+    ],
+    techStack: [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "WebAssembly / HTML5 Canvas API",
+      "JavaScript (ES6+)",
+      "Vercel Deployment"
+    ],
+    liveUrl: "https://mytools-kohl.vercel.app/",
   },
 ];
 

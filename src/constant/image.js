@@ -46,6 +46,14 @@ export const PROJECT_WILDORASS02 = image("/img/works/preview/WildoraSS02.png");
 export const PROJECT_WILDORASS03 = image("/img/works/preview/WildoraSS03.png");
 export const PROJECT_WILDORASS04 = image("/img/works/preview/WildoraSS04.png");
 
+export const PROJECT_MYTOOLSS01 = image("/img/works/preview/MytoolsSS01.png");
+export const PROJECT_MYTOOLSS02 = image("/img/works/preview/MyToolsSS02.png");
+export const PROJECT_MYTOOLSS03 = image("/img/works/preview/MyToolsSS03.png");
+export const PROJECT_MYTOOLSS04 = image("/img/works/preview/MyToolsSS04.png");
+export const PROJECT_MYTOOLSS05 = image("/img/works/preview/MyToolsSS05.png");
+export const PROJECT_MYTOOLSS06 = image("/img/works/preview/MyToolsSS06.png");
+export const PROJECT_MYTOOLSS07 = image("/img/works/preview/MyToolsSS07.png");
+export const PROJECT_MYTOOLSS08 = image("/img/works/preview/MyToolsSS08.png");
 // ==========================================
 // 3. TECH STACK & SKILL ICONS
 // ==========================================
