@@ -15,12 +15,12 @@ export default function MyWorksPage() {
       <ProjectsMasonry />
 
       {/* Parallax Divider */}
-      <ParallaxDivider
+      {/* <ParallaxDivider
         imageClass="divider-image-6"
         circleHref="/contact"
         circleText="Let's start new project * Let's start new project * "
         circleImage="/img/icons/300x300_obj-btn-02.webp"
-      />
+      /> */}
 
       {/* CTA Banner */}
       <CtaSection />
