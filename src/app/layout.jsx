@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import ScrollAnimations from "@/components/common/ScrollAnimations";
 import JsonLd from "@/components/common/JsonLd";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   metadataBase: new URL("https://suraj-banerjee.vercel.app"),
@@ -109,6 +110,7 @@ export default function RootLayout({ children }) {
           <Header />
           <ScrollAnimations />
           {children}
+          <Analytics />
           <Footer />
           <ScrollToTop />
         </SmoothScroll>
