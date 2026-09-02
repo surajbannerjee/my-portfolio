@@ -23,6 +23,7 @@ import {
   TECH_FIGMA,
   TECH_WEBFLOW,
   TECH_PHOTOSHOP,
+  ICON_300X300_OBJ_BTN_02,
 } from "@/constant/image";
 
 export default function AboutMePage() {
@@ -613,7 +614,7 @@ export default function AboutMePage() {
         imageClass="divider-image-1"
         circleHref="/contact"
         circleText="Let's start new project * Let's start new project * "
-        circleImage="/img/icons/300x300_obj-btn-02.webp"
+        circleImage={ICON_300X300_OBJ_BTN_02}
       />
 
       {/* 12. CTA Banner */}

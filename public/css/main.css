@@ -5511,6 +5511,13 @@ form textarea:required:valid {
     overflow: hidden
 }
 
+.mxd-divider__image.parallax-img,
+.parallax-img {
+    background-size: auto 135% !important;
+    background-position: 50% 0%;
+    will-change: background-position;
+}
+
 .mxd-divider__image img {
     width: 100%;
     height: 100%;
@@ -5654,6 +5661,13 @@ form textarea:required:valid {
     background-position: center;
     -moz-background-size: cover;
     background-size: cover
+}
+
+.mxd-project-item__preview.parallax-img-small,
+.parallax-img-small {
+    background-size: auto 140% !important;
+    background-position: 50% 0%;
+    will-change: background-position;
 }
 
 .mxd-project-item__tags {
@@ -22807,7 +22821,9 @@ form textarea:required:valid {
 
 .mxd-team-cards__media {
     position: relative;
-    height: 460px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
     -moz-border-radius: var(--_radius-m);
     border-radius: var(--_radius-m);
     margin-bottom: 1.7rem;
@@ -22824,19 +22840,22 @@ form textarea:required:valid {
 
 @media only screen and (min-width:768px) {
     .mxd-team-cards__media {
-        height: 460px
+        height: auto;
+        aspect-ratio: 1 / 1
     }
 }
 
 @media only screen and (min-width:1200px) {
     .mxd-team-cards__media {
-        height: 460px
+        height: auto;
+        aspect-ratio: 1 / 1
     }
 }
 
 @media only screen and (min-width:1600px) {
     .mxd-team-cards__media {
-        height: 600px
+        height: auto;
+        aspect-ratio: 1 / 1
     }
 }
 
@@ -22925,7 +22944,8 @@ form textarea:required:valid {
 .mxd-team-cards__photo {
     position: relative;
     width: 100%;
-    height: 460px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     display: -webkit-box;
     display: -moz-box;
@@ -22950,25 +22970,29 @@ form textarea:required:valid {
 .mxd-team-cards__photo img {
     width: 100%;
     height: 100%;
+    aspect-ratio: 1 / 1;
     -o-object-fit: cover;
     object-fit: cover
 }
 
 @media only screen and (min-width:768px) {
     .mxd-team-cards__photo {
-        height: 460px
+        height: 100%;
+        aspect-ratio: 1 / 1
     }
 }
 
 @media only screen and (min-width:1200px) {
     .mxd-team-cards__photo {
-        height: 460px
+        height: 100%;
+        aspect-ratio: 1 / 1
     }
 }
 
 @media only screen and (min-width:1600px) {
     .mxd-team-cards__photo {
-        height: 600px
+        height: 100%;
+        aspect-ratio: 1 / 1
     }
 }
 

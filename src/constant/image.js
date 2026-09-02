@@ -103,11 +103,13 @@ export const CTA_IMG_02 = image("/img/illustrations/cta-img-02.webp");
 // ==========================================
 // 6. AVATARS & TEAM
 // ==========================================
-export const AVATAR_1400140001 = image("/img/avatars/1400x1400_ava-01.webp");
-export const AVATAR_30030001 = image("/img/avatars/300x300_ava-01.webp");
-export const AVATAR_30030002 = image("/img/avatars/300x300_ava-02.webp");
-export const AVATAR_30030003 = image("/img/avatars/300x300_ava-03.webp");
-export const AVATAR_30030004 = image("/img/avatars/300x300_ava-04.webp");
+export const AVATAR_1 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788340877/digital-art-style-illustration-graphic-designer_2_an70k2.jpg");
+export const AVATAR_2 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788340882/digital-art-style-illustration-graphic-designer_1_jvc5u5.jpg");
+export const AVATAR_3 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788340885/industrial-designer-digital-art_1_jaw7ug.jpg");
+export const AVATAR_4 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788341091/digital-art-style-illustration-graphic-designer_3_vm2tay.jpg");
+export const AVATAR_5 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788340623/digital-art-style-illustration-graphic-designer_zznjgs.jpg");
+export const AVATAR_6 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788341092/industrial-designer-digital-art_4_f5eldh.jpg");
+export const AVATAR_7 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788341097/industrial-designer-digital-art_3_xkpdei.jpg");
 
 // ==========================================
 // 7. FAVICON & META
@@ -206,11 +208,13 @@ const IMAGES = {
   ILLUSTRATION_800X800_SERVICE_IMAGE_04,
   CTA_IMG_01,
   CTA_IMG_02,
-  AVATAR_1400140001,
-  AVATAR_30030001,
-  AVATAR_30030002,
-  AVATAR_30030003,
-  AVATAR_30030004,
+  AVATAR_1,
+  AVATAR_2,
+  AVATAR_3,
+  AVATAR_4,
+  AVATAR_5,
+  AVATAR_6,
+  AVATAR_7,
   FAVICON_APPLE_TOUCH_ICON,
   FAVICON_ICO,
   FAVICON_SVG,

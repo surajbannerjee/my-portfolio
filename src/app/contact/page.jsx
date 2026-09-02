@@ -2,6 +2,7 @@ import React from "react";
 import InnerHeadline from "@/components/sections/InnerHeadline";
 import ContactForm from "@/components/sections/ContactForm";
 import ParallaxDivider from "@/components/sections/ParallaxDivider";
+import { ICON_300X300_OBJ_BTN_02 } from "@/constant";
 
 export const metadata = {
   title: "Contact & Hire Suraj Banerjee — Frontend UI Developer",
@@ -39,7 +40,7 @@ export default function ContactPage() {
         imageClass="divider-image-2"
         circleHref="/contact"
         circleText="Let's start new project * Let's start new project * "
-        circleImage="/img/icons/300x300_obj-btn-02.webp"
+        circleImage={ICON_300X300_OBJ_BTN_02}
       />
     </main>
   );

@@ -14,13 +14,7 @@ export default function MyWorksPage() {
       {/* Gallery Section */}
       <ProjectsMasonry />
 
-      {/* Parallax Divider */}
-      {/* <ParallaxDivider
-        imageClass="divider-image-6"
-        circleHref="/contact"
-        circleText="Let's start new project * Let's start new project * "
-        circleImage="/img/icons/300x300_obj-btn-02.webp"
-      /> */}
+    
 
       {/* CTA Banner */}
       <CtaSection />

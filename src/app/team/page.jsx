@@ -1,16 +1,9 @@
-import { notFound } from "next/navigation";
-
-// The Team page is temporarily hidden. When ready to reopen, uncomment the component below.
-export default function TeamPage() {
-  notFound();
-}
-
-/*
 import React from "react";
 import InnerHeadline from "@/components/sections/InnerHeadline";
 import TeamGrid from "@/components/sections/TeamGrid";
 import ParallaxDivider from "@/components/sections/ParallaxDivider";
 import CtaSection from "@/components/sections/CtaSection";
+import { ICON_300X300_OBJ_BTN_02 } from "@/constant";
 
 export const metadata = {
   title: "Team & Collaborators — Suraj Banerjee",
@@ -21,12 +14,13 @@ export const metadata = {
   },
   openGraph: {
     title: "Team & Collaborators — Suraj Banerjee",
-    description: "Creative developers and UI designers united by a passion for crafting impactful digital experiences.",
+    description:
+      "Creative developers and UI designers united by a passion for crafting impactful digital experiences.",
     url: "https://suraj-banerjee.vercel.app/team",
   },
 };
 
-export function ActiveTeamPage() {
+export default function TeamPage() {
   return (
     <main id="mxd-page-content" className="mxd-page-content inner-page-content">
       <InnerHeadline
@@ -45,7 +39,7 @@ export function ActiveTeamPage() {
         imageClass="divider-image-5"
         circleHref="/contact"
         circleText="Let's start new project * Let's start new project * "
-        circleImage="/img/icons/300x300_obj-btn-02.webp"
+        circleImage={ICON_300X300_OBJ_BTN_02}
       />
 
       <CtaSection
@@ -56,4 +50,3 @@ export function ActiveTeamPage() {
     </main>
   );
 }
-*/

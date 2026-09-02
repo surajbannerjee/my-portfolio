@@ -5,6 +5,7 @@ import ServicesList from "@/components/sections/ServicesList";
 import StackingCards from "@/components/sections/StackingCards";
 import ParallaxDivider from "@/components/sections/ParallaxDivider";
 import CtaSection from "@/components/sections/CtaSection";
+import { ICON_300X300_OBJ_BTN_02 } from "@/constant";
 
 export const metadata = {
   title: "Frontend & UI Design Services — Suraj Banerjee",
@@ -49,7 +50,7 @@ export default function ServicesPage() {
         imageClass="divider-image-6"
         circleHref="/contact"
         circleText="Let's start new project * Let's start new project * "
-        circleImage="/img/icons/300x300_obj-btn-02.webp"
+        circleImage={ICON_300X300_OBJ_BTN_02}
       />
 
       {/* 6. CTA Section */}

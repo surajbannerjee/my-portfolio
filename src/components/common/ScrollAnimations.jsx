@@ -284,7 +284,7 @@ export default function ScrollAnimations() {
                 trigger: img,
                 start: "top bottom",
                 end: "bottom top",
-                scrub: true,
+                scrub: 0.8,
               },
             }
           );
@@ -294,15 +294,15 @@ export default function ScrollAnimations() {
         parallaxImagesSmall.forEach((img) => {
           gsap.fromTo(
             img,
-            { backgroundPosition: "50% 20%" },
+            { backgroundPosition: "50% 0%" },
             {
-              backgroundPosition: "50% 80%",
+              backgroundPosition: "50% 100%",
               ease: "none",
               scrollTrigger: {
                 trigger: img,
                 start: "top bottom",
                 end: "bottom top",
-                scrub: true,
+                scrub: 0.8,
               },
             }
           );

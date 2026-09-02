@@ -2,12 +2,13 @@
 
 import React from "react";
 import RotatingButton from "@/components/common/RotatingButton";
+import { ICON_300X300_OBJ_BTN_02 } from "@/constant";
 
 export default function ParallaxDivider({
   imageClass = "divider-image-6",
   circleHref = "/contact",
   circleText = "Let's start new project * Let's start new project * ",
-  circleImage = "/img/icons/300x300_obj-btn-02.webp",
+  circleImage = ICON_300X300_OBJ_BTN_02,
   className = "mxd-section padding-pre-title",
   download,
 }) {
