@@ -24,15 +24,16 @@ export default function TeamGrid() {
                           <div className="col-12">
                             <div className="mxd-section-title__title">
                               <SplitTextReveal as="h2" className="reveal-type">
-                                Dreamers and doers
+                                Dreamers.<br />Builders.<br />Problem Solvers.
                               </SplitTextReveal>
                             </div>
                           </div>
                           <div className="col-12">
                             <div className="mxd-section-title__descr">
                               <p className="anim-uni-in-up">
-                                Creatives and strategists united by a passion for crafting
-                                impactful digital solutions.
+                                We bring different skills, perspectives, and experiences to every project.
+                                From the first idea to the final detail, we work together to create digital
+                                experiences that are purposeful, intuitive, and built to perform.
                               </p>
                             </div>
                           </div>
@@ -41,7 +42,7 @@ export default function TeamGrid() {
                               <AnimatedButton
                                 href="/my-works"
                                 className="btn btn-anim btn-default btn-outline slide-right-up"
-                                caption="View Works"
+                                caption="Explore Our Work"
                                 iconClass="ph-bold ph-arrow-up-right"
                               />
                             </div>
@@ -62,7 +63,7 @@ export default function TeamGrid() {
                       <div className="mxd-team-cards__photo">
                         <ImageWithSkeleton
                           src={member.photo}
-                          alt={member.name}
+                          alt={member.name || member.position}
                           width={600}
                           height={600}
                           style={{ width: "100%", height: "100%", aspectRatio: "1 / 1" }}
@@ -72,7 +73,7 @@ export default function TeamGrid() {
                         />
                       </div>
                       <div className="mxd-team-cards__socials">
-                        {member.socials.map((social, sIdx) => (
+                        {member.socials && member.socials.map((social, sIdx) => (
                           <AnimatedButton
                             key={sIdx}
                             href={social.url}
@@ -81,15 +82,25 @@ export default function TeamGrid() {
                             caption={social.name}
                           />
                         ))}
+                        {member.tags && member.tags.map((tag, tIdx) => (
+                          <span
+                            key={tIdx}
+                            className="tag tag-default tag-permanent"
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
                     </div>
                     <div className="mxd-team-cards__info">
                       <p className="mxd-team-cards__name t-large t-bright t-caption">
-                        {member.name}
+                        {member.name || member.position}
                       </p>
-                      <p className="mxd-team-cards__position t-small t-medium t-140">
-                        {member.position}
-                      </p>
+                      {member.name && member.position && (
+                        <p className="mxd-team-cards__position t-small t-medium t-140">
+                          {member.position}
+                        </p>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -115,7 +126,8 @@ export default function TeamGrid() {
                           Maybe you?
                         </p>
                         <p className="mxd-team-cards__position t-small t-medium t-140">
-                          Become a part of our team
+                          Think you&apos;d be a great fit?<br />
+                          Let&apos;s build something together.
                         </p>
                       </div>
                     </Link>

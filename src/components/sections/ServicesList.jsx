@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { ILLUSTRATION_360X440_LIST_01, ILLUSTRATION_360X440_LIST_02, ILLUSTRATION_360X440_LIST_03, ILLUSTRATION_360X440_LIST_04 } from "@/constant";
 
 const SERVICES_LIST = [
   {
@@ -18,7 +19,7 @@ const SERVICES_LIST = [
       "Motion",
       "3D models",
     ],
-    image: "/img/illustrations/360x440_list-01.webp",
+    image: ILLUSTRATION_360X440_LIST_01,
   },
   {
     id: "development",
@@ -34,7 +35,7 @@ const SERVICES_LIST = [
       "E-commerce",
       "Optimization",
     ],
-    image: "/img/illustrations/360x440_list-02.webp",
+    image: ILLUSTRATION_360X440_LIST_02,
   },
   {
     id: "branding",
@@ -49,7 +50,7 @@ const SERVICES_LIST = [
       "Iconography",
       "Illustrations",
     ],
-    image: "/img/illustrations/360x440_list-03.webp",
+    image: ILLUSTRATION_360X440_LIST_03,
   },
   {
     id: "marketing",
@@ -64,7 +65,7 @@ const SERVICES_LIST = [
       "Analytics",
       "Conversion rate",
     ],
-    image: "/img/illustrations/360x440_list-04.webp",
+    image: ILLUSTRATION_360X440_LIST_04,
   },
 ];
 

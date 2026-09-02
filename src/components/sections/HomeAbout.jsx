@@ -10,6 +10,7 @@ import {
   SiWordpress,
   SiNextdotjs,
 } from "react-icons/si";
+import { ME } from "@/constant";
 
 export default function HomeAbout() {
   const pillars = [
@@ -21,7 +22,7 @@ export default function HomeAbout() {
       tag: "100% Fidelity",
     },
     {
-      icon: <SiNextdotjs size={34} className="text-white" />,
+      icon: <SiNextdotjs size={34} className="text-[var(--t-bright)]" />,
       title: "Next.js & React Engineering",
       description:
         "Building scalable, high-performance web applications using Tailwind CSS, Material UI, and modern React 18+ architecture for 40% faster UX.",
@@ -85,39 +86,39 @@ export default function HomeAbout() {
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-5 md:gap-6 items-stretch">
             {/* Left Column: Bio & Highlights */}
             <div className="xl:col-span-5 h-full">
-              <div className="bg-[#141414]/90 border-1 border-white/10 radius-m p-6 md:p-8 h-full flex flex-col justify-between">
+              <div className="home-about-card p-6 md:p-8 h-full flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-lime-400/40 shrink-0">
+                    <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-[var(--accent)] shrink-0">
                       <Image
-                        src="https://res.cloudinary.com/drrw18aos/image/upload/v1787163087/ChatGPT_Image_Aug_19_2026_11_41_05_PM_dtr5z4.png"
+                        src={ME}
                         alt="Suraj Banerjee"
-                        width={64}
-                        height={64}
+                        width={200}
+                        height={200}
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1" style={{ fontSize: "clamp(20px, 2vw, 24px)" }}>
+                      <h3 className="font-bold text-[var(--t-bright)] mb-1" style={{ fontSize: "clamp(20px, 2vw, 24px)" }}>
                         Suraj Banerjee
                       </h3>
-                      <p className="text-lime-400 font-medium" style={{ fontSize: "clamp(13px, 1.3vw, 15px)" }}>
+                      <p className="text-[var(--accent)] font-medium" style={{ fontSize: "clamp(13px, 1.3vw, 15px)" }}>
                         Frontend UI &amp; WordPress Developer
                       </p>
                     </div>
                   </div>
 
-                  <p className="font-semibold text-white/95 mb-3 leading-snug" style={{ fontSize: "clamp(16px, 1.6vw, 19px)" }}>
+                  <p className="font-semibold text-[var(--t-bright)] mb-3 leading-snug" style={{ fontSize: "clamp(16px, 1.6vw, 19px)" }}>
                     Bridging the gap between creative Figma UI designs and high-performance React &amp; Next.js web applications.
                   </p>
 
-                  <p className="text-neutral-400 mb-4 leading-relaxed" style={{ fontSize: "clamp(14px, 1.4vw, 16px)", lineHeight: "1.65" }}>
-                    With over 3 years of hands-on experience, I specialize in building responsive, blazing-fast interfaces with <strong>React.js, Next.js, Tailwind CSS, and Material UI</strong>. I also create custom WordPress solutions with Elementor Pro and ACF that give clients seamless digital workflows.
+                  <p className="text-[var(--t-muted)] mb-4 leading-relaxed" style={{ fontSize: "clamp(14px, 1.4vw, 16px)", lineHeight: "1.65" }}>
+                    With over 3 years of hands-on experience, I specialize in building responsive, blazing-fast interfaces with <strong className="text-[var(--t-bright)] font-semibold">React.js, Next.js, Tailwind CSS, and Material UI</strong>. I also create custom WordPress solutions with Elementor Pro and ACF that give clients seamless digital workflows.
                   </p>
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-wrap gap-3 pt-4 border-t border-white/10 mt-4">
+                <div className="flex flex-wrap gap-3 pt-4 border-t border-[var(--st-muted)] mt-4">
                   <AnimatedButton
                     href="/about-me"
                     className="btn btn-anim btn-default btn-accent slide-right-up"
@@ -136,27 +137,27 @@ export default function HomeAbout() {
               </div>
             </div>
 
-            {/* Right Column: Key Pillars Grid with generous gaps */}
+            {/* Right Column: Key Pillars Grid */}
             <div className="xl:col-span-7 h-full">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 h-full">
                 {pillars.map((pillar, idx) => (
                   <div
                     key={idx}
-                    className="bg-[#141414]/90 border-1 border-white/10 hover:border-lime-400/50 radius-m p-5 md:p-6 h-full flex flex-col justify-between transition-all duration-300 hover:bg-[#191919]"
+                    className="home-about-card p-5 md:p-6 h-full flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex justify-between items-start mb-3">
-                        <div className="p-3 rounded-2xl bg-black/50 border border-white/10 flex items-center justify-center">
+                        <div className="home-about-iconbox p-3 rounded-2xl flex items-center justify-center">
                           {pillar.icon}
                         </div>
-                        <span className="tag tag-default text-xs font-semibold">
+                        <span className="home-about-tag">
                           {pillar.tag}
                         </span>
                       </div>
-                      <h4 className="font-bold text-white mb-2" style={{ fontSize: "clamp(16px, 1.6vw, 19px)" }}>
+                      <h4 className="font-bold text-[var(--t-bright)] mb-2" style={{ fontSize: "clamp(16px, 1.6vw, 19px)" }}>
                         {pillar.title}
                       </h4>
-                      <p className="text-neutral-400 leading-relaxed mb-0" style={{ fontSize: "clamp(13px, 1.3vw, 15px)", lineHeight: "1.6" }}>
+                      <p className="text-[var(--t-muted)] leading-relaxed mb-0" style={{ fontSize: "clamp(13px, 1.3vw, 15px)", lineHeight: "1.6" }}>
                         {pillar.description}
                       </p>
                     </div>

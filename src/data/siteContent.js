@@ -4,9 +4,9 @@ export const SITE_CONTENT = {
   role: "Frontend UI Developer",
   copyrightYear: 2026,
   email: "surajbanerjee255@gmail.com",
-  phone: "+91 9609618271",
+  phone: "+91 96096 18271",
   address: "Kolkata, India",
-  tagline: "Bridging the gap between design and engineering.<br>Available for freelance & full-time roles.",
+  tagline: "Ideas designed. Experiences engineered.",
   greeting: "👋 Hello, I&apos;m Suraj,<br>Frontend UI Developer",
 
   logo: {
@@ -14,15 +14,15 @@ export const SITE_CONTENT = {
     url: "/",
   },
 
-  // Main 4 navigation links for Header & Footer
+  // Main navigation links for Header & Footer (big menus)
   menu: [
     { title: "Home", url: "/" },
-    { title: "About me", url: "/about-me" },
-    { title: "My works", url: "/my-works" },
+    { title: "About", url: "/about-me" },
+    { title: "Work", url: "/my-works" },
     { title: "Contact", url: "/contact" },
   ],
 
-  // Secondary explore pages accessible via interactive buttons
+  // Secondary explore pages (bottom small button type)
   exploreLinks: [
     { title: "Services", url: "/services" },
     { title: "Pricing", url: "/pricing" },
@@ -50,11 +50,9 @@ export const SITE_CONTENT = {
 
   footer: {
     svgText: "surajbanerjee",
+    tagline: "Ideas designed. Experiences engineered.",
     subscribeTitle: "Stay updated with the latest in frontend architecture and UI design.",
     socialsTitle: "Connect",
-    legalLinks: [
-      { title: "Privacy Policy", url: "#" },
-      { title: "Terms of Use", url: "#" },
-    ],
+    legalLinks: [],
   },
 };

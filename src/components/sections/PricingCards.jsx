@@ -88,7 +88,7 @@ export default function PricingCards() {
                           </ul>
                         </div>
                       </div>
-                      <div className="mxd-pricing-table__link anim-uni-in-up">
+                      <div className="mxd-pricing-table__link anim-uni-in-up mt-auto pt-4">
                         <Link href={plan.infoLinkUrl}>{plan.infoLinkText}</Link>
                       </div>
                     </div>

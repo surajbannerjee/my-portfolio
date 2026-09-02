@@ -1,68 +1,50 @@
-import { AVATAR_1, AVATAR_2, AVATAR_3, AVATAR_4, AVATAR_5, AVATAR_6, AVATAR_7 } from "@/constant";
+import { AVATAR_1, AVATAR_2, AVATAR_3, AVATAR_4, AVATAR_5, AVATAR_6, ME } from "@/constant";
 
 export const TEAM_MEMBERS = [
   {
     id: "suraj-banerjee",
     name: "Suraj Banerjee",
-    position: "Lead Frontend UI Developer & Designer",
-    photo: "https://res.cloudinary.com/drrw18aos/image/upload/v1788343133/Frame_2085663355_uifcvg.png",
+    position: "Frontend Developer & UI Specialist",
+    photo: ME,
     socials: [
-      { name: "LinkedIn", url: "#" },
-      { name: "GitHub", url: "#" },
+      { name: "LinkedIn", url: "https://www.linkedin.com/in/suraj-banerjee-0a1251268/" },
+      { name: "GitHub", url: "https://github.com/surajbannerjee" },
     ],
   },
   {
     id: "full-stack-developer",
     position: "Full Stack Developer",
     photo: AVATAR_1,
-    socials: [
-      { name: "GitHub", url: "#" },
-      { name: "LinkedIn", url: "#" },
-    ],
+    tags: ["Development", "Full Stack"],
   },
   {
     id: "senior-wordpress-developer",
     position: "Sr. WordPress Developer",
     photo: AVATAR_2,
-    socials: [
-      { name: "GitHub", url: "#" },
-      { name: "LinkedIn", url: "#" },
-    ],
+    tags: ["WordPress", "CMS"],
   },
   {
     id: "senior-ui-ux-designer",
     position: "Sr. UI/UX Designer",
     photo: AVATAR_6,
-    socials: [
-      { name: "Behance", url: "#" },
-      { name: "Dribbble", url: "#" },
-    ],
+    tags: ["UI/UX", "Design"],
   },
   {
     id: "senior-php-developer",
     position: "Sr. PHP Developer",
     photo: AVATAR_4,
-    socials: [
-      { name: "GitHub", url: "#" },
-      { name: "LinkedIn", url: "#" },
-    ],
+    tags: ["Backend", "PHP"],
   },
   {
     id: "senior-frontend-developer",
     position: "Sr. Frontend Developer",
     photo: AVATAR_5,
-    socials: [
-      { name: "GitHub", url: "#" },
-      { name: "LinkedIn", url: "#" },
-    ],
+    tags: ["Frontend", "Web"],
   },
   {
     id: "senior-flutter-developer",
     position: "Sr. Flutter Developer",
     photo: AVATAR_3,
-    socials: [
-      { name: "GitHub", url: "#" },
-      { name: "LinkedIn", url: "#" },
-    ],
+    tags: ["Flutter", "Mobile"],
   },
 ];

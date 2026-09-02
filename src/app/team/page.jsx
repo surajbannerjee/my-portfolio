@@ -6,16 +6,16 @@ import CtaSection from "@/components/sections/CtaSection";
 import { ICON_300X300_OBJ_BTN_02 } from "@/constant";
 
 export const metadata = {
-  title: "Team & Collaborators — Suraj Banerjee",
+  title: "Team — Suraj Banerjee",
   description:
-    "Meet Suraj Banerjee and our collaborative network of designers, engineers, and digital creative specialists.",
+    "Meet the people behind the pixels. Different disciplines. One shared vision. We combine design, development, and technology to build digital experiences that look exceptional and work beautifully.",
   alternates: {
     canonical: "https://suraj-banerjee.vercel.app/team",
   },
   openGraph: {
-    title: "Team & Collaborators — Suraj Banerjee",
+    title: "Team — Suraj Banerjee",
     description:
-      "Creative developers and UI designers united by a passion for crafting impactful digital experiences.",
+      "Different disciplines. One shared vision. We combine design, development, and technology to build digital experiences that look exceptional and work beautifully.",
     url: "https://suraj-banerjee.vercel.app/team",
   },
 };
@@ -24,17 +24,22 @@ export default function TeamPage() {
   return (
     <main id="mxd-page-content" className="mxd-page-content inner-page-content">
       <InnerHeadline
-        subtitle="Team"
-        title={<h1 className="inner-headline__title loading__item">Meet our team</h1>}
+        subtitle="OUR TEAM"
+        title={
+          <h1 className="inner-headline__title loading__item">
+            Meet the people<br className="d-none d-md-inline" /> behind the pixels.
+          </h1>
+        }
         description={
           <p className="inner-headline__text t-large t-bright loading__item">
-            A collaborative network of passionate frontend developers, UI designers, and technical strategists delivering exceptional digital products.
+            Different disciplines. One shared vision.<br className="d-none d-md-inline" /> We combine design, development, and technology to build digital experiences that look exceptional and work beautifully.
           </p>
         }
       />
 
       <TeamGrid />
 
+      {/* Cinematic SURAJ Banner - untouched */}
       <ParallaxDivider
         imageClass="divider-image-5"
         circleHref="/contact"
@@ -42,9 +47,12 @@ export default function TeamPage() {
         circleImage={ICON_300X300_OBJ_BTN_02}
       />
 
+      {/* Premium Agency CTA Section */}
       <CtaSection
-        caption="Interested in working together or hiring me for a project?"
-        btnText="Get in Touch"
+        label="LET'S CREATE"
+        caption="Got a bold idea? Let's make it real."
+        description="From interfaces and websites to complete digital experiences, let's build something people remember."
+        btnText="Start a Project"
         btnHref="/contact"
       />
     </main>

@@ -186,19 +186,6 @@ export default function NavigationMenu({ isOpen, onToggle }) {
                     ))}
                   </ul>
                 </nav>
-                <div className="menu-explore-buttons menu-fade-in" style={{ marginTop: "2.4rem", display: "flex", flexWrap: "wrap", gap: "0.8rem" }}>
-                  {SITE_CONTENT.exploreLinks?.map((item, idx) => (
-                    <Link
-                      key={idx}
-                      href={item.url}
-                      onClick={() => onToggle(false)}
-                      className="btn btn-line-xsmall btn-outline tag tag-default tag-outline-medium"
-                      style={{ padding: "0.6rem 1.4rem", borderRadius: "2rem", textDecoration: "none", fontSize: "1.3rem" }}
-                    >
-                      {item.title} <i className="ph ph-arrow-up-right" style={{ marginLeft: "4px" }}></i>
-                    </Link>
-                  ))}
-                </div>
               </div>
             </div>
             {/* right side */}
@@ -236,12 +223,46 @@ export default function NavigationMenu({ isOpen, onToggle }) {
             </div>
             {/* data bottom line */}
             <div className="mxd-menu__data menu-fade-in">
-              <p className="t-xsmall">
-                Made with <i className="ph-fill ph-heart t-additional"></i> by{" "}
-                <Link className="no-effect" href={SITE_CONTENT.authorUrl}>
-                  {SITE_CONTENT.author}
-                </Link>
-              </p>
+              <div className="mxd-menu__data-left">
+                {SITE_CONTENT.exploreLinks && SITE_CONTENT.exploreLinks.length > 0 && (
+                  <div
+                    className="menu-explore-buttons mb-3"
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      gap: "0.8rem",
+                      marginBottom: "1.2rem",
+                    }}
+                  >
+                    {SITE_CONTENT.exploreLinks.map((item, idx) => (
+                      <Link
+                        key={idx}
+                        href={item.url}
+                        onClick={() => onToggle(false)}
+                        className="btn btn-line-xsmall btn-outline tag tag-default tag-outline-medium"
+                        style={{
+                          padding: "0.6rem 1.4rem",
+                          borderRadius: "2rem",
+                          textDecoration: "none",
+                          fontSize: "1.3rem",
+                        }}
+                      >
+                        {item.title}{" "}
+                        <i
+                          className="ph ph-arrow-up-right"
+                          style={{ marginLeft: "4px" }}
+                        ></i>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+                <p className="t-xsmall">
+                  Made with <i className="ph-fill ph-heart t-additional"></i> by{" "}
+                  <Link className="no-effect" href={SITE_CONTENT.authorUrl}>
+                    {SITE_CONTENT.author}
+                  </Link>
+                </p>
+              </div>
               <p className="t-xsmall">
                 <i className="ph ph-copyright"></i> {SITE_CONTENT.copyrightYear}
               </p>

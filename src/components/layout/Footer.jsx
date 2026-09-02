@@ -37,6 +37,9 @@ export default function Footer() {
               {SITE_CONTENT.footer.svgText}
             </text>
           </svg>
+          <p className="text-center text-[var(--t-muted)] text-xs md:text-sm tracking-widest uppercase font-medium mt-3 mb-2">
+            Ideas designed. Experiences engineered.
+          </p>
         </div>
       </div>
       {/* Footer Block - Fullwidth Text End */}
@@ -45,7 +48,7 @@ export default function Footer() {
       <div className="mxd-footer__footer-blocks">
         {/* single column 1 - Navigation Links */}
         <div className="footer-blocks__column animate-card-3">
-          <div className="footer-blocks__card fullheight-card relative overflow-hidden group">
+          <div className="footer-blocks__card fullheight-card relative group">
             <div className="footer-blocks__nav z-10">
               <ul className="footer-nav">
                 {SITE_CONTENT.menu.map((item, idx) => (
@@ -61,39 +64,33 @@ export default function Footer() {
             </div>
 
             {/* Desktop Animated Floating Illustration */}
-            <div className="hidden xl:flex flex-col items-center justify-center my-auto py-2 z-10 pointer-events-none">
-              <div className="relative w-40 h-40 flex items-center justify-center">
+            <div className="hidden xl:flex flex-col items-center justify-center my-2 z-10 pointer-events-none">
+              <div className="relative w-32 h-32 flex items-center justify-center">
                 <div className="absolute inset-0 bg-lime-400/10 rounded-full blur-2xl transform scale-75 group-hover:scale-100 group-hover:bg-lime-400/20 transition-all duration-700"></div>
                 <Image
                   src="/img/illustrations/800x800_card-image-01.webp"
                   alt="Navigation 3D Emblem"
-                  width={160}
-                  height={160}
-                  className="footer-floating-img-1 relative z-10 w-36 h-36 object-contain transition-transform duration-500 group-hover:scale-110"
+                  width={120}
+                  height={120}
+                  className="footer-floating-img-1 relative z-10 w-28 h-28 object-contain transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
             </div>
 
-            <div className="footer-blocks__links anim-uni-in-up z-10" style={{ display: "flex", flexWrap: "wrap", gap: "0.8rem", marginTop: "1.6rem" }}>
-              {SITE_CONTENT.exploreLinks?.map((item, idx) => (
-                <AnimatedButton
-                  key={idx}
-                  href={item.url}
-                  className="btn btn-line-xsmall btn-muted slide-right anim-no-delay"
-                  caption={item.title}
-                  iconClass="ph ph-arrow-up-right"
-                />
-              ))}
-              {SITE_CONTENT.footer.legalLinks.map((item, idx) => (
-                <AnimatedButton
-                  key={`legal-${idx}`}
-                  href={item.url}
-                  className="btn btn-line-xsmall btn-muted slide-right anim-no-delay"
-                  caption={item.title}
-                  iconClass="ph ph-arrow-right"
-                />
-              ))}
-            </div>
+            {/* Explore links: Render only if present */}
+            {SITE_CONTENT.exploreLinks && SITE_CONTENT.exploreLinks.length > 0 && (
+              <div className="footer-blocks__links z-10" style={{ display: "flex", flexWrap: "wrap", gap: "0.6rem", marginTop: "1rem" }}>
+                {SITE_CONTENT.exploreLinks.map((item, idx) => (
+                  <AnimatedButton
+                    key={idx}
+                    href={item.url}
+                    className="btn btn-line-xsmall btn-muted slide-right anim-no-delay"
+                    caption={item.title}
+                    iconClass="ph ph-arrow-up-right"
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
@@ -154,20 +151,21 @@ export default function Footer() {
           <div className="footer-blocks__card fill-card">
             <div className="flex flex-col justify-between h-full">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-lime-400/10 border border-lime-400/20 text-lime-500 text-[1.2rem] font-semibold mb-3 anim-uni-in-up">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-lime-400/10 border border-lime-400/20 text-lime-500 text-[1.2rem] font-semibold mb-3">
                   <span className="w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>
                   <span>Available for New Projects</span>
                 </div>
-                <div className="footer-blocks__title anim-uni-in-up">
-                  <p className="footer-blocks__title-m" style={{ fontSize: "clamp(1.8rem, 2.4vw, 4rem)", lineHeight: "1.4", marginBottom: "0.8rem" }}>
-                    Have an idea or a project in mind? Let&apos;s talk.
+                <div className="footer-blocks__title">
+                  <p className="footer-blocks__title-m" style={{ fontSize: "clamp(1.8rem, 2.2vw, 3.4rem)", lineHeight: "1.35", marginBottom: "0.8rem" }}>
+                    Have an idea<br />in mind?
                   </p>
                 </div>
-                <p className="t-small t-muted anim-uni-in-up" style={{ fontSize: "14px", lineHeight: "1.6", marginBottom: "1.6rem" }}>
-                  Based in Kolkata, India (IST • UTC+5:30). Open for freelance projects and remote engineering roles.
+                <p className="t-small t-muted" style={{ fontSize: "14px", lineHeight: "1.5", marginBottom: "1.2rem" }}>
+                  Let&apos;s turn your vision into a digital experience worth remembering.
                 </p>
               </div>
-              <div className="anim-uni-in-up pt-1">
+              {/* Start a Project Button */}
+              <div className="pt-2 z-10">
                 <AnimatedButton
                   href="/contact"
                   className="btn btn-anim btn-default btn-accent slide-right-up"
@@ -181,7 +179,7 @@ export default function Footer() {
 
         {/* single column 3 - Socials & Connect */}
         <div className="footer-blocks__column animate-card-3">
-          <div className="footer-blocks__card fullheight-card relative overflow-hidden group">
+          <div className="footer-blocks__card fullheight-card relative group">
             <div className="footer-blocks__block z-10">
               <div className="footer-blocks__title anim-uni-in-up">
                 <p className="footer-blocks__title-l">{SITE_CONTENT.footer.socialsTitle}</p>
@@ -205,20 +203,21 @@ export default function Footer() {
             </div>
 
             {/* Desktop Animated Floating Illustration */}
-            <div className="hidden xl:flex flex-col items-center justify-center my-auto py-2 z-10 pointer-events-none">
-              <div className="relative w-40 h-40 flex items-center justify-center">
+            <div className="hidden xl:flex flex-col items-center justify-center my-2 z-10 pointer-events-none">
+              <div className="relative w-32 h-32 flex items-center justify-center">
                 <div className="absolute inset-0 bg-red-500/10 rounded-full blur-2xl transform scale-75 group-hover:scale-100 group-hover:bg-red-500/20 transition-all duration-700"></div>
                 <Image
                   src="/img/illustrations/800x800_card-image-04.webp"
                   alt="Connect 3D Helmet"
-                  width={160}
-                  height={160}
-                  className="footer-floating-img-2 relative z-10 w-36 h-36 object-contain transition-transform duration-500 group-hover:scale-110"
+                  width={120}
+                  height={120}
+                  className="footer-floating-img-2 relative z-10 w-28 h-28 object-contain transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
             </div>
 
-            <div className="footer-blocks__links anim-uni-in-up z-10">
+            {/* Copyright: Always visible */}
+            <div className="footer-blocks__links z-10">
               <p className="t-xsmall t-muted">
                 <Link className="no-effect" href={SITE_CONTENT.authorUrl}>
                   {SITE_CONTENT.author}

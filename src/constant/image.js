@@ -85,10 +85,10 @@ export const ICON_H70_APPR_03 = image("/img/icons/h70_appr-03.webp");
 // 5. SERVICES & ILLUSTRATIONS
 // ==========================================
 export const BG_404_ERR = image("/img/backgrounds/900x900_err-01.webp");
-export const ILLUSTRATION_360X440_LIST_01 = image("/img/illustrations/360x440_list-01.webp");
-export const ILLUSTRATION_360X440_LIST_02 = image("/img/illustrations/360x440_list-02.webp");
-export const ILLUSTRATION_360X440_LIST_03 = image("/img/illustrations/360x440_list-03.webp");
-export const ILLUSTRATION_360X440_LIST_04 = image("/img/illustrations/360x440_list-04.webp");
+export const ILLUSTRATION_360X440_LIST_01 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788351464/44706_appps2.jpg");
+export const ILLUSTRATION_360X440_LIST_02 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788351196/161831_tx5n4r.jpg");
+export const ILLUSTRATION_360X440_LIST_03 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788350989/803_wzhfpq.jpg");
+export const ILLUSTRATION_360X440_LIST_04 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788351730/3994230_syqmod.jpg");
 export const ILLUSTRATION_800X800_CARD_IMAGE_01 = image("/img/illustrations/800x800_card-image-01.webp");
 export const ILLUSTRATION_800X800_CARD_IMAGE_02 = image("/img/illustrations/800x800_card-image-02.webp");
 export const ILLUSTRATION_800X800_CARD_IMAGE_03 = image("/img/illustrations/800x800_card-image-03.webp");
@@ -103,6 +103,7 @@ export const CTA_IMG_02 = image("/img/illustrations/cta-img-02.webp");
 // ==========================================
 // 6. AVATARS & TEAM
 // ==========================================
+export const ME = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788343133/Frame_2085663355_uifcvg.png");
 export const AVATAR_1 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788340877/digital-art-style-illustration-graphic-designer_2_an70k2.jpg");
 export const AVATAR_2 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788340882/digital-art-style-illustration-graphic-designer_1_jvc5u5.jpg");
 export const AVATAR_3 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788340885/industrial-designer-digital-art_1_jaw7ug.jpg");
@@ -208,6 +209,7 @@ const IMAGES = {
   ILLUSTRATION_800X800_SERVICE_IMAGE_04,
   CTA_IMG_01,
   CTA_IMG_02,
+  ME,
   AVATAR_1,
   AVATAR_2,
   AVATAR_3,
