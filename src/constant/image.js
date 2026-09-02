@@ -13,47 +13,48 @@ export const CLOUD_DINKS_PREVIEW = image("https://res.cloudinary.com/drrw18aos/i
 // ==========================================
 // 2. PROJECT SCREENSHOTS & PREVIEWS
 // ==========================================
-export const PROJECT_DINKSSS01 = image("/img/works/preview/DinksSS01.png");
-export const PROJECT_DINKSSS02 = image("/img/works/preview/DinksSS02.png");
-export const PROJECT_DINKSSS03 = image("/img/works/preview/DinksSS03.png");
-export const PROJECT_DINKSSS04 = image("/img/works/preview/DinksSS04.png");
+export const PROJECT_DINKSSS01 = image("/img/works/preview/DinksSS01.webp");
+export const PROJECT_DINKSSS02 = image("/img/works/preview/DinksSS02.webp");
+export const PROJECT_DINKSSS03 = image("/img/works/preview/DinksSS03.webp");
+export const PROJECT_DINKSSS04 = image("/img/works/preview/DinksSS04.webp");
 
-export const PROJECT_FURNIROSS01 = image("/img/works/preview/furniroSS01.png");
-export const PROJECT_FURNIROSS02 = image("/img/works/preview/furniroSS02.png");
-export const PROJECT_FURNIROSS03 = image("/img/works/preview/furniroSS03.png");
-export const PROJECT_FURNIROSS04 = image("/img/works/preview/furniroSS04.png");
-export const PROJECT_FURNIROSS05 = image("/img/works/preview/furniroSS05.png");
-export const PROJECT_FURNIROSS06 = image("/img/works/preview/furniroSS06.png");
-export const PROJECT_FURNIROSS07 = image("/img/works/preview/furniroSS07.png");
+export const PROJECT_FURNIROSS01 = image("/img/works/preview/furniroSS01.webp");
+export const PROJECT_FURNIROSS02 = image("/img/works/preview/furniroSS02.webp");
+export const PROJECT_FURNIROSS03 = image("/img/works/preview/furniroSS03.webp");
+export const PROJECT_FURNIROSS04 = image("/img/works/preview/furniroSS04.webp");
+export const PROJECT_FURNIROSS05 = image("/img/works/preview/furniroSS05.webp");
+export const PROJECT_FURNIROSS06 = image("/img/works/preview/furniroSS06.webp");
+export const PROJECT_FURNIROSS07 = image("/img/works/preview/furniroSS07.webp");
 
-export const PROJECT_JAUNTYSS01 = image("/img/works/preview/JauntySS01.png");
-export const PROJECT_JAUNTYSS02 = image("/img/works/preview/JauntySS02.png");
-export const PROJECT_JAUNTYSS03 = image("/img/works/preview/JauntySS03.png");
-export const PROJECT_JAUNTYSS04 = image("/img/works/preview/JauntySS04.png");
+export const PROJECT_JAUNTYSS01 = image("/img/works/preview/JauntySS01.webp");
+export const PROJECT_JAUNTYSS02 = image("/img/works/preview/JauntySS02.webp");
+export const PROJECT_JAUNTYSS03 = image("/img/works/preview/JauntySS03.webp");
+export const PROJECT_JAUNTYSS04 = image("/img/works/preview/JauntySS04.webp");
 
-export const PROJECT_MUVISS01 = image("/img/works/preview/MuviSS01.png");
-export const PROJECT_MUVISS02 = image("/img/works/preview/MuviSS02.png");
-export const PROJECT_MUVISS03 = image("/img/works/preview/MuviSS03.png");
-export const PROJECT_MUVISS04 = image("/img/works/preview/MuviSS04.png");
+export const PROJECT_MUVISS01 = image("/img/works/preview/MuviSS01.webp");
+export const PROJECT_MUVISS02 = image("/img/works/preview/MuviSS02.webp");
+export const PROJECT_MUVISS03 = image("/img/works/preview/MuviSS03.webp");
+export const PROJECT_MUVISS04 = image("/img/works/preview/MuviSS04.webp");
 
-export const PROJECT_TALKSS01 = image("/img/works/preview/TalkSS01.png");
-export const PROJECT_TALKSS02 = image("/img/works/preview/TalkSS02.png");
-export const PROJECT_TALKSS03 = image("/img/works/preview/TalkSS03.png");
-export const PROJECT_TALKSS04 = image("/img/works/preview/TalkSS04.png");
+export const PROJECT_TALKSS01 = image("/img/works/preview/TalkSS01.webp");
+export const PROJECT_TALKSS02 = image("/img/works/preview/TalkSS02.webp");
+export const PROJECT_TALKSS03 = image("/img/works/preview/TalkSS03.webp");
+export const PROJECT_TALKSS04 = image("/img/works/preview/TalkSS04.webp");
 
-export const PROJECT_WILDORASS01 = image("/img/works/preview/WildoraSS01.png");
-export const PROJECT_WILDORASS02 = image("/img/works/preview/WildoraSS02.png");
-export const PROJECT_WILDORASS03 = image("/img/works/preview/WildoraSS03.png");
-export const PROJECT_WILDORASS04 = image("/img/works/preview/WildoraSS04.png");
+export const PROJECT_WILDORASS01 = image("/img/works/preview/WildoraSS01.webp");
+export const PROJECT_WILDORASS02 = image("/img/works/preview/WildoraSS02.webp");
+export const PROJECT_WILDORASS03 = image("/img/works/preview/WildoraSS03.webp");
+export const PROJECT_WILDORASS04 = image("/img/works/preview/WildoraSS04.webp");
 
-export const PROJECT_MYTOOLSS01 = image("/img/works/preview/MytoolsSS01.png");
-export const PROJECT_MYTOOLSS02 = image("/img/works/preview/MyToolsSS02.png");
-export const PROJECT_MYTOOLSS03 = image("/img/works/preview/MyToolsSS03.png");
-export const PROJECT_MYTOOLSS04 = image("/img/works/preview/MyToolsSS04.png");
-export const PROJECT_MYTOOLSS05 = image("/img/works/preview/MyToolsSS05.png");
-export const PROJECT_MYTOOLSS06 = image("/img/works/preview/MyToolsSS06.png");
-export const PROJECT_MYTOOLSS07 = image("/img/works/preview/MyToolsSS07.png");
-export const PROJECT_MYTOOLSS08 = image("/img/works/preview/MyToolsSS08.png");
+export const PROJECT_MYTOOLSS = image("/img/works/preview/MyToolsImg.webp");
+export const PROJECT_MYTOOLSS01 = image("/img/works/preview/MytoolsSS01.webp");
+export const PROJECT_MYTOOLSS02 = image("/img/works/preview/MyToolsSS02.webp");
+export const PROJECT_MYTOOLSS03 = image("/img/works/preview/MyToolsSS03.webp");
+export const PROJECT_MYTOOLSS04 = image("/img/works/preview/MyToolsSS04.webp");
+export const PROJECT_MYTOOLSS05 = image("/img/works/preview/MyToolsSS05.webp");
+export const PROJECT_MYTOOLSS06 = image("/img/works/preview/MyToolsSS06.webp");
+export const PROJECT_MYTOOLSS07 = image("/img/works/preview/MyToolsSS07.webp");
+export const PROJECT_MYTOOLSS08 = image("/img/works/preview/MyToolsSS08.webp");
 // ==========================================
 // 3. TECH STACK & SKILL ICONS
 // ==========================================
