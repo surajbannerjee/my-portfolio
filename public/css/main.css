@@ -2018,18 +2018,18 @@ html.lenis body {
 }
 
 h1 {
-    font: normal var(--fw-medium)6rem/1.1 var(--_font-accent);
+    font: normal var(--fw-medium)5rem/1.1 var(--_font-accent);
     letter-spacing: -0.06rem;
     color: var(--t-bright)
 }
 
 @media only screen and (min-width:768px) {
     h1 {
-        font-size: 8rem
+        font-size: 7rem
     }
 
     h1.h1-small {
-        font-size: 9rem
+        font-size: 6rem
     }
 }
 
