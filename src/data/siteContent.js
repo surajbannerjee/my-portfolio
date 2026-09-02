@@ -42,10 +42,10 @@ export const SITE_CONTENT = {
   },
 
   socials: [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/suraj-banerjee-0a1251268/" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/suraj-banerjee" },
     { name: "GitHub", url: "https://github.com/surajbannerjee" },
-    { name: "X (Twitter)", url: "https://x.com/imsurajbanerjee" },
-    { name: "Instagram", url: "https://www.instagram.com/imsurajbanerjee" },
+    { name: "Facebook", url: "https://www.facebook.com/share/1Bi6P7JikX/" },
+    { name: "Instagram", url: "https://www.instagram.com/soul.of.suraj?igsi=MXNwMDBuejJjeTNkbw==" },
   ],
 
   footer: {

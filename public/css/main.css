@@ -7165,7 +7165,7 @@ form textarea:required:valid {
     max-width: 1920px;
     padding: 0 3rem;
     color: var(--accent);
-    z-index: -1;
+    z-index: 1;
     padding-top: 12.5rem;
     margin-bottom: 2rem
 }
@@ -7196,12 +7196,33 @@ form textarea:required:valid {
     }
 }
 
-.mxd-footer__svg-v2 {
+.mxd-footer__svg-v2,
+.mxd-footer__svg-mobile {
     position: relative;
     display: block;
     width: 100%;
     fill: currentColor;
-    z-index: -1
+    z-index: 1
+}
+
+@media only screen and (min-width:1200px) {
+    .mxd-footer__svg-mobile {
+        display: none
+    }
+}
+
+.mxd-footer__svg-desktop {
+    display: none;
+    position: relative;
+    width: 100%;
+    fill: currentColor;
+    z-index: 1
+}
+
+@media only screen and (min-width:1200px) {
+    .mxd-footer__svg-desktop {
+        display: block
+    }
 }
 
 .fullwidth-text__tl-trigger {

@@ -13,19 +13,48 @@ export default function Footer() {
       <div className="mxd-footer__text-wrap">
         <div className="fullwidth-text__tl-trigger"></div>
         <div className="mxd-footer__fullwidth-text anim-top-to-bottom">
+          {/* Mobile & Tablet 2-Line Giant Banner SVG */}
           <svg
-            className="mxd-footer__svg-v2"
-            version="1.1"
+            className="mxd-footer__svg-mobile"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 500 70"
+            viewBox="0 0 160 76"
             xmlSpace="preserve"
           >
             <style type="text/css">
               {`
-                .mxd-footer__big-text {
+                .mxd-footer__mobile-text {
                   font-family: var(--_font-accent, "Funnel Display", sans-serif);
                   font-weight: 800;
-                  font-size: 64px;
+                  font-size: 36px;
+                  letter-spacing: -0.03em;
+                  fill: currentColor;
+                  dominant-baseline: hanging;
+                  text-anchor: middle;
+                }
+              `}
+            </style>
+            <text x="50%" y="0" className="mxd-footer__mobile-text">
+              suraj
+            </text>
+            <text x="50%" y="38" className="mxd-footer__mobile-text">
+              banerjee
+            </text>
+          </svg>
+
+          {/* Desktop Edge-to-Edge Huge Banner SVG */}
+          <svg
+            className="mxd-footer__svg-desktop"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1000 130"
+            xmlSpace="preserve"
+          >
+            <style type="text/css">
+              {`
+                .mxd-footer__desktop-text {
+                  font-family: var(--_font-accent, "Funnel Display", sans-serif);
+                  font-weight: 800;
+                  font-size: 116px;
                   letter-spacing: -0.03em;
                   fill: currentColor;
                   text-anchor: middle;
@@ -33,11 +62,12 @@ export default function Footer() {
                 }
               `}
             </style>
-            <text x="50%" y="45%" className="mxd-footer__big-text">
+            <text x="50%" y="50%" className="mxd-footer__desktop-text">
               {SITE_CONTENT.footer.svgText}
             </text>
           </svg>
-          <p className="text-center text-[var(--t-muted)] text-xs md:text-sm tracking-widest uppercase font-medium mt-3 mb-2">
+
+          <p className="text-center text-[var(--t-muted)] text-xs md:text-sm tracking-widest uppercase font-medium mt-4 mb-2">
             Ideas designed. Experiences engineered.
           </p>
         </div>
