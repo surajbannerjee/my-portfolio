@@ -12,11 +12,11 @@ export default function PricingCards() {
         <div className="mxd-block">
           <div className="mxd-pricing-table loading__fade">
             <div className="container-fluid p-0">
-              <div className="row g-0 gap-3">
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
                 {PRICING_PLANS.map((plan) => (
                   <div
                     key={plan.id}
-                    className="col-12 col-xl-4 mxd-pricing-table__item mxd-grid-item animate-card-3"
+                    className="w-full mxd-pricing-table__item mxd-grid-item animate-card-3"
                   >
                     <div
                       className={`mxd-pricing-table__inner ${
