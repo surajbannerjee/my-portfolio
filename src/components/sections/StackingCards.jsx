@@ -96,8 +96,10 @@ export default function StackingCards() {
                           containerClassName="service-img service-img-s"
                           src={service.imageSmall}
                           alt={service.title}
-                          width={300}
-                          height={300}
+                          width={240}
+                          height={200}
+                          style={{ maxWidth: "240px", maxHeight: "200px", width: "auto", height: "auto" }}
+                          imageClassName="object-contain"
                           rounded="rounded-2xl"
                         />
                         <ImageWithSkeleton

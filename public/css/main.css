@@ -730,7 +730,7 @@ html.lenis body {
 }
 
 .mxd-section.padding-grid-pre-pinned {
-    padding-bottom: 13rem
+    padding-bottom: 5rem
 }
 
 .mxd-section.padding-grid-pre-mtext {
@@ -1296,7 +1296,7 @@ html.lenis body {
     position: relative;
     width: 100%;
     max-width: 1920px;
-    padding: 0 3rem;
+    padding: 0 2rem;
     margin: 0 auto
 }
 
@@ -1315,11 +1315,11 @@ html.lenis body {
 }
 
 .mxd-container.grid-container {
-    padding: 0 1.5rem
+    padding: 0 2rem
 }
 
 .mxd-container.grid-l-container {
-    padding: 0 1.5rem
+    padding: 0 2rem
 }
 
 @media only screen and (min-width:768px) {
@@ -1391,7 +1391,7 @@ html.lenis body {
 }
 
 .mxd-grid-item {
-    padding: 0 1.5rem;
+    padding: 0 0rem;
     margin-top: 3rem
 }
 
@@ -7313,7 +7313,7 @@ form textarea:required:valid {
     gap: 3rem;
     width: 100%;
     max-width: 1920px;
-    padding: 0 3rem
+    padding: 0 2rem
 }
 
 @media only screen and (min-width:768px) {
@@ -11850,18 +11850,21 @@ form textarea:required:valid {
 .mxd-hero-09 {
     position: relative;
     width: 100%;
-    padding-top: 11rem
+    padding-top: 11rem;
+    padding-bottom: 6rem
 }
 
 @media only screen and (min-width:768px) {
     .mxd-hero-09 {
-        padding-top: 14.8rem
+        padding-top: 14.8rem;
+        padding-bottom: 7rem
     }
 }
 
 @media only screen and (min-width:1200px) {
     .mxd-hero-09 {
-        padding-top: 0
+        padding-top: 0;
+        padding-bottom: 0
     }
 }
 
@@ -11888,7 +11891,7 @@ form textarea:required:valid {
 .mxd-hero-09__headline,
 .mxd-hero-09__objects {
     position: relative;
-    padding: 0 3rem
+    padding: 0 2rem
 }
 
 @media only screen and (min-width:768px) {
@@ -20442,8 +20445,15 @@ form textarea:required:valid {
 .services-stack {
     width: 100%;
     position: relative;
-    height: 75vh;
-    min-height: 600px
+    height: 85vh;
+    min-height: 680px
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .services-stack {
+        height: 75vh;
+        min-height: 620px
+    }
 }
 
 @media only screen and (min-width:992px) {
@@ -20850,9 +20860,55 @@ form textarea:required:valid {
     }
 }
 
+@media only screen and (max-width:991px) {
+    .mxd-services-stack__inner {
+        padding: 2.8rem 2.4rem 1.6rem 2.4rem;
+        justify-content: flex-start
+    }
+
+    .mxd-services-stack__title {
+        margin-bottom: 1.4rem;
+        padding-right: 0
+    }
+
+    .mxd-services-cards__tags {
+        margin-bottom: 1.4rem;
+        gap: 0.6rem
+    }
+
+    .mxd-services-stack__info {
+        margin-bottom: 1rem
+    }
+}
+
 .services-stack__image {
     position: relative;
-    overflow: hidden
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    padding: 1.5rem 0 0.5rem;
+    overflow: visible
+}
+
+.services-stack__image .service-img-s {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: auto !important;
+    height: auto !important;
+    max-width: 240px !important;
+    max-height: 220px !important;
+    margin: 0 auto !important
+}
+
+.services-stack__image .service-img-s img {
+    width: auto !important;
+    height: auto !important;
+    max-height: 200px !important;
+    max-width: 100% !important;
+    object-fit: contain !important
 }
 
 .services-stack__image .service-img-m {

@@ -64,7 +64,7 @@ export default function HomePage() {
       <Hero />
 
       {/* 6. Tech Stack Marquee */}
-      <div className="mxd-section padding-grid-pre-pinned">
+      <div className="mxd-section padding-grid-pre-pinned pt-4 md:pt-0">
         <div className="mxd-container fullwidth-container">
           <div className="mxd-block">
             <Marquee direction="right">
