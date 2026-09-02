@@ -12,7 +12,7 @@ export default function PricingCards() {
         <div className="mxd-block">
           <div className="mxd-pricing-table loading__fade">
             <div className="container-fluid p-0">
-              <div className="row g-0">
+              <div className="row g-0 gap-3">
                 {PRICING_PLANS.map((plan) => (
                   <div
                     key={plan.id}
