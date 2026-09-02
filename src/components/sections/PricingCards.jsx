@@ -47,13 +47,17 @@ export default function PricingCards() {
                           {plan.price && (
                             <div className="pricing-data__price">
                               <div className="pricing-data__num anim-uni-in-up">
-                                <span className="pricing-data__currency">$</span>
+                                {plan.price.toLowerCase() !== "custom" && (
+                                  <span className="pricing-data__currency">₹</span>
+                                )}
                                 <span className="pricing-data__amount">
                                   {plan.price}
                                 </span>
-                                <span className="pricing-data__period">
-                                  {plan.period}
-                                </span>
+                                {plan.period && (
+                                  <span className="pricing-data__period">
+                                    {plan.period}
+                                  </span>
+                                )}
                               </div>
                               {plan.timeline && (
                                 <p className="t-small t-muted t-140 anim-uni-in-up">
