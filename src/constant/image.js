@@ -13,48 +13,48 @@ export const CLOUD_DINKS_PREVIEW = image("https://res.cloudinary.com/drrw18aos/i
 // ==========================================
 // 2. PROJECT SCREENSHOTS & PREVIEWS
 // ==========================================
-export const PROJECT_DINKSSS01 = image("/img/works/preview/DinksSS01.webp");
-export const PROJECT_DINKSSS02 = image("/img/works/preview/DinksSS02.webp");
-export const PROJECT_DINKSSS03 = image("/img/works/preview/DinksSS03.webp");
-export const PROJECT_DINKSSS04 = image("/img/works/preview/DinksSS04.webp");
+export const PROJECT_DINKSSS01 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336008/DinksSS01_vkvjin.webp");
+export const PROJECT_DINKSSS02 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336009/DinksSS03_gl8skj.webp");
+export const PROJECT_DINKSSS03 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336009/DinksSS02_xb4wnu.webp");
+export const PROJECT_DINKSSS04 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336010/DinksSS04_w29sv4.webp");
 
-export const PROJECT_FURNIROSS01 = image("/img/works/preview/furniroSS01.webp");
-export const PROJECT_FURNIROSS02 = image("/img/works/preview/furniroSS02.webp");
-export const PROJECT_FURNIROSS03 = image("/img/works/preview/furniroSS03.webp");
-export const PROJECT_FURNIROSS04 = image("/img/works/preview/furniroSS04.webp");
-export const PROJECT_FURNIROSS05 = image("/img/works/preview/furniroSS05.webp");
-export const PROJECT_FURNIROSS06 = image("/img/works/preview/furniroSS06.webp");
-export const PROJECT_FURNIROSS07 = image("/img/works/preview/furniroSS07.webp");
+export const PROJECT_FURNIROSS01 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336011/furniroSS01_ttotjr.webp");
+export const PROJECT_FURNIROSS02 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336012/furniroSS03_j7fxdk.webp");
+export const PROJECT_FURNIROSS03 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336011/furniroSS02_jnmgvj.webp");
+export const PROJECT_FURNIROSS04 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336012/furniroSS04_ape7of.webp");
+export const PROJECT_FURNIROSS05 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336012/furniroSS05_qbhn0h.webp");
+export const PROJECT_FURNIROSS06 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336014/furniroSS06_dxqfbg.webp");
+export const PROJECT_FURNIROSS07 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336014/furniroSS07_my1z5n.webp");
 
-export const PROJECT_JAUNTYSS01 = image("/img/works/preview/JauntySS01.webp");
-export const PROJECT_JAUNTYSS02 = image("/img/works/preview/JauntySS02.webp");
-export const PROJECT_JAUNTYSS03 = image("/img/works/preview/JauntySS03.webp");
-export const PROJECT_JAUNTYSS04 = image("/img/works/preview/JauntySS04.webp");
+export const PROJECT_JAUNTYSS01 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336014/JauntySS01_hzvcgv.webp");
+export const PROJECT_JAUNTYSS02 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336014/JauntySS02_bwc5mi.webp");
+export const PROJECT_JAUNTYSS03 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336015/JauntySS03_ef7d5s.webp");
+export const PROJECT_JAUNTYSS04 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336015/JauntySS04_ozdwq6.webp");
 
-export const PROJECT_MUVISS01 = image("/img/works/preview/MuviSS01.webp");
-export const PROJECT_MUVISS02 = image("/img/works/preview/MuviSS02.webp");
-export const PROJECT_MUVISS03 = image("/img/works/preview/MuviSS03.webp");
-export const PROJECT_MUVISS04 = image("/img/works/preview/MuviSS04.webp");
+export const PROJECT_MUVISS01 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336015/MuviSS01_x2dwav.webp");
+export const PROJECT_MUVISS02 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336015/MuviSS03_djgp3j.webp");
+export const PROJECT_MUVISS03 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336015/MuviSS02_v4ba20.webp");
+export const PROJECT_MUVISS04 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336015/MuviSS04_nmyggu.webp");
 
-export const PROJECT_TALKSS01 = image("/img/works/preview/TalkSS01.webp");
-export const PROJECT_TALKSS02 = image("/img/works/preview/TalkSS02.webp");
-export const PROJECT_TALKSS03 = image("/img/works/preview/TalkSS03.webp");
-export const PROJECT_TALKSS04 = image("/img/works/preview/TalkSS04.webp");
+export const PROJECT_TALKSS01 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336012/TalkSS01_wauwg4.webp");
+export const PROJECT_TALKSS02 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336013/TalkSS03_cxjyye.webp");
+export const PROJECT_TALKSS03 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336013/TalkSS02_jfvzvr.webp");
+export const PROJECT_TALKSS04 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336014/TalkSS04_rqify8.webp");
 
-export const PROJECT_WILDORASS01 = image("/img/works/preview/WildoraSS01.webp");
-export const PROJECT_WILDORASS02 = image("/img/works/preview/WildoraSS02.webp");
-export const PROJECT_WILDORASS03 = image("/img/works/preview/WildoraSS03.webp");
-export const PROJECT_WILDORASS04 = image("/img/works/preview/WildoraSS04.webp");
+export const PROJECT_WILDORASS01 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336013/WildoraSS01_zkna13.webp");
+export const PROJECT_WILDORASS02 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336009/WildoraSS04_idawwj.webp");
+export const PROJECT_WILDORASS03 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336013/WildoraSS03_r5dk5b.webp");
+export const PROJECT_WILDORASS04 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336014/WildoraSS02_svwpbb.webp");
 
-export const PROJECT_MYTOOLSS = image("/img/works/preview/MyToolsImg.webp");
-export const PROJECT_MYTOOLSS01 = image("/img/works/preview/MytoolsSS01.webp");
-export const PROJECT_MYTOOLSS02 = image("/img/works/preview/MyToolsSS02.webp");
-export const PROJECT_MYTOOLSS03 = image("/img/works/preview/MyToolsSS03.webp");
-export const PROJECT_MYTOOLSS04 = image("/img/works/preview/MyToolsSS04.webp");
-export const PROJECT_MYTOOLSS05 = image("/img/works/preview/MyToolsSS05.webp");
-export const PROJECT_MYTOOLSS06 = image("/img/works/preview/MyToolsSS06.webp");
-export const PROJECT_MYTOOLSS07 = image("/img/works/preview/MyToolsSS07.webp");
-export const PROJECT_MYTOOLSS08 = image("/img/works/preview/MyToolsSS08.webp");
+export const PROJECT_MYTOOLSS = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336009/MyToolsImg_fs8cgx.webp");
+export const PROJECT_MYTOOLSS01 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336008/MytoolsSS01_cjydxh.webp");
+export const PROJECT_MYTOOLSS02 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336009/MytoolsSS02_eumvb7.webp");
+export const PROJECT_MYTOOLSS03 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336010/MytoolsSS03_g5xwqg.webp");
+export const PROJECT_MYTOOLSS04 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336010/MytoolsSS05_styoxh.webp");
+export const PROJECT_MYTOOLSS05 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336011/MytoolsSS07_lo8k5r.webp");
+export const PROJECT_MYTOOLSS06 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336011/MytoolsSS06_jdc5vw.webp");
+export const PROJECT_MYTOOLSS07 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336011/MytoolsSS04_uenotg.webp");
+export const PROJECT_MYTOOLSS08 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336012/MytoolsSS08_say6su.webp");
 // ==========================================
 // 3. TECH STACK & SKILL ICONS
 // ==========================================
