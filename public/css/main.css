@@ -20889,7 +20889,7 @@ form textarea:required:valid {
 
     .mxd-services-stack__title {
         margin-bottom: 1.4rem;
-        padding-right: 0
+        padding-right: 20px
     }
 
     .mxd-services-cards__tags {

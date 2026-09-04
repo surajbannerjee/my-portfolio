@@ -97,7 +97,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" dir="ltr" color-scheme="dark">
+    <html lang="en" dir="ltr" color-scheme="dark" data-theme="dark">
       <head>
         <link rel="stylesheet" type="text/css" href="/css/loaders/loader.css" />
         <link rel="stylesheet" type="text/css" href="/css/plugins.css" />

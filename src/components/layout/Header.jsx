@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { SITE_CONTENT } from "@/data/siteContent";
 import { useTheme } from "@/hooks/useTheme";
+import { PiSunHorizonBold, PiMoonStarsBold, PiArrowUpRightBold } from "react-icons/pi";
 import AnimatedButton from "@/components/common/AnimatedButton";
 import NavigationMenu from "./NavigationMenu";
 
@@ -75,21 +76,25 @@ export default function Header() {
             className="mxd-color-switcher"
             type="button"
             role="switch"
-            aria-label="light/dark mode"
+            aria-label="Toggle light and dark mode"
             aria-checked={theme === "dark"}
             onClick={toggleTheme}
           >
             {mounted && theme === "light" ? (
-              <i className="ph-bold ph-moon-stars"></i>
+              <i className="inline-flex items-center justify-center">
+                <PiMoonStarsBold />
+              </i>
             ) : (
-              <i className="ph-bold ph-sun-horizon"></i>
+              <i className="inline-flex items-center justify-center">
+                <PiSunHorizonBold />
+              </i>
             )}
           </button>
           <AnimatedButton
             href={SITE_CONTENT.headerControls.ctaUrl}
             className="btn btn-anim btn-default btn-mobile-icon btn-outline slide-right-up"
             caption={SITE_CONTENT.headerControls.ctaText}
-            iconClass="ph-bold ph-arrow-up-right"
+            icon={<PiArrowUpRightBold className="text-xl" />}
           />
         </div>
       </header>

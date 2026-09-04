@@ -360,14 +360,6 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                 />
               ) : (
                 <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-                  {project.gallery && project.gallery.length > 0 && (
-                    <AnimatedButton
-                      onClick={handleScrollToGallery}
-                      className="btn btn-anim btn-default btn-outline slide-right-up"
-                      caption="View Design Gallery"
-                      iconClass="ph-bold ph-images"
-                    />
-                  )}
                   <AnimatedButton
                     href="/contact"
                     className="btn btn-anim btn-default btn-accent slide-right-up"
