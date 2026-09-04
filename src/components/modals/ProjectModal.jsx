@@ -104,14 +104,14 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
       {/* Modal Container */}
       <div
         ref={contentRef}
-        className="relative z-10 w-full xl:max-w-[70dvw] lg:max-w-[80dvw] md:max-w-[90dvw] max-h-[90dvh] bg-[#141414] border border-white/10 rounded-[1.8rem] md:rounded-[2.4rem] shadow-2xl flex flex-col overflow-hidden"
+        className="relative z-10 w-full xl:max-w-[70dvw] lg:max-w-[80dvw] md:max-w-[90dvw] max-h-[90dvh] bg-[#141414] rounded-[1.8rem] md:rounded-[2.4rem] shadow-2xl flex flex-col overflow-hidden"
         style={{
           boxShadow: "0 25px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(190, 242, 100, 0.08)",
         }}
         data-lenis-prevent=""
       >
         {/* Sticky Header Bar */}
-        <div className="sticky top-0 z-30 flex items-center justify-between px-6 py-4 md:px-8 md:py-5 bg-[#141414]/95 border-b border-white/10 backdrop-blur-md shrink-0">
+        <div className="sticky top-0 z-30 flex items-center justify-between px-6 py-4 md:px-8 md:py-5 bg-[#141414]/95 backdrop-blur-md shrink-0">
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
             <span
               className="tag tag-default font-semibold uppercase tracking-wider"
@@ -175,7 +175,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
               {project.summary}
             </p>
             {!hasLiveUrl && (
-              <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)] text-[var(--accent)] font-medium text-[14px]">
+              <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--accent)]/10 border-1 border-[var(--accent)] text-[var(--accent)] font-medium text-[14px]">
                 <i className="ph-bold ph-sparkle text-sm"></i>
                 <span>Design &amp; Architecture Showcase — High-resolution mockups available below</span>
               </div>
@@ -183,7 +183,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
           </div>
 
           {/* Featured Hero Banner */}
-          <div className="relative w-full aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 bg-black/40">
+          <div className="relative w-full aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden border-2 border-white/20 bg-black/40">
             <ImageWithSkeleton
               src={project.image}
               alt={project.title}
@@ -196,7 +196,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
           </div>
 
           {/* Project Meta Details Grid */}
-          <div className="flex flex-wrap justify-between gap-4 p-5 md:p-6 bg-[#1C1C1C] border border-white/10 rounded-2xl">
+          <div className="flex flex-wrap justify-between gap-4 p-5 md:p-6 bg-[#1C1C1C] border-2 border-white/20 rounded-2xl">
             <div>
               <p
                 className="uppercase font-semibold text-neutral-400 tracking-wider mb-1"
@@ -245,7 +245,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
 
           {/* Challenge & Solution Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-            <div className="p-6 md:p-8 bg-[#1C1C1C] border border-white/10 rounded-2xl flex flex-col justify-between">
+            <div className="p-6 md:p-8 bg-[#1C1C1C] border-2 border-white/20 rounded-2xl flex flex-col justify-between">
               <div>
                 <span
                   className="uppercase font-bold text-[var(--accent)] tracking-wider block mb-2"
@@ -268,7 +268,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
               </div>
             </div>
 
-            <div className="p-6 md:p-8 bg-[#1C1C1C] border border-white/10 rounded-2xl flex flex-col justify-between">
+            <div className="p-6 md:p-8 bg-[#1C1C1C] border-2 border-white/20 rounded-2xl flex flex-col justify-between">
               <div>
                 <span
                   className="uppercase font-bold text-[var(--accent)] tracking-wider block mb-2"
@@ -302,7 +302,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                 >
                   Visual Showcase &amp; Design Details
                 </h3>
-                <span className="text-neutral-400 text-xs font-semibold px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                <span className="text-neutral-400 text-xs font-semibold px-3 py-1 rounded-full bg-white/5 border-2 border-white/20">
                   {project.gallery.length} Screens
                 </span>
               </div>
@@ -310,7 +310,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                 {project.gallery.map((imgUrl, gIdx) => (
                   <div
                     key={gIdx}
-                    className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/40 group/img"
+                    className="relative aspect-video rounded-2xl overflow-hidden border-2 border-white/20 bg-black/40 group/img"
                   >
                     <ImageWithSkeleton
                       src={imgUrl}
@@ -327,7 +327,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
           )}
 
           {/* Tech Stack & Action Links */}
-          <div className="p-6 md:p-8 bg-[#1C1C1C] border border-white/10 rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div className="p-6 md:p-8 bg-[#1C1C1C] border-2 border-white/20 rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="flex-1">
               <p
                 className="uppercase font-semibold text-neutral-400 tracking-wider mb-3"
@@ -339,7 +339,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                 {(project.techStack || project.tags).map((tech, tIdx) => (
                   <span
                     key={tIdx}
-                    className="px-3.5 py-1.5 bg-black/40 border border-white/10 rounded-full font-semibold text-white/90"
+                    className="px-3.5 py-1.5 bg-black/40 border-2 border-white/20 rounded-full font-semibold text-white/90"
                     style={{ fontSize: "14px" }}
                   >
                     {tech}
@@ -371,7 +371,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                   <AnimatedButton
                     href="/contact"
                     className="btn btn-anim btn-default btn-accent slide-right-up"
-                    caption="Request Live Demo"
+                    caption="Contact Me"
                     iconClass="ph-bold ph-paper-plane-tilt"
                   />
                 </div>

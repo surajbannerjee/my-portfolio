@@ -8,12 +8,15 @@ export default function AnimatedButton({
   className = "btn btn-anim btn-default btn-outline slide-right-up",
   caption,
   iconClass,
+  icon,
   download,
   target,
   onClick,
   type = "button",
+  disabled,
   ariaLabel,
   id,
+  style,
   children,
 }) {
   const textContent = caption || (typeof children === "string" ? children : "");
@@ -51,7 +54,11 @@ export default function AnimatedButton({
   const content = (
     <>
       {renderCaption()}
-      {iconClass && <i className={iconClass}></i>}
+      {icon ? (
+        <span className="btn-icon inline-flex items-center justify-center">{icon}</span>
+      ) : (
+        iconClass && <i className={iconClass}></i>
+      )}
     </>
   );
 
@@ -65,6 +72,7 @@ export default function AnimatedButton({
           aria-label={ariaLabel || textContent}
           onClick={onClick}
           id={id}
+          style={style}
         >
           {content}
         </Link>
@@ -80,6 +88,7 @@ export default function AnimatedButton({
         aria-label={ariaLabel || textContent}
         onClick={onClick}
         id={id}
+        style={style}
       >
         {content}
       </a>
@@ -92,7 +101,9 @@ export default function AnimatedButton({
       className={className}
       aria-label={ariaLabel || textContent}
       onClick={onClick}
+      disabled={disabled}
       id={id}
+      style={style}
     >
       {content}
     </button>
