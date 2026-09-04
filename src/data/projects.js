@@ -36,6 +36,12 @@ import {
   PROJECT_BISTROVIASS04,
   PROJECT_BISTROVIASS05,
   PROJECT_BISTROVIASS06,
+  PROJECT_RASTURASS01,
+  PROJECT_RASTURASS02,
+  PROJECT_RASTURASS03,
+  PROJECT_RASTURASS04,
+  PROJECT_RASTURASS05,
+  PROJECT_RASTURASS06,
 } from "@/constant";
 
 export const PINNED_PROJECTS = [
@@ -234,6 +240,31 @@ export const ALL_PROJECTS = [
     techStack: ["WordPress", "Elementor Pro", "Advanced Custom CSS", "Responsive Design"],
     liveUrl: "",
   },
-
+{
+    id: "rastura-restaurant",
+    highlightTitle: "Rastura",
+    title: "Modern Dining & Bar Website Concept",
+    url: "/my-works?project=rastura-restaurant",
+    previewClass: "mxd-project-item__preview-4",
+    tags: ["WordPress", "Elementor Pro", "UI/UX Design", "Concept Project"],
+    image: "https://res.cloudinary.com/drrw18aos/image/upload/v1788513514/portfolio_SHowcase_1_zdwifx.webp",
+    client: "Personal Concept / Demo",
+    year: "2026",
+    services: "Web Design, WordPress Development, Menu Architecture, Table Booking Integration",
+    industry: "Food, Beverage & Hospitality",
+    summary: "A sleek, warm-toned dining and bar landing page concept built to showcase categorized menus, signature drink showcases, customer reviews, and a table reservation module.",
+    challenge: "Organizing distinct dining offerings (Breakfast, Lunch, Dinner, Signature Drinks) into a cohesive visual hierarchy while ensuring table booking forms remain prominent across all viewports.",
+    solution: "Developed a custom WordPress layout using Elementor Pro, featuring tabbed menu navigation, dynamic review cards, custom CSS animations, and an accessible table reservation form.",
+    gallery: [
+      PROJECT_RASTURASS01,
+      PROJECT_RASTURASS02,
+      PROJECT_RASTURASS03,
+      PROJECT_RASTURASS04,
+      PROJECT_RASTURASS05,
+      PROJECT_RASTURASS06,
+    ],
+    techStack: ["WordPress", "Elementor Pro", "Advanced Custom CSS", "PHP", "Responsive Design"],
+    liveUrl: "",
+  },
 
 ];

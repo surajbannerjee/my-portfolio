@@ -12,6 +12,15 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
   const backdropRef = useRef(null);
   const contentRef = useRef(null);
   const scrollContainerRef = useRef(null);
+  const galleryRef = useRef(null);
+
+  const hasLiveUrl = Boolean(project?.liveUrl && project.liveUrl.trim() !== "");
+
+  const handleScrollToGallery = () => {
+    if (galleryRef.current) {
+      galleryRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   useEffect(() => {
     if (!project) return;
@@ -103,7 +112,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
       >
         {/* Sticky Header Bar */}
         <div className="sticky top-0 z-30 flex items-center justify-between px-6 py-4 md:px-8 md:py-5 bg-[#141414]/95 border-b border-white/10 backdrop-blur-md shrink-0">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
             <span
               className="tag tag-default font-semibold uppercase tracking-wider"
               style={{ fontSize: "13px", padding: "6px 14px" }}
@@ -117,12 +126,24 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
             >
               {project.year || "2026"}
             </span>
+            <span className="text-neutral-400 text-sm hidden sm:inline">•</span>
+            {hasLiveUrl ? (
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)] text-[var(--accent)] font-medium text-[14px]">
+                <span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse"></span>
+                Live Project
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)] text-[var(--accent)] font-medium text-[14px]">
+                <span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse"></span>
+                Concept Showcase
+              </span>
+            )}
           </div>
 
           <button
             onClick={handleClose}
             aria-label="Close Project Details"
-            className="group flex items-center justify-center w-11 h-11 rounded-full bg-white/5 border border-white/15 hover:border-lime-400 hover:bg-white/10 text-white transition-all duration-200"
+            className="group flex items-center justify-center w-11 h-11 rounded-full bg-white/5 border border-white/15 hover:border-lime-400 hover:bg-white/10 text-white transition-all duration-200 shrink-0"
           >
             <i className="ph-bold ph-x text-xl transition-transform duration-200 group-hover:rotate-90"></i>
           </button>
@@ -153,6 +174,12 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
             >
               {project.summary}
             </p>
+            {!hasLiveUrl && (
+              <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)] text-[var(--accent)] font-medium text-[14px]">
+                <i className="ph-bold ph-sparkle text-sm"></i>
+                <span>Design &amp; Architecture Showcase — High-resolution mockups available below</span>
+              </div>
+            )}
           </div>
 
           {/* Featured Hero Banner */}
@@ -267,24 +294,29 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
 
           {/* Project Gallery Mockups */}
           {project.gallery && project.gallery.length > 0 && (
-            <div>
-              <h3
-                className="font-bold text-white mb-4"
-                style={{ fontSize: "clamp(18px, 2vw, 22px)" }}
-              >
-                Visual Showcase &amp; Design Details
-              </h3>
+            <div ref={galleryRef} id="project-gallery-showcase" className="scroll-mt-6">
+              <div className="flex items-center justify-between gap-4 mb-4">
+                <h3
+                  className="font-bold text-white mb-0"
+                  style={{ fontSize: "clamp(18px, 2vw, 22px)" }}
+                >
+                  Visual Showcase &amp; Design Details
+                </h3>
+                <span className="text-neutral-400 text-xs font-semibold px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                  {project.gallery.length} Screens
+                </span>
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {project.gallery.map((imgUrl, gIdx) => (
                   <div
                     key={gIdx}
-                    className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/40"
+                    className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/40 group/img"
                   >
                     <ImageWithSkeleton
                       src={imgUrl}
                       alt={`${project.title} Preview ${gIdx + 1}`}
                       fill
-                      imageClassName="object-cover"
+                      imageClassName="object-cover transition-transform duration-500 group-hover/img:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"
                       rounded="rounded-2xl"
                     />
@@ -295,8 +327,8 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
           )}
 
           {/* Tech Stack & Action Links */}
-          <div className="p-6 md:p-8 bg-[#1C1C1C] border border-white/10 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            <div>
+          <div className="p-6 md:p-8 bg-[#1C1C1C] border border-white/10 rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+            <div className="flex-1">
               <p
                 className="uppercase font-semibold text-neutral-400 tracking-wider mb-3"
                 style={{ fontSize: "13px" }}
@@ -316,8 +348,8 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
               </div>
             </div>
 
-            <div className="flex items-center gap-3 shrink-0">
-              {project.liveUrl && (
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              {hasLiveUrl ? (
                 <AnimatedButton
                   href={project.liveUrl}
                   target="_blank"
@@ -326,6 +358,23 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                   caption="Explore Live"
                   iconClass="ph-bold ph-arrow-up-right"
                 />
+              ) : (
+                <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+                  {project.gallery && project.gallery.length > 0 && (
+                    <AnimatedButton
+                      onClick={handleScrollToGallery}
+                      className="btn btn-anim btn-default btn-outline slide-right-up"
+                      caption="View Design Gallery"
+                      iconClass="ph-bold ph-images"
+                    />
+                  )}
+                  <AnimatedButton
+                    href="/contact"
+                    className="btn btn-anim btn-default btn-accent slide-right-up"
+                    caption="Request Live Demo"
+                    iconClass="ph-bold ph-paper-plane-tilt"
+                  />
+                </div>
               )}
             </div>
           </div>
