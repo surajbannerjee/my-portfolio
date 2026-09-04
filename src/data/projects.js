@@ -30,6 +30,12 @@ import {
   PROJECT_MYTOOLSS06,
   PROJECT_MYTOOLSS07,
   PROJECT_MYTOOLSS08,
+  PROJECT_BISTROVIASS01,
+  PROJECT_BISTROVIASS02,
+  PROJECT_BISTROVIASS03,
+  PROJECT_BISTROVIASS04,
+  PROJECT_BISTROVIASS05,
+  PROJECT_BISTROVIASS06,
 } from "@/constant";
 
 export const PINNED_PROJECTS = [
@@ -201,6 +207,33 @@ export const ALL_PROJECTS = [
     ],
     techStack: ["WordPress", "Elementor", "Yoast SEO", "LiteSpeed Cache"],
     liveUrl: "https://dinkselectrical.com.au/",
-  }
+  },
+  {
+    id: "bistrovia-restaurant",
+    highlightTitle: "Bistrovia",
+    title: "Fine Dining Restaurant & Reservation Concept",
+    url: "/my-works?project=bistrovia-restaurant",
+    previewClass: "mxd-project-item__preview-4",
+    tags: ["WordPress", "Elementor Pro", "UI/UX Design", "Concept Project"],
+    image: "https://res.cloudinary.com/drrw18aos/image/upload/v1788499362/portfolio_SHowcase_jj1b5p.webp",
+    client: "Personal Concept / Demo",
+    year: "2026",
+    services: "UI/UX Design, Web Development, Interactive Menu Architecture, Table Booking System",
+    industry: "Food, Beverage & Hospitality",
+    summary: "A modern, upscale dining website concept designed to showcase high-converting layouts, interactive culinary menus, and a seamless online table reservation experience.",
+    challenge: "Designing a luxury editorial aesthetic that mirrors a fine-dining ambiance while structuring an intuitive UI for browsable food menus and reservation flows.",
+    solution: "Built a fully responsive concept prototype using a rich, dark theme with Elementor Pro, featuring custom menu cards, an integrated table booking UI, and curated food gallery showcases.",
+    gallery: [
+      PROJECT_BISTROVIASS01,
+      PROJECT_BISTROVIASS02,
+      PROJECT_BISTROVIASS03,
+      PROJECT_BISTROVIASS04,
+      PROJECT_BISTROVIASS05,
+      PROJECT_BISTROVIASS06,
+    ],
+    techStack: ["WordPress", "Elementor Pro", "Advanced Custom CSS", "Responsive Design"],
+    liveUrl: "",
+  },
+
 
 ];

@@ -55,6 +55,13 @@ export const PROJECT_MYTOOLSS05 = image("https://res.cloudinary.com/drrw18aos/im
 export const PROJECT_MYTOOLSS06 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336011/MytoolsSS06_jdc5vw.webp");
 export const PROJECT_MYTOOLSS07 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336011/MytoolsSS04_uenotg.webp");
 export const PROJECT_MYTOOLSS08 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788336012/MytoolsSS08_say6su.webp");
+
+export const PROJECT_BISTROVIASS01 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788499407/bistrovia4_n65xdv.png");
+export const PROJECT_BISTROVIASS02 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788499407/bistrovia3_qfdp2k.png");
+export const PROJECT_BISTROVIASS03 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788499407/bistrovia6_qwy9mo.png");
+export const PROJECT_BISTROVIASS04 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788499408/bistrovia1_mhoyja.png");
+export const PROJECT_BISTROVIASS05 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788499407/bistrovia5_q82ivv.png");
+export const PROJECT_BISTROVIASS06 = image("https://res.cloudinary.com/drrw18aos/image/upload/v1788499408/bistrovia2_s02eka.png");
 // ==========================================
 // 3. TECH STACK & SKILL ICONS
 // ==========================================
@@ -176,6 +183,12 @@ const IMAGES = {
   PROJECT_WILDORASS02,
   PROJECT_WILDORASS03,
   PROJECT_WILDORASS04,
+  PROJECT_BISTROVIASS01,
+  PROJECT_BISTROVIASS02,
+  PROJECT_BISTROVIASS03,
+  PROJECT_BISTROVIASS04,
+  PROJECT_BISTROVIASS05,
+  PROJECT_BISTROVIASS06,
   TECH_HTML,
   TECH_CSS,
   TECH_JAVASCRIPT,
